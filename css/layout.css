@@ -1,0 +1,19 @@
+#wrapper {
+  width: 100%;
+}
+#page-wrapper {
+  margin: 0 0 0 220px;
+  padding: 0;
+}
+a {
+  color: #G;
+}
+.overview ul {
+  padding: 0 17px;
+}
+.overview ul li {
+  padding: 7px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
