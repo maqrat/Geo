@@ -10,7 +10,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 // Variables
-@navy: #1ab394;         // Primary color
+//@navy: #1ab394;         // Primary color
+@navy: #0094e7;         // Primary color
 @text-color: #676a6c;   // Body text
 @border-color: #e7eaec; // Border
 
@@ -52,7 +53,7 @@ a.navy-link:hover {
 }
 
 section p {
-  color: #aeaeae;
+  color: @text-color;
   font-size: 13px;
 }
 
@@ -164,9 +165,9 @@ h1 {
 .navbar-default .nav li a {
   color: @text-color;
   &.navy {
-    color: lighten(@navy-color, 30%);
+    color: lighten(@navy, 30%);
     &:hover {
-      color: lighten(@navy-color, 45%);
+      color: lighten(@navy, 45%);
 
     }
   }
@@ -174,9 +175,9 @@ h1 {
 .navbar-scroll.navbar-default .nav li a {
   color: @text-color;
   &.navy {
-    color: lighten(@navy-color, 30%);
+    color: lighten(@navy, 30%);
     &:hover {
-      color: darken(@navy-color, 5%);
+      color: darken(@navy, 5%);
 
     }
   }
@@ -541,7 +542,7 @@ h1 {
       color: #fff;
       filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
       &:hover {
-        color: lighten(@navy-color, 45%);
+        color: lighten(@navy, 45%);
       }
     }
     .navbar-brand {
