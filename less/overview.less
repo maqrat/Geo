@@ -1,0 +1,46 @@
+.overview {
+  h2 {
+    font-size: 22px;
+    font-weight: 200;
+    color: @navy;
+  }
+  .text-point-l {
+    text-align: left;
+  }
+  .text-point-r {
+    text-align: right;
+  }
+  .v-table {
+    .v-row {
+      .v-cell {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .overview {
+    .v-table {
+      .v-row {
+        .v-cell {
+          display: table-cell;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .overview {
+    .text-point-r {
+      text-align: center;
+    }
+    .text-point-l {
+      display: none;
+    }
+    .v-table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

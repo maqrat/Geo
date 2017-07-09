@@ -16,6 +16,12 @@ span.navy {
 p.text-color {
   color: #777c80;
 }
+a {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 a.navy-link {
   color: #0094e7;
   text-decoration: none;
@@ -38,6 +44,35 @@ h1 {
   margin-top: 10px;
   font-size: 30px;
   font-weight: 200;
+}
+.v-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.v-table .v-row {
+  display: table-row;
+  height: 100%;
+}
+.v-table .v-row .v-cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+.v-table .v-row .v-cell.bottom {
+  vertical-align: bottom;
+}
+.v-table .v-row .v-cell.middle {
+  vertical-align: middle;
+}
+.v-table .v-row .v-cell.top {
+  vertical-align: top;
+}
+.dib {
+  display: inline-block;
+}
+.o-hidden {
+  overflow: hidden;
 }
 .navy-line {
   width: 60px;
@@ -225,6 +260,21 @@ h1 {
 }
 /* Sections
 ------------------------- */
+.home {
+  padding-bottom: 30px;
+}
+.home h2 {
+  font-size: 24px;
+  font-weight: 100;
+}
+.home ul {
+  padding: 0 17px;
+}
+.home ul li {
+  font-weight: 100;
+  padding: 5px 7px;
+  font-size: 20px;
+}
 .services {
   padding-top: 60px;
 }
@@ -266,10 +316,38 @@ h1 {
 .features .big-icon {
   color: #0094e7;
 }
+.software table tr,
+.data table tr {
+  height: 37px;
+}
 .contact {
   background-image: url('../img/word_map.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+.contact a {
+  color: #0094e7;
+}
+.contact .social-icon a {
+  background: transparent;
+  display: block;
+  width: auto;
+  height: 27px;
+  text-decoration: underline;
+  padding: 0;
+}
+.contact .social-icon a:hover i {
+  background: #0087d3;
+}
+.contact .social-icon a i {
+  background: #0094e7;
+  color: #fff;
+  display: inline-block;
+  border-radius: 50px;
+  height: 28px;
+  width: 28px;
+  padding: 6px 9px;
+  margin-right: 5px;
 }
 /* Buttons - only primary custom button
 ------------------------- */
@@ -348,6 +426,9 @@ fieldset[disabled] .btn-primary.active {
   }
   .carousel-control {
     display: none;
+  }
+  .contact h4 {
+    margin-top: 40px;
   }
 }
 /* MARGINS & PADDINGS
@@ -855,84 +936,6 @@ fieldset[disabled] .btn-primary.active {
     overflow-y: auto !important;
   }
 }
-a {
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.v-table {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-.v-table .v-row {
-  display: table-row;
-  height: 100%;
-}
-.v-table .v-row .v-cell {
-  display: table-cell;
-  vertical-align: middle;
-  float: none;
-}
-.v-table .v-row .v-cell.bottom {
-  vertical-align: bottom;
-}
-.v-table .v-row .v-cell.middle {
-  vertical-align: middle;
-}
-.v-table .v-row .v-cell.top {
-  vertical-align: top;
-}
-.dib {
-  display: inline-block;
-}
-.o-hidden {
-  overflow: hidden;
-}
-.home {
-  padding-bottom: 30px;
-}
-.home h2 {
-  font-size: 24px;
-  font-weight: 100;
-}
-.home ul {
-  padding: 0 17px;
-}
-.home ul li {
-  font-weight: 100;
-  padding: 5px 7px;
-  font-size: 20px;
-}
-.software table tr,
-.data table tr {
-  height: 37px;
-}
-.contact a {
-  color: #0094e7;
-}
-.contact .social-icon a {
-  background: transparent;
-  display: block;
-  width: auto;
-  height: 27px;
-  text-decoration: underline;
-  padding: 0;
-}
-.contact .social-icon a:hover i {
-  background: #0087d3;
-}
-.contact .social-icon a i {
-  background: #0094e7;
-  color: #fff;
-  display: inline-block;
-  border-radius: 50px;
-  height: 28px;
-  width: 28px;
-  padding: 6px 9px;
-  margin-right: 5px;
-}
 .overview h2 {
   font-size: 22px;
   font-weight: 200;
@@ -962,8 +965,5 @@ a {
   .overview .v-table {
     margin-left: auto;
     margin-right: auto;
-  }
-  .contact h4 {
-    margin-top: 40px;
   }
 }
