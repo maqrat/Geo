@@ -5,18 +5,16 @@
 */
 
 // Google Fonts
-//@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 // Variables
 //@navy: #1ab394;         // Primary color
 @navy: #0094e7;         // Primary color
-@text-color: #676a6c;   // Body text
+@text-color: #777c80;   // Body text
 @border-color: #e7eaec; // Border
 
 //Mixins
-.transition(@duration:0.4s, @ease:ease-out) {
+.transition(@duration:.3s, @ease:ease-out) {
   -webkit-transition: all @duration @ease;
   -moz-transition: all @duration @ease;
   transition: all @duration @ease;
@@ -99,7 +97,6 @@ h1 {
 .navbar-default.navbar-scroll {
   background-color: #fff;
   border-color: #fff;
-  padding: 5px 0 13px;
 }
 
 .navbar-default {
@@ -506,7 +503,9 @@ h1 {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
+  .navbar-right {
+    margin-right: -9px;
+  }
   .navbar-wrapper {
     margin-top: 20px;
   }
@@ -520,6 +519,8 @@ h1 {
   }
   .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
      margin-left: 0;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
   }
   .navbar-default .navbar-brand:hover {
     background-color: #fff;
@@ -533,7 +534,10 @@ h1 {
         text-shadow: none;
       }
       .navbar-brand {
-        padding-top: 8px;
+        padding-top: 0;
+        .img-responsive {
+          height: 77px;
+        }
       }
     }
     .nav li a {
@@ -551,14 +555,9 @@ h1 {
       padding-top: 26px;
       border-radius: 0;
       .img-responsive {
-        height: 54px;
+        height: 77px;
       }
     }
-  }
-
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
   }
 
   /* Bump up size of carousel content */
@@ -575,20 +574,21 @@ h1 {
 
 @media (min-width: 992px) {
   .navbar-default {
-    &.navbar-scroll {
-      .navbar-brand {
-        .img-responsive {
-          height: 54px;
-        }
-      }
-    }
+    //&.navbar-scroll {
+    //  .navbar-brand {
+    //    padding-top: 0;
+    //    .img-responsive {
+    //      height: 77px;
+    //    }
+    //  }
+    //}
     .nav > li > a {
       padding: 25px 10px 15px 10px;
     }
     .navbar-brand {
       padding-top: 0;
       .img-responsive {
-        height: 138px;
+        height: 106px;
       }
     }
   }
