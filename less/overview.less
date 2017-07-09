@@ -10,18 +10,11 @@
   .text-point-l, .text-point-r {
     text-align: center;
   }
-  .text-point-l {
-    display: none;
+
+  .flex-container {
+    margin-top: 60px;
   }
 
-  .v-table {
-    .v-row {
-      .v-cell {
-        display: block;
-        padding: 0;
-      }
-    }
-  }
   .wwc {
     h2 {
       position: relative;
@@ -29,9 +22,9 @@
       font-size: 33px;
       font-weight: 400;
 
-      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF)";/*IE 8*/
-      text-shadow: 2px 2px 8px #FFFFFF;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-      filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF); /*IE 5.5-7*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF)";
+      text-shadow: 2px 2px 8px #FFFFFF;
+      filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF);
     }
     p {
       position: relative;
@@ -41,21 +34,24 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .overview {
     .text-point-l {
       text-align: left;
-      display: block;
     }
     .text-point-r {
       text-align: right;
     }
-    .v-table {
-      .v-row {
-        .v-cell {
-          display: table-cell;
-        }
-      }
+    .flex-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+    }
+    .flex-container-revert {
+      flex-direction: row-reverse;
     }
     .wwc {
       h2, p {
@@ -65,11 +61,4 @@
   }
 }
 @media (max-width: 767px) {
-  .overview {
-
-    .v-table {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }

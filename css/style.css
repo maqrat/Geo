@@ -941,12 +941,8 @@ fieldset[disabled] .btn-primary.active {
 .overview .text-point-r {
   text-align: center;
 }
-.overview .text-point-l {
-  display: none;
-}
-.overview .v-table .v-row .v-cell {
-  display: block;
-  padding: 0;
+.overview .flex-container {
+  margin-top: 60px;
 }
 .overview .wwc h2 {
   position: relative;
@@ -954,27 +950,31 @@ fieldset[disabled] .btn-primary.active {
   font-size: 33px;
   font-weight: 400;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF)";
-  /*IE 8*/
   text-shadow: 2px 2px 8px #FFFFFF;
-  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF);
-  /*IE 5.5-7*/
 }
 .overview .wwc p {
   position: relative;
   font-size: 17px;
   bottom: 3%;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .overview .text-point-l {
     text-align: left;
-    display: block;
   }
   .overview .text-point-r {
     text-align: right;
   }
-  .overview .v-table .v-row .v-cell {
-    display: table-cell;
+  .overview .flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+  }
+  .overview .flex-container-revert {
+    flex-direction: row-reverse;
   }
   .overview .wwc h2,
   .overview .wwc p {
@@ -983,11 +983,5 @@ fieldset[disabled] .btn-primary.active {
     right: 0;
     margin-right: 0;
     margin-left: 0;
-  }
-}
-@media (max-width: 767px) {
-  .overview .v-table {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
