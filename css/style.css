@@ -27,6 +27,10 @@ section p {
   color: #777c80;
   font-size: 13px;
 }
+section ul li {
+  color: #777c80;
+  font-size: 13px;
+}
 address {
   font-size: 13px;
 }
@@ -150,6 +154,8 @@ h1 {
 .header-back {
   height: 400px;
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 .header-back.back-1 {
   background: url('../img/carousel/2d-reconstruction-of-dwntown-vancouver.jpg') 50% 0 no-repeat;
@@ -205,6 +211,23 @@ h1 {
 .carousel {
   height: 400px;
 }
+.carousel .item > .container {
+  height: 100%;
+  position: relative;
+}
+.carousel .text {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  z-index: 1000000;
+  padding: 0 15px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=@color)";
+  text-shadow: 0 0 8px #000000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
+}
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -254,24 +277,11 @@ h1 {
 .carousel-control {
   width: 6%;
 }
-.carousel-inner .container {
-  position: relative;
-}
 .carousel-inner {
   overflow: visible;
 }
 .carousel-caption {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  bottom: auto;
-  right: auto;
-  text-align: left;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.carousel-caption {
-  position: absolute;
+  position: relative;
   top: 100px;
   left: 0;
   bottom: auto;
@@ -285,9 +295,6 @@ h1 {
   position: absolute;
   right: 10px;
   top: 150px;
-}
-.carousel-indicators {
-  padding-right: 60px;
 }
 .carousel-caption h1 {
   font-weight: 700;
@@ -497,7 +504,6 @@ fieldset[disabled] .btn-primary.active {
 @media (max-width: 767px) {
   .carousel-caption,
   .carousel-caption.blank {
-    left: 5%;
     top: 80px;
   }
   .carousel-caption h1 {
@@ -808,13 +814,6 @@ a {
 }
 .o-hidden {
   overflow: hidden;
-}
-.carousel-indicators {
-  padding-right: 0;
-}
-section ul li {
-  color: #777c80;
-  font-size: 13px;
 }
 .home {
   padding-bottom: 30px;
