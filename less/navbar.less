@@ -19,24 +19,6 @@
   margin: 0 -15px;
 }
 
-.navbar-default.navbar-scroll {
-  background-color: #fff;
-  border-color: #fff;
-  .nav li a {
-    color: @text-color;
-    &.navy {
-      color: lighten(@navy, 30%);
-      &:hover {
-        color: darken(@navy, 5%);
-
-      }
-    }
-    &:hover {
-      color: @navy;
-    }
-  }
-}
-
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -47,38 +29,56 @@
     display: block;
     font-size: 14px;
     padding: 0 10px;
-    border-radius: 0 0px 5px 5px;
+    border-radius: 0 0 5px 5px;
     font-weight: 700;
     transition: all 0.3s ease-in-out 0s;
     .img-responsive {
       height: 50px;
       .transition();
     }
-    .nav li a {
-      color: @text-color;
-      &.navy {
-        color: lighten(@navy, 30%);
-        &:hover {
-          color: lighten(@navy, 45%);
-
-        }
+  }
+  .nav li a {
+    color: #fff;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 25px;
+    border-top: 6px solid transparent;
+    &.navy {
+      color: lighten(@navy, 30%);
+      &:hover {
+        color: lighten(@navy, 45%);
       }
     }
   }
 }
 
-.navbar-default .nav li a {
-  color: #fff;
-  font-family: 'Open Sans', helvetica, arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+.navbar-default.navbar-scroll {
+  background-color: #fff;
+  border-color: #fff;
+  padding-top: 0;
+  border-bottom: 1px solid @border-color;
+  border-radius: 0;
 
-.navbar-nav > li > a {
-  padding-top: 25px;
-  border-top: 6px solid transparent;
+  // Uncomment this to add box shodow
+  //  -moz-box-shadow:    3px 0 5px #9f9f9f;
+  //  -webkit-box-shadow: 3px 0 5px #9f9f9f;
+  //  box-shadow:         3px 0 5px #9f9f9f;
+  .nav li a {
+    color: @text-color;
+    &.navy {
+      //color: lighten(@navy, 30%);
+      color: @navy;
+      &:hover {
+        color: darken(@navy, 5%);
 
+      }
+    }
+    &:hover {
+      color: @navy;
+    }
+  }
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
@@ -106,18 +106,6 @@
   background-color: transparent;
 }
 
-
-.navbar-wrapper .navbar.navbar-scroll {
-  padding-top: 0;
-  border-bottom: 1px solid @border-color;
-  border-radius: 0;
-
-  // Uncomment this to add box shodow
-  //  -moz-box-shadow:    3px 0 5px #9f9f9f;
-  //  -webkit-box-shadow: 3px 0 5px #9f9f9f;
-  //  box-shadow:         3px 0 5px #9f9f9f;
-
-}
 
 .nav > li > a {
   padding: 25px 10px 15px 10px;

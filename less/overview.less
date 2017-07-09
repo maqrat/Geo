@@ -1,26 +1,55 @@
 .overview {
+  .container-fluid {
+    max-width: 2000px;
+  }
   h2 {
     font-size: 22px;
     font-weight: 200;
     color: @navy;
   }
+  .text-point-l, .text-point-r {
+    text-align: center;
+  }
   .text-point-l {
-    text-align: left;
+    display: none;
   }
-  .text-point-r {
-    text-align: right;
-  }
+
   .v-table {
     .v-row {
       .v-cell {
         display: block;
+        padding: 0;
       }
+    }
+  }
+  .wwc {
+    h2 {
+      position: relative;
+      top: 4%;
+      font-size: 33px;
+      font-weight: 400;
+
+      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF)";/*IE 8*/
+      text-shadow: 2px 2px 8px #FFFFFF;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+      filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF); /*IE 5.5-7*/
+    }
+    p {
+      position: relative;
+      font-size: 17px;
+      bottom: 3%;
     }
   }
 }
 
 @media (min-width: 768px) {
   .overview {
+    .text-point-l {
+      text-align: left;
+      display: block;
+    }
+    .text-point-r {
+      text-align: right;
+    }
     .v-table {
       .v-row {
         .v-cell {
@@ -28,16 +57,16 @@
         }
       }
     }
+    .wwc {
+      h2, p {
+        .absolute-center();
+      }
+    }
   }
 }
 @media (max-width: 767px) {
   .overview {
-    .text-point-r {
-      text-align: center;
-    }
-    .text-point-l {
-      display: none;
-    }
+
     .v-table {
       margin-left: auto;
       margin-right: auto;

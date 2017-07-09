@@ -10,7 +10,7 @@
 // Variables
 //@navy: #1ab394;         // Primary color
 @navy: #0094e7;         // Primary color
-@text-color: #777c80;   // Body text
+@text-color: #5b5f63;   // Body text
 @border-color: #e7eaec; // Border
 
 
@@ -25,6 +25,13 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=@color)";
   text-shadow: 0 0 8px @color;
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=@color);
+}
+.absolute-center (@position:absolute) {
+  position: @position;
+  left: 0;
+  right: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 
@@ -210,7 +217,7 @@ h1 {
     bottom: 10px;
     color: #fff;
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 600;
     z-index: 1000000;
     padding: 0 15px;
     .text-shadow();
