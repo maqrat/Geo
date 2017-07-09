@@ -1,0 +1,303 @@
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+}
+
+.navbar-default.navbar-scroll {
+  background-color: #fff;
+  border-color: #fff;
+  .nav li a {
+    color: @text-color;
+    &.navy {
+      color: lighten(@navy, 30%);
+      &:hover {
+        color: darken(@navy, 5%);
+
+      }
+    }
+    &:hover {
+      color: @navy;
+    }
+  }
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 0.3s ease-in-out 0s;
+  .navbar-brand {
+    color: #fff;
+    height: auto;
+    display: block;
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 0 0px 5px 5px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s;
+    .img-responsive {
+      height: 50px;
+      .transition();
+    }
+    .nav li a {
+      color: @text-color;
+      &.navy {
+        color: lighten(@navy, 30%);
+        &:hover {
+          color: lighten(@navy, 45%);
+
+        }
+      }
+    }
+  }
+}
+
+.navbar-default .nav li a {
+  color: #fff;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  padding-top: 25px;
+  border-top: 6px solid transparent;
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+  background: transparent;
+  color: #fff;
+  border-top: 6px solid @navy;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: @navy;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: #fff;
+}
+
+.navbar-default.navbar-scroll .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: inherit;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+
+.navbar-wrapper .navbar.navbar-scroll {
+  padding-top: 0;
+  border-bottom: 1px solid @border-color;
+  border-radius: 0;
+
+  // Uncomment this to add box shodow
+  //  -moz-box-shadow:    3px 0 5px #9f9f9f;
+  //  -webkit-box-shadow: 3px 0 5px #9f9f9f;
+  //  box-shadow:         3px 0 5px #9f9f9f;
+
+}
+
+.nav > li > a {
+  padding: 25px 10px 15px 10px;
+}
+
+
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: -9px;
+  }
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+  }
+  .navbar-default .navbar-brand:hover {
+    background-color: #fff;
+  }
+  .nav > li > a {
+    padding: 25px 6px 15px 6px;
+  }
+  .navbar-default {
+    &.navbar-scroll {
+      .nav li a {
+        text-shadow: none;
+      }
+      .navbar-brand {
+        padding-top: 0;
+        .img-responsive {
+          height: 77px;
+        }
+      }
+    }
+    .nav li a {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";
+      text-shadow: 0 0 8px #000000;
+      color: #fff;
+      filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
+      &:hover {
+        color: lighten(@navy, 45%);
+      }
+    }
+    .navbar-brand {
+      background-color: #fff;
+      padding: 0;
+      padding-top: 26px;
+      border-radius: 0;
+      .img-responsive {
+        height: 77px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .navbar-default {
+    .nav > li > a {
+      padding: 25px 10px 15px 10px;
+    }
+    .navbar-brand {
+      padding-top: 0;
+      .img-responsive {
+        height: 106px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+    padding: 15px 0;
+  }
+  .navbar-default .navbar-nav > .active > a:focus {
+    background: transparent;
+    color: inherit;
+  }
+  .navbar-default .nav li a {
+    color: @text-color;
+  }
+
+  .navbar-default .nav li a:hover {
+    color: @navy;
+  }
+
+  .navbar-wrapper .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid @border-color;
+    border-radius: 0;
+  }
+
+  .nav > li > a {
+    padding: 25px 10px 15px 10px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 15px 10px;
+  }
+
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+    color: inherit;
+  }
+}
+
+
+//navbar collapsing after 992px
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+    .container {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .navbar-brand {
+      //padding-top: 0;
+      padding: 0 10px;
+      .img-responsive {
+        height: 50px!important;
+      }
+    }
+    .nav li a {
+      color: @text-color;
+      text-shadow: none;
+    }
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+    color: inherit;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: @navy;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    max-height: 340px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 0;
+    width: 100%;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding: 15px 10px;
+  }
+  .collapse.in{
+    display:block !important;
+    overflow-y: auto !important;
+  }
+}
