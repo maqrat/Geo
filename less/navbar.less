@@ -95,17 +95,10 @@
   background: transparent;
   color: #fff;
 }
-
-.navbar-default.navbar-scroll .navbar-nav > .active > a:focus {
+.navbar-default.navbar-scroll .navbar-nav > .active > a:focus, .navbar-default.navbar-scroll .navbar-nav > .active > a:hover {
   background: transparent;
-  color: inherit;
+  color: @text-color;
 }
-
-.navbar-default .navbar-nav>li>a:focus {
-  color: #fff;
-  background-color: transparent;
-}
-
 
 .nav > li > a {
   padding: 25px 10px 15px 10px;
@@ -189,10 +182,10 @@
     border-color: #fff;
     padding: 15px 0;
   }
-  .navbar-default .navbar-nav > .active > a:focus {
-    background: transparent;
-    color: inherit;
-  }
+  //.navbar-default .navbar-nav > .active > a:focus {
+  //  background: transparent;
+  //  color: inherit;
+  //}
   .navbar-default .nav li a {
     color: @text-color;
   }

@@ -77,9 +77,14 @@ h1 {
 .navy-line {
   width: 60px;
   height: 1px;
-  margin: 60px auto 0;
   margin: 40px auto 0;
   border-bottom: 2px solid #0094e7;
+}
+.navy-line-sm {
+  width: 30px;
+  height: 1px;
+  margin: auto;
+  border-bottom: 1px solid #0094e7;
 }
 .navy-bg {
   background-color: #0094e7;
@@ -266,13 +271,14 @@ h1 {
 .home h2 {
   font-size: 24px;
   font-weight: 100;
+  text-align: center;
 }
 .home ul {
-  padding: 0 17px;
+  padding: 0 0 0 22px;
 }
 .home ul li {
   font-weight: 100;
-  padding: 5px 7px;
+  padding: 5px 0px;
   font-size: 20px;
 }
 .services {
@@ -290,9 +296,11 @@ h1 {
 }
 .team-member {
   text-align: center;
+  max-width: 700px;
+  margin: auto;
 }
 .team-member img {
-  margin: auto;
+  margin: 20px auto;
 }
 .social-icon a {
   background: #0094e7;
@@ -327,6 +335,11 @@ h1 {
 }
 .contact a {
   color: #0094e7;
+}
+.contact span.navy,
+.contact a.n-l {
+  font-size: 18px;
+  font-weight: 700;
 }
 .contact .social-icon a {
   background: transparent;
@@ -634,6 +647,9 @@ fieldset[disabled] .btn-primary.active {
 .m-b-xl {
   margin-bottom: 40px;
 }
+.m-b-xl-ex {
+  margin-bottom: 60px;
+}
 .m-b-n-xxs {
   margin-bottom: -1px;
 }
@@ -752,13 +768,10 @@ fieldset[disabled] .btn-primary.active {
   background: transparent;
   color: #fff;
 }
-.navbar-default.navbar-scroll .navbar-nav > .active > a:focus {
+.navbar-default.navbar-scroll .navbar-nav > .active > a:focus,
+.navbar-default.navbar-scroll .navbar-nav > .active > a:hover {
   background: transparent;
-  color: inherit;
-}
-.navbar-default .navbar-nav > li > a:focus {
-  color: #fff;
-  background-color: transparent;
+  color: #5b5f63;
 }
 .nav > li > a {
   padding: 25px 10px 15px 10px;
@@ -834,10 +847,6 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
     border-color: #fff;
     padding: 15px 0;
-  }
-  .navbar-default .navbar-nav > .active > a:focus {
-    background: transparent;
-    color: inherit;
   }
   .navbar-default .nav li a {
     color: #5b5f63;
@@ -933,30 +942,44 @@ fieldset[disabled] .btn-primary.active {
   max-width: 2000px;
 }
 .overview h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 200;
   color: #0094e7;
+}
+.overview p {
+  font-size: 20px;
+  font-weight: 100;
 }
 .overview .text-point-l,
 .overview .text-point-r {
   text-align: center;
 }
 .overview .flex-container {
-  margin-top: 60px;
+  max-width: 700px;
+  margin: 0 auto 60px;
 }
 .overview .wwc h2 {
   position: relative;
-  top: 4%;
   font-size: 33px;
   font-weight: 400;
+  margin-top: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF)";
   text-shadow: 2px 2px 8px #FFFFFF;
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF);
 }
 .overview .wwc p {
   position: relative;
-  font-size: 17px;
-  bottom: 3%;
+  font-size: 22px;
+  bottom: 20px;
+  color: #434648;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2)";
+  text-shadow: 2px 2px 3px #C2C2C2;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2);
+}
+@media (min-width: 768px) {
+  .overview .wwc p {
+    font-weight: 400;
+  }
 }
 @media (min-width: 992px) {
   .overview .text-point-l {
@@ -966,6 +989,7 @@ fieldset[disabled] .btn-primary.active {
     text-align: right;
   }
   .overview .flex-container {
+    max-width: 1450px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -983,5 +1007,19 @@ fieldset[disabled] .btn-primary.active {
     right: 0;
     margin-right: 0;
     margin-left: 0;
+  }
+  .overview .wwc p {
+    bottom: 2%;
+    font-size: 20px;
+  }
+  .overview .wwc img {
+    max-width: 85%;
+  }
+}
+@media (min-width: 1400px) {
+  .overview .wwc p {
+    bottom: 4%;
+    font-weight: 600;
+    font-size: 22px;
   }
 }
