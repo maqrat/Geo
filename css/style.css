@@ -701,9 +701,8 @@ fieldset[disabled] .btn-primary.active {
   margin: 0 -15px;
 }
 .navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-  transition: all 0.3s ease-in-out 0s;
+  background-color: #fff;
+  border-color: #fff;
 }
 .navbar-default .navbar-brand {
   color: #fff;
@@ -711,9 +710,11 @@ fieldset[disabled] .btn-primary.active {
   display: block;
   font-size: 14px;
   padding: 0 10px;
-  border-radius: 0 0 5px 5px;
   font-weight: 700;
   transition: all 0.3s ease-in-out 0s;
+  margin-left: 0!important;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
 }
 .navbar-default .navbar-brand .img-responsive {
   height: 50px;
@@ -721,182 +722,149 @@ fieldset[disabled] .btn-primary.active {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.navbar-default .nav li a {
-  color: #fff;
+.navbar-default .nav.navbar-nav > li.active > a {
+  background: transparent;
+  color: #0094e7;
+  border-top: 0;
+  text-shadow: none;
+}
+.navbar-default .nav.navbar-nav > li.active > a:hover {
+  background: transparent;
+  color: #0073b4;
+  border-top: 0;
+}
+.navbar-default .nav.navbar-nav > li.active > a:focus {
+  background: transparent;
+  color: #5b5f63;
+}
+.navbar-default .nav.navbar-nav > li > a {
+  color: #5b5f63;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding-top: 25px;
-  border-top: 6px solid transparent;
+  border-top: 0;
+  padding: 25px 10px 15px 10px;
 }
-.navbar-default .nav li a.navy {
-  color: #81d2ff;
+.navbar-default .nav.navbar-nav > li > a:hover {
+  color: #0073b4;
 }
-.navbar-default .nav li a.navy:hover {
-  color: #ceedff;
+.navbar-default .nav.navbar-nav > li > a.navy {
+  color: #0094e7;
+}
+.navbar-default .nav.navbar-nav > li > a.navy:hover {
+  color: #0073b4;
 }
 .navbar-default.navbar-scroll {
-  background-color: #fff;
-  border-color: #fff;
-  padding-top: 0;
   border-bottom: 1px solid #e7eaec;
   border-radius: 0;
 }
-.navbar-default.navbar-scroll .nav li a {
+.navbar-default.navbar-scroll .nav.navbar-nav > li.active > a {
+  color: #0094e7;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:hover {
+  color: #0073b4;
+  background: transparent;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:focus {
+  color: #0094e7;
+  background: transparent;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a {
   color: #5b5f63;
 }
-.navbar-default.navbar-scroll .nav li a.navy {
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy {
   color: #0094e7;
 }
-.navbar-default.navbar-scroll .nav li a.navy:hover {
-  color: #0084ce;
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy:hover {
+  color: #0073b4;
 }
-.navbar-default.navbar-scroll .nav li a:hover {
-  color: #0094e7;
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
+  color: #0073b4;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover {
-  background: transparent;
-  color: #fff;
-  border-top: 6px solid #0094e7;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: #0094e7;
-}
-.navbar-default .navbar-nav > .active > a:focus {
-  background: transparent;
-  color: #fff;
-}
-.navbar-default.navbar-scroll .navbar-nav > .active > a:focus,
-.navbar-default.navbar-scroll .navbar-nav > .active > a:hover {
-  background: transparent;
-  color: #5b5f63;
-}
-.nav > li > a {
-  padding: 25px 10px 15px 10px;
-}
-@media (min-width: 768px) {
-  .navbar-right {
-    margin-right: -9px;
+@media (min-width: 992px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
   }
-  .navbar-wrapper {
-    margin-top: 20px;
+  .navbar-default .navbar-brand {
+    padding: 0;
   }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .navbar > .container .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: 0;
+  .navbar-default .navbar-brand .img-responsive {
+    height: 106px;
     border-radius: 0 0 15px 15px;
-    overflow: hidden;
   }
-  .navbar-default .navbar-brand:hover {
+  .navbar-default .nav.navbar-nav > li.active > a {
+    color: #fff;
+    border-top: 6px solid #0094e7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";
+    text-shadow: 0 0 8px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
+  }
+  .navbar-default .nav.navbar-nav > li.active > a:hover {
+    color: #fff;
+    border-top: 6px solid #0094e7;
+  }
+  .navbar-default .nav.navbar-nav > li.active > a:focus {
+    color: #fff;
+  }
+  .navbar-default .nav.navbar-nav > li > a {
+    color: #fff;
+    border-top: 6px solid transparent;
+    padding: 25px 10px 15px 10px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";
+    text-shadow: 0 0 8px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
+  }
+  .navbar-default .nav.navbar-nav > li > a:hover {
+    color: #ceedff;
+  }
+  .navbar-default .nav.navbar-nav > li > a.navy {
+    color: #81d2ff;
+  }
+  .navbar-default .nav.navbar-nav > li > a.navy:hover {
+    color: #ceedff;
+  }
+  .navbar-default.navbar-scroll {
     background-color: #fff;
-  }
-  .nav > li > a {
-    padding: 25px 6px 15px 6px;
-  }
-  .navbar-default.navbar-scroll .nav li a {
-    text-shadow: none;
-  }
-  .navbar-default.navbar-scroll .navbar-brand {
+    border-color: #fff;
     padding-top: 0;
+    border-bottom: 1px solid #e7eaec;
+    border-radius: 0;
   }
   .navbar-default.navbar-scroll .navbar-brand .img-responsive {
     height: 77px;
   }
-  .navbar-default .nav li a {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";
-    text-shadow: 0 0 8px #000000;
-    color: #fff;
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
-  }
-  .navbar-default .nav li a:hover {
-    color: #ceedff;
-  }
-  .navbar-default .navbar-brand {
-    background-color: #fff;
-    padding: 0;
-    padding-top: 26px;
-    border-radius: 0;
-  }
-  .navbar-default .navbar-brand .img-responsive {
-    height: 77px;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-default .nav > li > a {
-    padding: 25px 10px 15px 10px;
-  }
-  .navbar-default .navbar-brand {
-    padding-top: 0;
-  }
-  .navbar-default .navbar-brand .img-responsive {
-    height: 106px;
-  }
-}
-@media (max-width: 767px) {
-  .navbar-default {
-    background-color: #fff;
-    border-color: #fff;
-    padding: 15px 0;
-  }
-  .navbar-default .nav li a {
+  .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a {
     color: #5b5f63;
   }
-  .navbar-default .nav li a:hover {
+  .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:hover {
+    color: #5b5f63;
+    background: transparent;
+  }
+  .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:focus {
+    color: #5b5f63;
+    background: transparent;
+  }
+  .navbar-default.navbar-scroll .nav.navbar-nav > li > a {
+    color: #5b5f63;
+    text-shadow: none;
+  }
+  .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
+    color: #0084ce;
+  }
+  .navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy {
     color: #0094e7;
   }
-  .navbar-wrapper .navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: 1px solid #e7eaec;
-    border-radius: 0;
-  }
-  .nav > li > a {
-    padding: 25px 10px 15px 10px;
-  }
-  .navbar-nav > li > a {
-    padding: 15px 10px;
-  }
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover {
-    color: inherit;
+  .navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy:hover {
+    color: #0084ce;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .navbar-default {
-    background-color: #fff;
-    border-color: #fff;
-  }
   .navbar-default .container {
     width: 100%;
     padding: 0;
     overflow: hidden;
-  }
-  .navbar-default .navbar-brand {
-    padding: 0 10px;
-  }
-  .navbar-default .navbar-brand .img-responsive {
-    height: 50px!important;
-  }
-  .navbar-default .nav li a {
-    color: #5b5f63;
-    text-shadow: none;
-  }
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover {
-    color: inherit;
-  }
-  .navbar-default .navbar-nav > li > a:hover {
-    color: #0094e7;
   }
   .navbar-header {
     float: none;
@@ -918,6 +886,7 @@ fieldset[disabled] .btn-primary.active {
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
+    border-bottom: 1px solid #e7eaec;
   }
   .navbar-collapse.collapse {
     display: none!important;
@@ -929,9 +898,6 @@ fieldset[disabled] .btn-primary.active {
   }
   .navbar-nav > li {
     float: none;
-  }
-  .navbar-nav > li > a {
-    padding: 15px 10px;
   }
   .collapse.in {
     display: block !important;
