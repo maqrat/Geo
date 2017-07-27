@@ -7,14 +7,14 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 body {
-  color: #5b5f63;
+  color: black;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
 span.navy {
   color: #0094e7;
 }
 p.text-color {
-  color: #5b5f63;
+  color: black;
 }
 a {
   cursor: pointer;
@@ -30,11 +30,11 @@ a.navy-link:hover {
   color: #0087d3;
 }
 section p {
-  color: #5b5f63;
+  color: black;
   font-size: 13px;
 }
 section ul li {
-  color: #5b5f63;
+  color: black;
   font-size: 14px;
 }
 address {
@@ -87,7 +87,7 @@ h1 {
   border-bottom: 1px solid #0094e7;
 }
 .coming-soon {
-  color: #9b9fa3;
+  color: #404040;
 }
 .navy-bg {
   background-color: #0094e7;
@@ -285,7 +285,7 @@ h1 {
 }
 .home h2 {
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
 }
 .home ul {
@@ -724,6 +724,9 @@ fieldset[disabled] .btn-primary.active {
   padding-right: 0;
   padding-left: 0;
 }
+.navbar-fixed-top .navbar-bg {
+  display: none;
+}
 .navbar-default {
   background-color: #fff;
   border-color: #fff;
@@ -742,6 +745,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-default .navbar-brand .img-responsive {
   height: 50px;
+  position: absolute;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -759,10 +763,10 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-default .nav.navbar-nav > li.active > a:focus {
   background: transparent;
-  color: #5b5f63;
+  color: black;
 }
 .navbar-default .nav.navbar-nav > li > a {
-  color: #5b5f63;
+  color: black;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -783,6 +787,12 @@ fieldset[disabled] .btn-primary.active {
   border-bottom: 1px solid #e7eaec;
   border-radius: 0;
 }
+.navbar-default.navbar-scroll.navbar-fixed-top .navbar-bg {
+  display: none;
+}
+.navbar-default.navbar-scroll .navbar-brand .img-responsive {
+  position: static;
+}
 .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a {
   color: #0094e7;
 }
@@ -795,7 +805,7 @@ fieldset[disabled] .btn-primary.active {
   background: transparent;
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a {
-  color: #5b5f63;
+  color: black;
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy {
   color: #0094e7;
@@ -807,6 +817,15 @@ fieldset[disabled] .btn-primary.active {
   color: #0073b4;
 }
 @media (min-width: 992px) {
+  .navbar-fixed-top .navbar-bg {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 78px;
+    background-color: rgba(0, 34, 53, 0.31);
+  }
   .navbar-default {
     background-color: transparent;
     border-color: transparent;
@@ -863,18 +882,18 @@ fieldset[disabled] .btn-primary.active {
     height: 77px;
   }
   .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a {
-    color: #5b5f63;
+    color: black;
   }
   .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:hover {
-    color: #5b5f63;
+    color: black;
     background: transparent;
   }
   .navbar-default.navbar-scroll .nav.navbar-nav > li.active > a:focus {
-    color: #5b5f63;
+    color: black;
     background: transparent;
   }
   .navbar-default.navbar-scroll .nav.navbar-nav > li > a {
-    color: #5b5f63;
+    color: black;
     text-shadow: none;
   }
   .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
@@ -936,7 +955,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .overview h2 {
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 400;
   color: #0094e7;
 }
 .overview p {
@@ -970,7 +989,7 @@ fieldset[disabled] .btn-primary.active {
 p.bottom-text {
   font-size: 22px;
   font-weight: 100;
-  color: #434648;
+  color: #000000;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2)";
   text-shadow: 2px 2px 3px #C2C2C2;
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2);
