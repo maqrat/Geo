@@ -18,6 +18,9 @@
   .flex-container {
     max-width: 700px;
     margin: 0 auto 60px;
+    img {
+      max-height: 590px;
+    }
   }
 
   .wwc {
@@ -31,24 +34,23 @@
       text-shadow: 2px 2px 8px #FFFFFF;
       filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#FFFFFF);
     }
-    p {
-      position: relative;
-      font-size: 22px;
+    p.bottom-text {
       bottom: 20px;
-      color: darken(@text-color, 10%);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2)";
-      text-shadow: 2px 2px 3px #C2C2C2;
-      filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2);
+      position: relative;
     }
   }
 }
+p.bottom-text {
+  font-size: 22px;
+  font-weight: 100;
+  color: darken(@text-color, 10%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2)";
+  text-shadow: 2px 2px 3px #C2C2C2;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#C2C2C2);
+}
 @media (min-width: 768px) {
-  .overview {
-    .wwc {
-      p {
-        font-weight: 400;
-      }
-    }
+  p.bottom-text {
+    font-weight: 400;
   }
 }
 @media (min-width: 992px) {
@@ -72,13 +74,13 @@
       flex-direction: row-reverse;
     }
     .wwc {
-      h2, p {
+      h2 {
         .absolute-center();
       }
-      p {
+      p.bottom-text {
+        .absolute-center();
         bottom: 2%;
         font-size: 20px;
-
       }
       img {
         max-width: 85%;
@@ -89,13 +91,13 @@
 @media (min-width: 1400px) {
   .overview {
     .wwc {
-      p {
+      p.bottom-text {
         bottom: 4%;
-        font-weight: 600;
-        font-size: 22px;
       }
     }
   }
-}
-@media (max-width: 767px) {
+  p.bottom-text {
+    font-weight: 600;
+    font-size: 22px;
+  }
 }
