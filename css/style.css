@@ -45,6 +45,9 @@ h1 {
   font-size: 30px;
   font-weight: 200;
 }
+.background-page {
+  padding-top: 77px;
+}
 .v-table {
   display: table;
   width: 100%;
@@ -278,6 +281,22 @@ h1 {
   text-decoration: none;
   color: inherit;
 }
+/*Carousel small*/
+.carousel.carousel-sm {
+  height: 200px;
+}
+.carousel.carousel-sm .item {
+  height: 200px;
+}
+.carousel.carousel-sm .item img {
+  height: 200px;
+}
+.carousel.carousel-sm .header-back {
+  height: 200px;
+}
+.carousel.carousel-sm .carousel-caption.blank {
+  top: 0;
+}
 /* Sections
 ------------------------- */
 .home {
@@ -447,6 +466,9 @@ fieldset[disabled] .btn-primary.active {
     font-size: 14px;
     line-height: 1.4;
   }
+  .carousel.carousel-sm .carousel-caption.blank {
+    top: 30px;
+  }
   .featurette-heading {
     font-size: 50px;
   }
@@ -469,6 +491,11 @@ fieldset[disabled] .btn-primary.active {
   }
   .contact h4 {
     margin-top: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .carousel.carousel-sm .carousel-caption.blank {
+    padding-top: 0;
   }
 }
 /* MARGINS & PADDINGS
@@ -719,7 +746,6 @@ fieldset[disabled] .btn-primary.active {
   left: 0;
   z-index: 20;
 }
-/* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
   padding-right: 0;
   padding-left: 0;
@@ -816,6 +842,41 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
   color: #0073b4;
 }
+.navbar-default.navbar-sm {
+  background-color: #fff;
+  border-color: #fff;
+  padding-top: 0;
+  border-bottom: 1px solid #e7eaec;
+  border-radius: 0;
+}
+.navbar-default.navbar-sm .navbar-brand .img-responsive {
+  height: 77px;
+  position: static;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li.active > a {
+  color: #0094e7;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li.active > a:hover {
+  color: #0073b4;
+  background: transparent;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li.active > a:focus {
+  color: #0094e7;
+  background: transparent;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li > a {
+  color: black;
+  text-shadow: none;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li > a.navy {
+  color: #0094e7;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li > a.navy:hover {
+  color: #0073b4;
+}
+.navbar-default.navbar-sm .nav.navbar-nav > li > a:hover {
+  color: #0073b4;
+}
 @media (min-width: 992px) {
   .navbar-fixed-top .navbar-bg {
     position: absolute;
@@ -843,9 +904,6 @@ fieldset[disabled] .btn-primary.active {
   .navbar-default .nav.navbar-nav > li.active > a {
     color: #fff;
     border-top: 6px solid #0094e7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";
-    text-shadow: 0 0 8px #000000;
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000);
   }
   .navbar-default .nav.navbar-nav > li.active > a:hover {
     color: #fff;
@@ -1045,5 +1103,134 @@ p.bottom-text {
   p.bottom-text {
     font-weight: 600;
     font-size: 22px;
+  }
+}
+a.link-to-software {
+  text-decoration: none;
+  float: right;
+}
+/* iCheck plugin Square skin, blue
+----------------------------------- */
+.icheckbox_square-blue,
+.iradio_square-blue {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: url(../img/blue.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.icheckbox_square-blue {
+  background-position: 0 0;
+}
+.icheckbox_square-blue.hover {
+  background-position: -24px 0;
+}
+.icheckbox_square-blue.checked {
+  background-position: -48px 0;
+}
+.icheckbox_square-blue.disabled {
+  background-position: -72px 0;
+  cursor: default;
+}
+.icheckbox_square-blue.checked.disabled {
+  background-position: -96px 0;
+}
+.iradio_square-blue {
+  background-position: -120px 0;
+}
+.iradio_square-blue.hover {
+  background-position: -144px 0;
+}
+.iradio_square-blue.checked {
+  background-position: -168px 0;
+}
+.iradio_square-blue.disabled {
+  background-position: -192px 0;
+  cursor: default;
+}
+.iradio_square-blue.checked.disabled {
+  background-position: -216px 0;
+}
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-resolution: 1.25dppx) {
+  .icheckbox_square-blue,
+  .iradio_square-blue {
+    background-image: url(../img/blue@2x.png);
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+  }
+}
+.filter {
+  border-right: none;
+}
+.filter .filter-header,
+.filter .filter-footer {
+  position: relative;
+  min-height: 31px;
+}
+.filter .filter-header h3,
+.filter .filter-footer h3 {
+  margin: 5px 0;
+  cursor: pointer;
+}
+.filter .filter-header h3 i.visible-sm.visible-xs,
+.filter .filter-footer h3 i.visible-sm.visible-xs {
+  display: inline-block !important;
+  position: absolute;
+  top: 3px;
+  left: 80px;
+}
+.filter .filter-header h3 i,
+.filter .filter-footer h3 i {
+  transform: rotate(0deg);
+  transition: transform .3s linear;
+}
+.filter .filter-header h3 i.open,
+.filter .filter-footer h3 i.open {
+  transform: rotate(180deg);
+  transition: transform .3s linear;
+}
+.filter .filter-header button,
+.filter .filter-footer button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.filter .filter-body {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+  display: none;
+}
+.filter h4 {
+  margin: 25px 0 16px;
+}
+.filter ul li {
+  padding: 4px 0 4px 0;
+}
+.filter ul li label {
+  font-weight: 100;
+  padding-left: 10px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .filter {
+    border-right: 1px solid #ddd;
+  }
+  .filter .filter-header h3,
+  .filter .filter-footer h3 {
+    cursor: auto;
+  }
+  .filter .filter-header h3 .visible-sm.visible-xs,
+  .filter .filter-footer h3 .visible-sm.visible-xs {
+    display: none!important;
+  }
+  .filter .filter-body {
+    border-top: none;
+    display: block;
   }
 }

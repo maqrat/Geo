@@ -88,6 +88,10 @@ h1 {
   font-weight: 200;
 }
 
+.background-page {
+  padding-top: 77px;
+}
+
 // vertical centering
 .v-table {
   display: table;
@@ -350,6 +354,23 @@ h1 {
   color: inherit;
 }
 
+/*Carousel small*/
+.carousel.carousel-sm {
+  height: 200px;
+  .item {
+    height: 200px;
+    img {
+      height: 200px;
+    }
+  }
+  .header-back {
+    height: 200px;
+  }
+  .carousel-caption.blank {
+    top: 0;
+  }
+}
+
 
 /* Sections
 ------------------------- */
@@ -533,6 +554,12 @@ h1 {
     line-height: 1.4;
   }
 
+  .carousel.carousel-sm {
+    .carousel-caption.blank {
+      top: 30px;
+    }
+  }
+
   .featurette-heading {
     font-size: 50px;
   }
@@ -565,6 +592,13 @@ h1 {
   }
 }
 
+@media (max-width:500px) {
+  .carousel.carousel-sm {
+    .carousel-caption.blank {
+      padding-top: 0;
+    }
+  }
+}
 /* MARGINS & PADDINGS
 -------------------------------------------------- */
 
