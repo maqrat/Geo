@@ -46,7 +46,7 @@ h1 {
   font-weight: 200;
 }
 .background-page {
-  padding-top: 77px;
+  padding-top: 50px;
 }
 .v-table {
   display: table;
@@ -850,7 +850,7 @@ fieldset[disabled] .btn-primary.active {
   border-radius: 0;
 }
 .navbar-default.navbar-sm .navbar-brand .img-responsive {
-  height: 77px;
+  height: 50px;
   position: static;
 }
 .navbar-default.navbar-sm .nav.navbar-nav > li.active > a {
@@ -867,6 +867,7 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default.navbar-sm .nav.navbar-nav > li > a {
   color: black;
   text-shadow: none;
+  padding: 11px 10px 11px 10px;
 }
 .navbar-default.navbar-sm .nav.navbar-nav > li > a.navy {
   color: #0094e7;
@@ -876,6 +877,9 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-default.navbar-sm .nav.navbar-nav > li > a:hover {
   color: #0073b4;
+}
+.navbar-default.navbar-scroll.navbar-sm .nav.navbar-nav > li > a {
+  padding: 25px 10px 15px 10px;
 }
 @media (min-width: 992px) {
   .navbar-fixed-top .navbar-bg {

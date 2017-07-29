@@ -137,7 +137,7 @@
   border-radius: 0;
   .navbar-brand {
     .img-responsive {
-      height: 77px;
+      height: 50px;
       position: static;
     }
   }
@@ -160,6 +160,7 @@
       &> a {
         color: @text-color;
         text-shadow: none;
+        padding: 11px 10px 11px 10px;
         &.navy {
           color: @navy;
           &:hover {
@@ -170,6 +171,15 @@
         &:hover {
           color: darken(@navy, 10%);
         }
+      }
+    }
+  }
+}
+.navbar-default.navbar-scroll.navbar-sm {
+  .nav.navbar-nav {
+    &>li {
+      &> a {
+        padding: 25px 10px 15px 10px;
       }
     }
   }
