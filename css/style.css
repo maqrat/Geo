@@ -842,6 +842,7 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
   color: #0073b4;
 }
+/*navbar-sm*/
 .navbar-default.navbar-sm {
   background-color: #fff;
   border-color: #fff;
@@ -1229,8 +1230,8 @@ a.link-to-software {
   .filter .filter-footer h3 {
     cursor: auto;
   }
-  .filter .filter-header h3 .visible-sm.visible-xs,
-  .filter .filter-footer h3 .visible-sm.visible-xs {
+  .filter .filter-header h3 i.visible-sm.visible-xs,
+  .filter .filter-footer h3 i.visible-sm.visible-xs {
     display: none!important;
   }
   .filter .filter-body {
