@@ -2,3 +2,52 @@ a.link-to-software {
   text-decoration:none;
   float: right;
 }
+.col-md-left-affix-container {
+  border-right: none;
+}
+.col-md-right {
+  .table-responsive {
+    border-left: none;
+    margin-left: 0;
+  }
+  .table {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-left-affix-container {
+    width: 260px;
+    border-right: 1px solid #ddd;
+    position: relative;
+    .filter {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      //left: 15px;
+    }
+    .filter-fixed {
+      top: 75px;
+      z-index: 100;
+      position: fixed;
+      left: inherit;
+      width: 229px;
+    }
+    .filter-body {
+      .col-xs-6 {
+        padding: 0;
+      }
+    }
+  }
+  .col-md-right {
+    padding-left: 260px;
+    float: none;
+    width: 100%;
+    .table-responsive {
+      border-left: 1px solid #ddd;
+      margin-left: -1px;
+    }
+    .table {
+      margin-left: 15px;
+    }
+  }
+}

@@ -1116,6 +1116,50 @@ a.link-to-software {
   text-decoration: none;
   float: right;
 }
+.col-md-left-affix-container {
+  border-right: none;
+}
+.col-md-right .table-responsive {
+  border-left: none;
+  margin-left: 0;
+}
+.col-md-right .table {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .col-md-left-affix-container {
+    width: 260px;
+    border-right: 1px solid #ddd;
+    position: relative;
+  }
+  .col-md-left-affix-container .filter {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+  }
+  .col-md-left-affix-container .filter-fixed {
+    top: 75px;
+    z-index: 100;
+    position: fixed;
+    left: inherit;
+    width: 229px;
+  }
+  .col-md-left-affix-container .filter-body .col-xs-6 {
+    padding: 0;
+  }
+  .col-md-right {
+    padding-left: 260px;
+    float: none;
+    width: 100%;
+  }
+  .col-md-right .table-responsive {
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+  }
+  .col-md-right .table {
+    margin-left: 15px;
+  }
+}
 /* iCheck plugin Square skin, blue
 ----------------------------------- */
 .icheckbox_square-blue,
@@ -1173,7 +1217,9 @@ a.link-to-software {
   }
 }
 .filter {
-  border-right: none;
+  overflow: hidden;
+  position: static;
+  margin: 0;
 }
 .filter .filter-header,
 .filter .filter-footer {
@@ -1210,8 +1256,8 @@ a.link-to-software {
 }
 .filter .filter-body {
   border-top: 1px solid #ddd;
-  margin: 20px 0;
   display: none;
+  overflow: hidden;
 }
 .filter h4 {
   margin: 25px 0 16px;
@@ -1226,7 +1272,8 @@ a.link-to-software {
 }
 @media (min-width: 992px) {
   .filter {
-    border-right: 1px solid #ddd;
+    position: absolute;
+    margin: 0 15px 0 0;
   }
   .filter .filter-header h3,
   .filter .filter-footer h3 {
@@ -1238,7 +1285,7 @@ a.link-to-software {
   }
   .filter .filter-body {
     border-top: none;
-    display: block;
+    display: block!important;
   }
 }
 /* Slider */

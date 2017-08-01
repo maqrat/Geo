@@ -1,5 +1,7 @@
 .filter {
-  border-right: none;
+  overflow: hidden;
+  position: static;
+  margin: 0;
   .filter-header, .filter-footer {
     position: relative;
     min-height: 31px;
@@ -30,8 +32,8 @@
   }
   .filter-body {
     border-top: 1px solid #ddd;
-    margin: 20px 0;
     display: none;
+    overflow: hidden;
   }
   h4 {
     margin: 25px 0 16px;
@@ -49,7 +51,8 @@
 }
 @media (min-width:992px) {
   .filter {
-    border-right: 1px solid #ddd;
+    position: absolute;
+    margin: 0 15px 0 0;
     .filter-header, .filter-footer {
       h3 {
         cursor: auto;
@@ -60,7 +63,7 @@
     }
     .filter-body {
       border-top: none;
-      display: block;
+      display: block!important;
     }
   }
 }
