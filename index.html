@@ -810,6 +810,15 @@
             event.preventDefault();
             $("#navbar").collapse('hide');
         });
+        if(window.location.hash && window.location.hash !== '') {
+            var section = $(window.location.hash);
+            if(section.length) {
+                $('html, body').stop().animate({
+                    scrollTop: section.offset().top - 50
+                }, 500);
+            }
+
+        }
     });
 
     var cbpAnimatedHeader = (function () {
@@ -843,6 +852,7 @@
         }
 
         init();
+        scrollY();
 
     })();
 

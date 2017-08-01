@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95ed65f5-c793-4216-9457-dcb9d1ba696f" name="Default" comment="slick, software partly faxed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/slick/slick.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/slick/slick.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/slick/slick.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/brands/agisoft_logo-w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/brands/bundle_adjustment-w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/brands/ic_logo-w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/brands/logo-racurs-w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/brands/super-map-logo-w.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/slick/slick.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/slick/slick.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/brands-carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/slick/slick-theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/slick/slick.less" />
+    <list default="true" id="95ed65f5-c793-4216-9457-dcb9d1ba696f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/style.less" afterPath="$PROJECT_DIR$/less/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/theme.less" afterPath="$PROJECT_DIR$/less/theme.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/software.html" afterPath="$PROJECT_DIR$/software.html" />
     </list>
     <ignored path="GeoCloud.iws" />
@@ -48,21 +30,26 @@
       <file leaf-file-name="software.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="685">
+              <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#14755#15633#0" expanded="false" />
+                <element signature="n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#address#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brands-carousel.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="brands-carousel.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/brands-carousel.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="721">
@@ -72,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="798" column="8" selection-start-line="798" selection-start-column="8" selection-end-line="801" selection-end-column="11" />
+            <state relative-caret-position="402">
+              <caret line="812" column="31" selection-start-line="812" selection-start-column="11" selection-end-line="812" selection-end-column="31" />
               <folding>
                 <element signature="n#button#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -159,21 +146,22 @@
                 <element signature="n#address#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1501578939834" expanded="false" signature="22394:22517" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27234:29579" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27302:29544" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27346:27910" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27391:27865" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27954:29503" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="27999:28465" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="28510:28980" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="28883:28934" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="29025:29458" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="34520:34668" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="34733:35129" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="34770:34853" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="34890:34974" ph="..." />
-                <marker date="1501578939834" expanded="false" signature="35011:35095" ph="..." />
+                <element signature="e#39958#40855#0" expanded="false" />
+                <marker date="1501598528914" expanded="false" signature="22394:22517" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27234:29579" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27302:29544" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27346:27910" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27391:27865" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27954:29503" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="27999:28465" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="28510:28980" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="28883:28934" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="29025:29458" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="34520:34668" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="34733:35129" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="34770:34853" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="34890:34974" ph="..." />
+                <marker date="1501598528914" expanded="false" signature="35011:35095" ph="..." />
               </folding>
             </state>
           </provider>
@@ -412,12 +400,12 @@
         <option value="$PROJECT_DIR$/less/navbar.less" />
         <option value="$PROJECT_DIR$/less/filter.less" />
         <option value="$PROJECT_DIR$/less/theme.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/less/slick/slick.less" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/less/slick/slick-theme.less" />
-        <option value="$PROJECT_DIR$/software.html" />
         <option value="$PROJECT_DIR$/less/brands-carousel.less" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/software.html" />
       </list>
     </option>
   </component>
@@ -474,6 +462,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GeoCloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeoCloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeoCloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeoCloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeoCloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,7 +654,7 @@
       <workItem from="1501572352776" duration="3061000" />
       <workItem from="1501575723122" duration="180000" />
       <workItem from="1501575921403" duration="73000" />
-      <workItem from="1501576045611" duration="14281000" />
+      <workItem from="1501576045611" duration="16724000" />
     </task>
     <task id="LOCAL-00001" summary="base structure">
       <created>1499014767895</created>
@@ -804,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501319018042</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="slick, software partly faxed">
+      <created>1501595854007</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1501595854007</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179818000" />
+    <option name="totallyTimeSpent" value="182261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,7 +850,7 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16593887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12882096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6764092" sideWeight="0.5043668" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49373695" sideWeight="0.4967249" order="9" side_tool="false" content_ui="tabs" />
@@ -1177,10 +1204,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/less/slick/slick.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/slick/slick-theme.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/navbar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="25" />
+          <folding>
+            <element signature="e#320#1625#0" expanded="false" />
+            <element signature="e#751#1623#0" expanded="false" />
+            <element signature="e#1887#2423#0" expanded="false" />
+            <element signature="e#2704#3305#0" expanded="false" />
+            <element signature="e#4919#5788#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/brands-carousel.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#address#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="798" column="8" selection-start-line="798" selection-start-column="8" selection-end-line="801" selection-end-column="11" />
+        <state relative-caret-position="402">
+          <caret line="812" column="31" selection-start-line="812" selection-start-column="11" selection-end-line="812" selection-end-column="31" />
           <folding>
             <element signature="n#button#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1263,83 +1356,23 @@
             <element signature="n#address#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#section#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1501578939834" expanded="false" signature="22394:22517" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27234:29579" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27302:29544" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27346:27910" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27391:27865" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27954:29503" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="27999:28465" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="28510:28980" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="28883:28934" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="29025:29458" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="34520:34668" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="34733:35129" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="34770:34853" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="34890:34974" ph="..." />
-            <marker date="1501578939834" expanded="false" signature="35011:35095" ph="..." />
+            <element signature="e#39958#40855#0" expanded="false" />
+            <marker date="1501598528914" expanded="false" signature="22394:22517" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27234:29579" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27302:29544" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27346:27910" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27391:27865" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27954:29503" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="27999:28465" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="28510:28980" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="28883:28934" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="29025:29458" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="34520:34668" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="34733:35129" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="34770:34853" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="34890:34974" ph="..." />
+            <marker date="1501598528914" expanded="false" signature="35011:35095" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/slick/slick.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/slick/slick-theme.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/software.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#14755#15633#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/navbar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="25" />
-          <folding>
-            <element signature="e#320#1625#0" expanded="false" />
-            <element signature="e#751#1623#0" expanded="false" />
-            <element signature="e#1887#2423#0" expanded="false" />
-            <element signature="e#2704#3305#0" expanded="false" />
-            <element signature="e#4919#5788#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/brands-carousel.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
