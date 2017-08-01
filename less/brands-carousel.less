@@ -1,0 +1,76 @@
+.container-brands-carousel {
+  height: 180px;
+  background-color: #003169;
+  background-image: url("../img/bg.jpg");
+  color: #fff;
+  background-size: cover;
+  background-position: top;
+  border-top: 7px solid black;
+  &>.container-fluid {
+    max-width: 1000px;
+  }
+  .carousel-caption {
+    text-align: center;
+    top: 0;
+    padding: 0;
+    h1 {
+      font-weight: 700;
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      text-shadow: none;
+      letter-spacing: 0px;
+    }
+  }
+  img {
+    max-height: 95px;
+    margin: auto;
+    //-webkit-filter: invert(.8);
+    //filter: invert(.8);
+    &.bundle_adjustment-w {
+      max-height: 100px;
+    }
+    &.super-map-logo-w {
+      margin-top: 11px;
+    }
+    &.agisoft_logo-w {
+      max-height: 79px;
+      margin-top: 29px;
+    }
+    &.ic_logo-w {
+      max-height: 112px;
+      margin-top: 9px;
+    }
+    &.logo-racurs-w {
+      margin-top: 19px;
+    }
+  }
+  .slick-list {
+    opacity: 0.95;
+    margin-top: 4px;
+  }
+  .slick-dots {
+    bottom: 5px;
+    li {
+      margin: 0000
+    }
+  }
+  .slick-next {
+    right: -20px;
+  }
+  .slick-prev {
+    left: -20px;
+  }
+  .slick-prev, .slick-next {
+    top: 32%;
+  }
+}
+@media (max-width: 500px) {
+  .container-brands-carousel {
+    .carousel-caption {
+      h1 {
+        font-size: 15px;
+      }
+    }
+  }
+}
