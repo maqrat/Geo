@@ -1122,9 +1122,6 @@ a.link-to-software {
   text-decoration: none;
   float: right;
 }
-#page-wrapper {
-  position: relative;
-}
 .col-md-left-affix-container {
   border-right: none;
   background-color: #fff;
@@ -1191,9 +1188,6 @@ a.link-to-software {
   .col-md-right .table-responsive {
     border-left: 1px solid #ddd;
     margin-left: -1px;
-  }
-  .col-md-right .table {
-    margin-left: 15px;
   }
 }
 /* iCheck plugin Square skin, blue

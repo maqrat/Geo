@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95ed65f5-c793-4216-9457-dcb9d1ba696f" name="Default" comment="">
+    <list default="true" id="95ed65f5-c793-4216-9457-dcb9d1ba696f" name="Default" comment="filter position on desktop and mobile">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/inspinia.js" afterPath="$PROJECT_DIR$/js/inspinia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/filter.less" afterPath="$PROJECT_DIR$/less/filter.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/navbar.less" afterPath="$PROJECT_DIR$/less/navbar.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/software.less" afterPath="$PROJECT_DIR$/less/software.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/theme.less" afterPath="$PROJECT_DIR$/less/theme.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/software.html" afterPath="$PROJECT_DIR$/software.html" />
     </list>
     <ignored path="GeoCloud.iws" />
@@ -36,15 +31,14 @@
       <file leaf-file-name="software.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/software.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="635" column="0" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
+            <state relative-caret-position="201">
+              <caret line="544" column="46" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="46" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#table#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#28718#29796#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,14 +47,12 @@
       <file leaf-file-name="software.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/software.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="18">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#19#62#0" expanded="false" />
-                <element signature="e#77#102#0" expanded="false" />
-                <element signature="e#659#707#0" expanded="false" />
-                <element signature="e#1354#1421#0" expanded="false" />
-                <element signature="e#1433#1465#0" expanded="false" />
+                <element signature="e#561#609#0" expanded="false" />
+                <element signature="e#1256#1323#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -69,12 +61,9 @@
       <file leaf-file-name="filter.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/filter.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+            <state relative-caret-position="72">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding>
-                <element signature="e#129#689#0" expanded="false" />
-                <element signature="e#184#610#0" expanded="false" />
-                <element signature="e#286#402#0" expanded="false" />
                 <element signature="e#411#603#0" expanded="false" />
                 <element signature="e#503#595#0" expanded="false" />
                 <element signature="e#622#685#0" expanded="false" />
@@ -83,6 +72,8 @@
                 <element signature="e#996#1132#0" expanded="false" />
                 <element signature="e#1038#1126#0" expanded="false" />
                 <element signature="e#1327#1373#0" expanded="false" />
+                <marker date="1501683004862" expanded="false" signature="184:610" ph="{...}" />
+                <marker date="1501683004862" expanded="false" signature="286:402" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -258,8 +249,8 @@
         <option value="$PROJECT_DIR$/less/theme.less" />
         <option value="$PROJECT_DIR$/js/inspinia.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/less/filter.less" />
         <option value="$PROJECT_DIR$/less/software.less" />
+        <option value="$PROJECT_DIR$/less/filter.less" />
         <option value="$PROJECT_DIR$/software.html" />
       </list>
     </option>
@@ -460,7 +451,7 @@
       <workItem from="1501575723122" duration="180000" />
       <workItem from="1501575921403" duration="73000" />
       <workItem from="1501576045611" duration="27456000" />
-      <workItem from="1501655676463" duration="15759000" />
+      <workItem from="1501655676463" duration="19261000" />
     </task>
     <task id="LOCAL-00001" summary="base structure">
       <created>1499014767895</created>
@@ -651,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501609940088</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="filter position on desktop and mobile">
+      <created>1501675392786</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1501675392786</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208752000" />
+    <option name="totallyTimeSpent" value="212254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -672,6 +670,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12827511" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6764092" sideWeight="0.5043668" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49373695" sideWeight="0.4967249" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24634655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -680,7 +679,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -743,7 +741,8 @@
     <MESSAGE value="slick, software partly faxed" />
     <MESSAGE value="window.location.hash" />
     <MESSAGE value="filter affix" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter affix" />
+    <MESSAGE value="filter position on desktop and mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter position on desktop and mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1233,14 +1232,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/less/software.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#62#0" expanded="false" />
+            <element signature="e#561#609#0" expanded="false" />
+            <element signature="e#1256#1323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/less/filter.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="72">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#129#689#0" expanded="false" />
-            <element signature="e#184#610#0" expanded="false" />
-            <element signature="e#286#402#0" expanded="false" />
             <element signature="e#411#603#0" expanded="false" />
             <element signature="e#503#595#0" expanded="false" />
             <element signature="e#622#685#0" expanded="false" />
@@ -1249,35 +1257,22 @@
             <element signature="e#996#1132#0" expanded="false" />
             <element signature="e#1038#1126#0" expanded="false" />
             <element signature="e#1327#1373#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/software.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <element signature="e#19#62#0" expanded="false" />
-            <element signature="e#77#102#0" expanded="false" />
-            <element signature="e#659#707#0" expanded="false" />
-            <element signature="e#1354#1421#0" expanded="false" />
-            <element signature="e#1433#1465#0" expanded="false" />
+            <marker date="1501683004862" expanded="false" signature="184:610" ph="{...}" />
+            <marker date="1501683004862" expanded="false" signature="286:402" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="635" column="0" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
+        <state relative-caret-position="201">
+          <caret line="544" column="46" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="46" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#table#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#28718#29796#0" expanded="false" />
           </folding>
         </state>
       </provider>
