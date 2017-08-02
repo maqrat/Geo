@@ -2,16 +2,49 @@ a.link-to-software {
   text-decoration:none;
   float: right;
 }
+#page-wrapper {
+  position: relative;
+}
 .col-md-left-affix-container {
   border-right: none;
+  background-color: #fff;
+  width: 100%;
+  //margin-bottom: 20px;
+  position: relative;
+  .filter-fixed {
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    top: 51px; //navbar height
+    margin: auto;
+    background-color: #fff;
+    z-index: 1;
+    .filter-body {
+      position: static;
+      border-bottom: 0;
+      //display: none!important;
+    }
+  }
+  .col-sm-6 {
+    padding: 0;
+  }
 }
 .col-md-right {
+  &.top-padding {
+    padding-top: 62px; //filter header height
+  }
   .table-responsive {
     border-left: none;
     margin-left: 0;
   }
   .table {
     margin-left: 0;
+    margin-top: 7px;
+  }
+}
+@media (min-width:768px) {
+  .filter-fixed {
+    width: 720px;
   }
 }
 @media (min-width: 992px) {
@@ -19,22 +52,15 @@ a.link-to-software {
     width: 260px;
     border-right: 1px solid #ddd;
     position: relative;
-    .filter {
-      z-index: 100;
-      position: absolute;
-      top: 0;
-      //left: 15px;
-    }
     .filter-fixed {
-      top: 75px;
+      top: 51px; //   navbar height
+      right: inherit;
       z-index: 100;
       position: fixed;
       left: inherit;
       width: 229px;
-    }
-    .filter-body {
-      .col-xs-6 {
-        padding: 0;
+      .filter-body {
+        display: block!important;
       }
     }
   }
@@ -42,6 +68,9 @@ a.link-to-software {
     padding-left: 260px;
     float: none;
     width: 100%;
+    &.top-padding {
+      padding-top: 0;
+    }
     .table-responsive {
       border-left: 1px solid #ddd;
       margin-left: -1px;

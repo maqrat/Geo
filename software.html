@@ -79,7 +79,7 @@
                         <h1>Software</h1>
                     </div>
                 </div>
-                <div class="row m-t-md m-b-xl">
+                <div class="row m-b-xl">
                     <div class="col-xs-12 col-md-left-affix-container">
                         <div class="filter">
                             <div class="filter-header">
@@ -159,8 +159,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="filter-footer col-xs-12">
-                                <button type="button" class="btn btn-default btn-sm hidden-sm hidden-xs">Clear Filters</button>
+                            <div class="filter-footer col-xs-12 hidden-sm hidden-xs">
+                                <button type="button" class="btn btn-default btn-sm">Clear Filters</button>
                             </div>
                         </div>
                     </div>
@@ -542,15 +542,17 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="js/jquery-3.1.1.min.js"></script>
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--<script src="js/jquery-3.1.1.min.js"></script>-->
+<script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="js/inspinia.js"></script>
+<!--<script src="js/inspinia.js"></script>-->
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/plugins/wow/wow.min.js"></script>
 
@@ -623,24 +625,27 @@
                 $('.col-md-left-affix-container').css('height', filterHeight + 'px');
             }
             else {
+                $('.filter-body').css('display', 'none');
+                $('.filter-header h3 i').removeClass('open');
                 $('.col-md-left-affix-container').css('height', 'auto');
             }
         }
-
         filterHeightFunction();
 
         var topOffset = $('.navbar').outerHeight() + $('.container-brands-carousel').outerHeight() + $('.navy-line').outerHeight() + $('.software h1').outerHeight();
-        console.log(topOffset);
 
         $(window).scroll(function () {
-            console.log($(window).scrollTop());
-            if ($(window).scrollTop() > topOffset) {
+            if ($(window).scrollTop() > topOffset + 8) {
                 $('.filter').addClass('filter-fixed');
+                $('.col-md-right').addClass('top-padding');
             }
-            if ($(window).scrollTop() < topOffset - 1) {
+            if ($(window).scrollTop() < topOffset - 1 + 8) {
                 $('.filter').removeClass('filter-fixed');
+                $('.col-md-right').removeClass('top-padding');
             }
         });
+
+        $(window).scroll();
     });
 
     // Activate WOW.js plugin for animation on scrol

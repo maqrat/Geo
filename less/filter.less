@@ -2,16 +2,18 @@
   overflow: hidden;
   position: static;
   margin: 0;
+  border-bottom: 1px solid #ddd;
   .filter-header, .filter-footer {
     position: relative;
     min-height: 31px;
     h3 {
-      margin: 5px 0;
+      margin: 15px 0;
       cursor: pointer;
+      line-height: 30px;
       i.visible-sm.visible-xs {
         display: inline-block!important;
         position: absolute;
-        top: 3px;
+        top: 4px;
         left: 80px;
       }
       i {
@@ -32,8 +34,15 @@
   }
   .filter-body {
     border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     display: none;
     overflow: hidden;
+    padding-bottom: 15px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    left: 15px;
+    right: 15px;
   }
   h4 {
     margin: 25px 0 16px;
@@ -51,11 +60,11 @@
 }
 @media (min-width:992px) {
   .filter {
-    position: absolute;
-    margin: 0 15px 0 0;
+    border-bottom: 0;
     .filter-header, .filter-footer {
       h3 {
         cursor: auto;
+        //margin: 3px 0;
         i.visible-sm.visible-xs {
           display: none!important;
         }
@@ -64,6 +73,8 @@
     .filter-body {
       border-top: none;
       display: block!important;
+      border-bottom: 0;
+      position: static;
     }
   }
 }
