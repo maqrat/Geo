@@ -17,9 +17,19 @@ a.link-to-software {
     z-index: 1;
     .filter-body {
       position: static;
-      border-bottom: 0;
+
+      &.filter-body-scroll {
+        position: fixed;
+        overflow-y: auto;
+        top: 111px;
+        right: 15px;
+        bottom: 0;
+        left: 15px;
+        margin: auto;
+      }
     }
   }
+
   .col-sm-6 {
     padding: 0;
   }
@@ -40,6 +50,11 @@ a.link-to-software {
 @media (min-width:768px) {
   .filter-fixed {
     width: 720px;
+    .filter-body {
+      &.filter-body-scroll {
+        width: 720px;
+      }
+    }
   }
 }
 @media (min-width: 992px) {
@@ -50,10 +65,11 @@ a.link-to-software {
     .filter-fixed {
       top: 51px; //   navbar height
       right: inherit;
-      z-index: 100;
       position: fixed;
       left: inherit;
-      width: 229px;
+      //width: 229px;
+      overflow: auto;
+      bottom: 0;
       .filter-body {
         display: block!important;
       }
@@ -71,7 +87,9 @@ a.link-to-software {
       margin-left: -1px;
     }
     .table {
-      //margin-left: 15px;
     }
   }
 }
+
+
+

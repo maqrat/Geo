@@ -12,6 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.noscroll {
+  overflow: hidden;
+}
 span.navy {
   color: #0094e7;
 }
@@ -1139,7 +1142,15 @@ a.link-to-software {
 }
 .col-md-left-affix-container .filter-fixed .filter-body {
   position: static;
-  border-bottom: 0;
+}
+.col-md-left-affix-container .filter-fixed .filter-body.filter-body-scroll {
+  position: fixed;
+  overflow-y: auto;
+  top: 111px;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+  margin: auto;
 }
 .col-md-left-affix-container .col-sm-6 {
   padding: 0;
@@ -1159,6 +1170,9 @@ a.link-to-software {
   .filter-fixed {
     width: 720px;
   }
+  .filter-fixed .filter-body.filter-body-scroll {
+    width: 720px;
+  }
 }
 @media (min-width: 992px) {
   .col-md-left-affix-container {
@@ -1169,10 +1183,10 @@ a.link-to-software {
   .col-md-left-affix-container .filter-fixed {
     top: 51px;
     right: inherit;
-    z-index: 100;
     position: fixed;
     left: inherit;
-    width: 229px;
+    overflow: auto;
+    bottom: 0;
   }
   .col-md-left-affix-container .filter-fixed .filter-body {
     display: block!important;
@@ -1247,10 +1261,11 @@ a.link-to-software {
   }
 }
 .filter {
-  overflow: hidden;
-  position: static;
+  overflow: auto;
+  z-index: 1;
   margin: 0;
   border-bottom: 1px solid #ddd;
+  overflow-x: visible;
 }
 .filter .filter-header,
 .filter .filter-footer {
@@ -1312,6 +1327,8 @@ a.link-to-software {
 @media (min-width: 992px) {
   .filter {
     border-bottom: 0;
+    padding: 0 15px 20px;
+    width: 244px;
   }
   .filter .filter-header h3,
   .filter .filter-footer h3 {

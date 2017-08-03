@@ -85,7 +85,7 @@
                             <div class="filter-header">
                                 <h3 class="fa-angle-down-cont">Filters <i id="fa-angle-down" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
                                 </h3>
-                                <button type="button" class="btn btn-default btn-sm">Clear Filters</button>
+                                <button type="button" class="btn btn-default btn-sm btn-clear-f">Clear Filters</button>
                             </div>
                             <div class="filter-body">
                                 <div class="col-xs-12 col-sm-6 col-md-12">
@@ -160,7 +160,7 @@
                                 </div>
                             </div>
                             <div class="filter-footer col-xs-12 hidden-sm hidden-xs">
-                                <button type="button" class="btn btn-default btn-sm">Clear Filters</button>
+                                <button type="button" class="btn btn-default btn-sm btn-clear-f">Clear Filters</button>
                             </div>
                         </div>
                     </div>
@@ -560,17 +560,6 @@
 
     $(document).ready(function () {
 
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
-        });
-
-        $('.filter-header h3 i').click(function() {
-            $('.filter-body').toggle("slide");
-            $(this).toggleClass("open");
-        });
-
         $('.brands-carousel').slick({
             dots: true,
             speed: 300,
@@ -610,37 +599,70 @@
             ]
         });
 
-        $(window).on('resize', filterHeightFunction);
+        /*$('.btn-clear-f').on('click', function(){
+         $("input[type='checkbox']").prop('checked',false)
+         console.log('fdfg');
+         });*/
 
-        function filterHeightFunction() {
-
-            var filterHeight = $('.filter').height();
-
-            if ($(window).width() > 992) {
-                $('.filter-body').css('display', 'block');
-                $('.col-md-left-affix-container').css('height', filterHeight + 'px');
-            }
-            else {
-                $('.filter-body').css('display', 'none');
-                $('.filter-header h3 i').removeClass('open');
-                $('.col-md-left-affix-container').css('height', 'auto');
-            }
-        }
-        filterHeightFunction();
-
-        var topOffset = $('.navbar').outerHeight() + $('.container-brands-carousel').outerHeight() + $('.navy-line').outerHeight() + $('.software h1').outerHeight();
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > topOffset + 8) {
-                $('.filter').addClass('filter-fixed');
-                $('.col-md-right').addClass('top-padding');
-            }
-            if ($(window).scrollTop() < topOffset - 1 + 8) {
-                $('.filter').removeClass('filter-fixed');
-                $('.col-md-right').removeClass('top-padding');
-            }
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
         });
 
+        var filterBody = $('.filter-body');
+        var caretOpenFilter = $('.filter-header h3 i');
+        var bodyHtml = $("body");
+        var filter = $('.filter');
+        var rTableCol = $('.col-md-right');
+        var topOffset = $('.navbar').outerHeight() + $('.container-brands-carousel').outerHeight() + $('.navy-line').outerHeight() + $('.software h1').outerHeight();
+
+        function filterOpenScroll() {
+            if(caretOpenFilter.hasClass("open") && filter.hasClass("filter-fixed")) {
+                filterBody.addClass('filter-body-scroll');
+                bodyHtml.addClass("noscroll");
+            } else {
+                filterBody.removeClass('filter-body-scroll');
+                bodyHtml.removeClass("noscroll");
+            }
+        }
+
+        function filterDisplay() {
+            filterBody.css({
+                'height' : 'auto'
+            });
+            filterOpenScroll();
+            caretOpenFilter.removeClass("open");
+            bodyHtml.removeClass("noscroll");
+            if ($(window).width() < 991) {
+                filterBody.css('display', 'none');
+            }
+        }
+
+        function fixedFilter() {
+            if ($(window).scrollTop() > topOffset + 8) {
+                filter.addClass('filter-fixed');
+                rTableCol.addClass('top-padding');
+                filterOpenScroll();
+            }
+            if ($(window).scrollTop() < topOffset - 1 + 8) {
+                filter.removeClass('filter-fixed');
+                rTableCol.removeClass('top-padding');
+            }
+        }
+
+        $(window).scroll(function () {
+            fixedFilter();
+        });
+
+        caretOpenFilter.click(function() {
+            filterBody.toggle("slide");
+            $(this).toggleClass("open");
+            filterOpenScroll();
+        });
+
+        filterDisplay();
+        $(window).on('resize', filterDisplay);
         $(window).scroll();
     });
 
