@@ -558,7 +558,7 @@
                                 </thead>
                                 <tbody v-for="app in filteredApps">
                                     <tr>
-                                        <th rowspan="2"><img src="img/products/3DReshaper-viewer.png" class="img-responsive product-logo" alt=""></th>
+                                        <th rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></th>
                                         <td>${app.title}</td>
                                         <td>${app.software}</td>
                                         <td>${app.company}</td>
