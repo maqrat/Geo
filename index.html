@@ -560,13 +560,14 @@
                                     <tr>
                                         <th rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></th>
                                         <td>${app.title}</td>
-                                        <td>${app.software}</td>
+                                        <td><a :href="app.info_link">${app.scompany}</a></td>
                                         <td>${app.company}</td>
                                         <td>${app.price|price}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="3">
-                                            description ${app.description}
+                                            ${app.description}
+                                            <a :href="app.website">more info</a>
                                         </td>
                                         <td></td>
                                         <!--<td>
@@ -576,9 +577,7 @@
                                             <span v-else>-</span>
                                         </td>
                                         <td>
-                                            <a  v-if="app.website"
-                                                target="_blank"
-                                                :href="app.website">${app.website_anchor}</a>
+                                            <a :href="app.website">more info</a>
                                             <span v-else>-</span>
                                         </td>-->
                                     </tr>
