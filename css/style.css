@@ -1386,7 +1386,7 @@ a.link-to-software {
 @media (min-width: 992px) {
   .filter {
     border-bottom: 0;
-    padding: 0 15px 20px;
+    padding: 0 15px 20px 0;
     width: 244px;
   }
   .filter .filter-header h3,
@@ -1641,7 +1641,7 @@ a.link-to-software {
   opacity: 0.75;
 }
 .container-brands-carousel {
-  height: 180px;
+  height: 150px;
   background-color: #003169;
   background-image: url("../img/bg.jpg");
   color: #fff;
@@ -1651,6 +1651,10 @@ a.link-to-software {
 }
 .container-brands-carousel > .container-fluid {
   max-width: 1000px;
+}
+.container-brands-carousel:hover .slick-prev,
+.container-brands-carousel:hover .slick-next {
+  opacity: .8;
 }
 .container-brands-carousel .carousel-caption {
   text-align: center;
@@ -1663,32 +1667,33 @@ a.link-to-software {
   margin-top: 15px;
   margin-bottom: 10px;
   text-shadow: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 .container-brands-carousel img {
-  max-height: 95px;
   margin: auto;
 }
 .container-brands-carousel img.bundle_adjustment-w {
-  max-height: 100px;
-}
-.container-brands-carousel img.super-map-logo-w {
-  margin-top: 11px;
-}
-.container-brands-carousel img.agisoft_logo-w {
-  max-height: 79px;
-  margin-top: 29px;
-}
-.container-brands-carousel img.ic_logo-w {
-  max-height: 112px;
+  max-height: 65px;
   margin-top: 9px;
 }
+.container-brands-carousel img.super-map-logo-w {
+  max-height: 75px;
+  margin-top: 7px;
+}
+.container-brands-carousel img.agisoft_logo-w {
+  max-height: 68px;
+  margin-top: 14px;
+}
+.container-brands-carousel img.ic_logo-w {
+  max-height: 99px;
+  margin-top: 0;
+}
 .container-brands-carousel img.logo-racurs-w {
-  margin-top: 19px;
+  margin-top: 17px;
+  max-height: 65px;
 }
 .container-brands-carousel .slick-list {
   opacity: 0.95;
-  margin-top: 4px;
 }
 .container-brands-carousel .slick-dots {
   bottom: 5px;
@@ -1704,10 +1709,25 @@ a.link-to-software {
 }
 .container-brands-carousel .slick-prev,
 .container-brands-carousel .slick-next {
-  top: 32%;
+  top: 24%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 500px) {
   .container-brands-carousel .carousel-caption h1 {
     font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-brands-carousel .slick-prev,
+  .container-brands-carousel .slick-next {
+    opacity: 0;
+  }
+  .container-brands-carousel .slick-next {
+    right: -89px;
+  }
+  .container-brands-carousel .slick-prev {
+    left: -89px;
   }
 }

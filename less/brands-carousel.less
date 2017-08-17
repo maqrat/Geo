@@ -1,5 +1,5 @@
 .container-brands-carousel {
-  height: 180px;
+  height: 150px;
   background-color: #003169;
   background-image: url("../img/bg.jpg");
   color: #fff;
@@ -8,6 +8,11 @@
   border-top: 7px solid black;
   &>.container-fluid {
     max-width: 1000px;
+  }
+  &:hover {
+    .slick-prev, .slick-next {
+      opacity: .8;
+    }
   }
   .carousel-caption {
     text-align: center;
@@ -19,40 +24,41 @@
       margin-top: 15px;
       margin-bottom: 10px;
       text-shadow: none;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
   }
   img {
-    max-height: 95px;
     margin: auto;
     //-webkit-filter: invert(.8);
     //filter: invert(.8);
     &.bundle_adjustment-w {
-      max-height: 100px;
-    }
-    &.super-map-logo-w {
-      margin-top: 11px;
-    }
-    &.agisoft_logo-w {
-      max-height: 79px;
-      margin-top: 29px;
-    }
-    &.ic_logo-w {
-      max-height: 112px;
+      max-height: 65px;
       margin-top: 9px;
     }
+    &.super-map-logo-w {
+      max-height: 75px;
+      margin-top: 7px;
+    }
+    &.agisoft_logo-w {
+      max-height: 68px;
+      margin-top: 14px
+    }
+    &.ic_logo-w {
+      max-height: 99px;
+      margin-top: 0;
+    }
     &.logo-racurs-w {
-      margin-top: 19px;
+      margin-top: 17px;
+      max-height: 65px;
     }
   }
   .slick-list {
     opacity: 0.95;
-    margin-top: 4px;
   }
   .slick-dots {
     bottom: 5px;
     li {
-      margin: 0000
+      margin: 0;
     }
   }
   .slick-next {
@@ -62,7 +68,8 @@
     left: -20px;
   }
   .slick-prev, .slick-next {
-    top: 32%;
+    top: 24%;
+    .transition(@duration:0.3s, @ease:ease-out);
   }
 }
 @media (max-width: 500px) {
@@ -71,6 +78,20 @@
       h1 {
         font-size: 15px;
       }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .container-brands-carousel {
+    .slick-prev, .slick-next {
+      opacity: 0;
+    }
+
+    .slick-next {
+      right: -89px;
+    }
+    .slick-prev {
+      left: -89px;
     }
   }
 }
