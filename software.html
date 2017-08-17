@@ -23,7 +23,8 @@
 <body id="page-top" class="background-page software-page">
 
 <div class="navbar-wrapper">
-    <nav class="navbar navbar-default navbar-sm navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-bg"></div>
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -54,6 +55,7 @@
 
 <div class="container-fluid container-brands-carousel">
     <div class="carousel-caption">
+        <!--<div class="navy-line"></div>-->
         <h1 class="center-block">INDUSTRY LEADERS WORK WITH US</h1>
     </div>
     <div class="container-fluid">
@@ -560,6 +562,25 @@
 
     $(document).ready(function () {
 
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function (event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+        if(window.location.hash && window.location.hash !== '') {
+            var section = $(window.location.hash);
+            if(section.length) {
+                $('html, body').stop().animate({
+                    scrollTop: section.offset().top - 50
+                }, 500);
+            }
+
+        }
+
         $('.brands-carousel').slick({
             dots: true,
             speed: 300,
@@ -665,6 +686,41 @@
         $(window).on('resize', filterDisplay);
         $(window).scroll();
     });
+
+    var cbpAnimatedHeader = (function () {
+        var docElem = document.documentElement,
+                header = document.querySelector('.navbar-default'),
+                didScroll = false,
+                changeHeaderOn = 200;
+
+        function init() {
+            window.addEventListener('scroll', function (event) {
+                if (!didScroll) {
+                    didScroll = true;
+                    setTimeout(scrollPage, 250);
+                }
+            }, false);
+        }
+
+        function scrollPage() {
+            var sy = scrollY();
+            if (sy >= changeHeaderOn) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+
+        init();
+        scrollY();
+
+    })();
 
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();

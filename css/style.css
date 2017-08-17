@@ -55,9 +55,9 @@ h1 {
   font-size: 30px;
   font-weight: 200;
 }
-.background-page {
+/*.background-page {
   padding-top: 50px;
-}
+}*/
 .v-table {
   display: table;
   width: 100%;
@@ -1582,20 +1582,19 @@ a.link-to-software {
   opacity: 0.75;
 }
 .container-brands-carousel {
-  height: 180px;
+  height: 300px;
   background-color: #003169;
   background-image: url("../img/bg.jpg");
   color: #fff;
   background-size: cover;
   background-position: top;
-  border-top: 7px solid black;
 }
 .container-brands-carousel > .container-fluid {
   max-width: 1000px;
 }
 .container-brands-carousel .carousel-caption {
   text-align: center;
-  top: 0;
+  top: 95px;
   padding: 0;
 }
 .container-brands-carousel .carousel-caption h1 {
@@ -1629,7 +1628,7 @@ a.link-to-software {
 }
 .container-brands-carousel .slick-list {
   opacity: 0.95;
-  margin-top: 4px;
+  margin-top: 114px;
 }
 .container-brands-carousel .slick-dots {
   bottom: 5px;
