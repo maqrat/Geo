@@ -1165,6 +1165,7 @@ a.link-to-software {
 .col-md-right .table-responsive {
   border-left: none;
   margin-left: 0;
+  overflow: hidden;
 }
 .col-md-right .table {
   background-color: #fff;
@@ -1182,6 +1183,41 @@ a.link-to-software {
 }
 .col-md-right .table tr.odd {
   background-color: #f9f9f9;
+}
+.table-fixed {
+  width: 100%;
+}
+.table-fixed tbody {
+  height: 650px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed tbody,
+.table-fixed thead,
+.table-fixed thead tr {
+  display: block;
+}
+.table-fixed thead tr {
+  border-bottom: 2px solid #ddd;
+}
+.table-fixed thead tr th {
+  float: left;
+  border-bottom: 0;
+}
+.table-fixed thead tr th.software-t-col-1 {
+  width: 9%;
+}
+.table-fixed thead tr th.software-t-col-2 {
+  width: 32%;
+}
+.table-fixed thead tr th.software-t-col-3 {
+  width: 25%;
+}
+.table-fixed thead tr th.software-t-col-4 {
+  width: 23%;
+}
+.table-fixed thead tr th.software-t-col-5 {
+  width: 10%;
 }
 @media (min-width: 768px) {
   .filter-fixed {
@@ -1223,7 +1259,6 @@ a.link-to-software {
   .col-md-right .table {
     padding-left: 15px;
     display: inline-block;
-    max-height: 689px;
     margin-bottom: 0;
   }
 }

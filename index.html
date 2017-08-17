@@ -19,8 +19,6 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">
 
@@ -546,14 +544,14 @@
                     </div>
                     <div class="col-xs-12 col-md-right">
                         <div class="">
-                            <table class="table table-responsive">
+                            <table class="table table-responsive table-fixed">
                                 <thead>
                                     <tr>
-                                        <th>Logo</th>
-                                        <th>Software</th>
-                                        <th>Category</th>
-                                        <th>Company</th>
-                                        <th>US$/Hour</th>
+                                        <th class="software-t-col-1">Logo</th>
+                                        <th class="software-t-col-2">Software</th>
+                                        <th class="software-t-col-3">Category</th>
+                                        <th class="software-t-col-4">Company</th>
+                                        <th class="software-t-col-5">US$/Hour</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -562,13 +560,13 @@
                                             <td rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
                                             <td>${app.title}</td>
                                             <td>${app.software}</a></td>
-                                            <td><a :href="app.website">${app.company}</td>
+                                            <td><a :href="app.website" target="_blank">${app.company}</td>
                                             <td>${app.price|price}</td>
                                         </tr>
                                         <tr :class="{odd: index % 2}">
                                             <td colspan="3" class="description">
-                                                ${app.description}
-                                                <a :href="app.info_link">&nbsp; more info <i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                                ${app.description} &nbsp;
+                                                <a :href="app.info_link" target="_blank"><i class="fa fa-external-link" aria-hidden="true" ></i></a>
                                             </td>
                                             <td></td>
                                             <!--<td>

@@ -43,6 +43,7 @@ a.link-to-software {
   .table-responsive {
     border-left: none;
     margin-left: 0;
+    overflow: hidden;
   }
   .table {
     background-color: #fff;
@@ -62,6 +63,42 @@ a.link-to-software {
     }
   }
 }
+.table-fixed{
+  width: 100%;
+  tbody{
+    height:650px;
+    overflow-y:auto;
+    width: 100%;
+  }
+  tbody, thead, thead tr{
+    display: block;
+  }
+  thead {
+    tr{
+      border-bottom: 2px solid #ddd;
+      th{
+        float:left;
+        border-bottom: 0;
+        &.software-t-col-1 {
+          width: 9%;
+        }
+        &.software-t-col-2 {
+          width: 32%;
+        }
+        &.software-t-col-3 {
+          width: 25%;
+        }
+        &.software-t-col-4 {
+          width: 23%;
+        }
+        &.software-t-col-5 {
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width:768px) {
   .filter-fixed {
     width: 720px;
@@ -104,7 +141,6 @@ a.link-to-software {
     .table {
       padding-left: 15px;
       display: inline-block;
-      max-height: 689px;
       margin-bottom: 0;
     }
   }
