@@ -1162,14 +1162,10 @@ a.link-to-software {
 .col-md-right.top-padding {
   padding-top: 62px;
 }
-.col-md-right .table-responsive {
+.col-md-right .table {
   border-left: none;
   margin-left: 0;
-  overflow: hidden;
-}
-.col-md-right .table {
   background-color: #fff;
-  margin-left: 0;
   margin-top: 7px;
 }
 .col-md-right .table .product-logo {
@@ -1252,11 +1248,9 @@ a.link-to-software {
   .col-md-right.top-padding {
     padding-top: 0;
   }
-  .col-md-right .table-responsive {
+  .col-md-right .table {
     border-left: 1px solid #ddd;
     margin-left: -1px;
-  }
-  .col-md-right .table {
     padding-left: 15px;
     display: inline-block;
     margin-bottom: 0;
