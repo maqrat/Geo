@@ -1173,6 +1173,12 @@ a.link-to-software {
 .col-md-right .table .product-logo {
   width: 77px;
 }
+.col-md-right .table .fa-external-link {
+  font-size: 10px;
+}
+.col-md-right .table .description {
+  font-size: 13px;
+}
 @media (min-width: 768px) {
   .filter-fixed {
     width: 720px;
