@@ -1124,6 +1124,7 @@ p.bottom-text {
     font-size: 22px;
   }
 }
+/* +Table styles */
 a.link-to-software {
   text-decoration: none;
   float: right;
@@ -1222,7 +1223,8 @@ a.link-to-software {
   .col-md-right .table {
     padding-left: 15px;
     display: inline-block;
-    max-height: 850px;
+    max-height: 689px;
+    margin-bottom: 0;
   }
 }
 /* iCheck plugin Square skin, blue
@@ -1297,7 +1299,7 @@ a.link-to-software {
 }
 .filter .filter-header h3,
 .filter .filter-footer h3 {
-  margin: 15px 0;
+  margin: 13px 0 6px;
   cursor: pointer;
   line-height: 30px;
 }
@@ -1337,7 +1339,7 @@ a.link-to-software {
   right: 15px;
 }
 .filter .filter-body .list-unstyled {
-  max-height: 330px;
+  max-height: 230px;
   overflow-y: auto;
 }
 .filter h4 {
