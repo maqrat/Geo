@@ -34,7 +34,7 @@ a.navy-link {
 a.navy-link:hover {
   color: #0087d3;
 }
-.table > tbody > tr > th {
+.table > tbody > tr > td {
   vertical-align: middle;
 }
 @media (max-width: 767px) {
