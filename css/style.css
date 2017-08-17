@@ -1194,7 +1194,8 @@ a.link-to-software {
   display: block;
 }
 .table-fixed thead tr {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
 }
 .table-fixed thead tr th {
   float: left;
