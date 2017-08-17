@@ -560,14 +560,14 @@
                                     <tr>
                                         <th rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></th>
                                         <td>${app.title}</td>
-                                        <td><a :href="app.website">${app.software}</a></td>
-                                        <td>${app.company}</td>
+                                        <td>${app.software}</a></td>
+                                        <td><a :href="app.website">${app.company}</td>
                                         <td>${app.price|price}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="3" class="description">
                                             ${app.description}
-                                            <a :href="app.info_link">more info <i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                            <a :href="app.info_link">&nbsp; more info <i class="fa fa-external-link" aria-hidden="true" ></i></a>
                                         </td>
                                         <td></td>
                                         <!--<td>
