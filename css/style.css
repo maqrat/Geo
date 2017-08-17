@@ -1179,6 +1179,9 @@ a.link-to-software {
 .col-md-right .table .description {
   font-size: 13px;
 }
+.col-md-right .table tr.odd {
+  background-color: #f9f9f9;
+}
 @media (min-width: 768px) {
   .filter-fixed {
     width: 720px;

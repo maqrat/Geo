@@ -556,31 +556,33 @@
                                         <th>US$/Hour</th>
                                     </tr>
                                 </thead>
-                                <tbody v-for="app in filteredApps">
-                                    <tr>
-                                        <th rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></th>
-                                        <td>${app.title}</td>
-                                        <td>${app.software}</a></td>
-                                        <td><a :href="app.website">${app.company}</td>
-                                        <td>${app.price|price}</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="description">
-                                            ${app.description}
-                                            <a :href="app.info_link">&nbsp; more info <i class="fa fa-external-link" aria-hidden="true" ></i></a>
-                                        </td>
-                                        <td></td>
-                                        <!--<td>
-                                            <a  v-if="app.info_link"
-                                                target="_blank"
-                                                :href="app.info_link">link</a>
-                                            <span v-else>-</span>
-                                        </td>
-                                        <td>
-                                            <a :href="app.website">more info</a>
-                                            <span v-else>-</span>
-                                        </td>-->
-                                    </tr>
+                                <tbody>
+                                    <template v-for="(app, index) in filteredApps">
+                                        <tr :class="{odd: index % 2}">
+                                            <td rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
+                                            <td>${app.title}</td>
+                                            <td>${app.software}</a></td>
+                                            <td><a :href="app.website">${app.company}</td>
+                                            <td>${app.price|price}</td>
+                                        </tr>
+                                        <tr :class="{odd: index % 2}">
+                                            <td colspan="3" class="description">
+                                                ${app.description}
+                                                <a :href="app.info_link">&nbsp; more info <i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                            </td>
+                                            <td></td>
+                                            <!--<td>
+                                                <a  v-if="app.info_link"
+                                                    target="_blank"
+                                                    :href="app.info_link">link</a>
+                                                <span v-else>-</span>
+                                            </td>
+                                            <td>
+                                                <a :href="app.website">more info</a>
+                                                <span v-else>-</span>
+                                            </td>-->
+                                        </tr>
+                                    </template>
                                 </tbody>
                             </table>
                         </div>
