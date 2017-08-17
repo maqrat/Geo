@@ -18,6 +18,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">
 
@@ -39,7 +42,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a class="page-scroll" href="#page-top">Home</a></li>
                     <li><a class="page-scroll" href="#overview">Overview</a></li>
-                    <li><a class="page-scroll" href="software.html" target="_blank">Software</a></li>
+                    <li><a class="page-scroll" href="#software">Software</a></li>
                     <li><a class="page-scroll" href="#data">Data</a></li>
                     <li><a class="page-scroll" href="#workflow">Workflow</a></li>
                     <li><a class="page-scroll" href="#team">Team</a></li>
@@ -485,91 +488,122 @@
                         <h1>Software</h1>
                     </div>
                 </div>
-                <div class="row m-t-xl m-b-xl">
-                    <div class="col-md-12">
-                        <div class="table-responsive wow fadeInLeft animated">
-                            <table class="table table-striped">
+                <div class="row m-t-md m-b-xl">
+                    <div class="col-xs-12 col-md-left-affix-container">
+                        <div class="filter">
+                            <div class="filter-header">
+                                <h3 class="fa-angle-down-cont">Filters <i id="fa-angle-down" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
+                                </h3>
+                                <button
+                                        type="button"
+                                        class="btn btn-default btn-sm"
+                                        @click="clearFilters"
+                                >Clear Filters</button>
+                            </div>
+                            <div class="filter-body" id="filters">
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <h4>Companies</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="(company, index) in companies">
+                                            <input
+                                                    type="checkbox"
+                                                    :id="'square-checkbox-companies-' + index"
+                                                    :value="'company-' + company">
+                                            <label
+                                                    :for="'square-checkbox-companies-' + index"
+                                                    class="">
+                                                ${company}
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <h4>Categories</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="(category, index) in categories">
+                                            <input
+                                                    type="checkbox"
+                                                    :id="'square-checkbox-categories-' + index"
+                                                    :value="'category-' + category">
+                                            <label
+                                                    :for="'square-checkbox-categories-' + index"
+                                                    class="">
+                                                ${category}
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-footer col-xs-12">
+                                <button type="button" class="btn btn-default btn-sm hidden-sm hidden-xs">Clear Filters</button>
+                                <button
+                                        type="button"
+                                        class="btn btn-default btn-sm hidden-sm hidden-xs"
+                                        @click="clearFilters"
+                                >Clear Filters</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-right">
+                        <div class="">
+                            <table class="table table-responsive">
                                 <thead>
-                                <tr>
-                                    <th>Logo</th>
-                                    <th>Software</th>
-                                    <th>Category</th>
-                                    <th>Description</th>
-                                    <th>Company</th>
-                                    <th>Brochure</th>
-                                    <th>Web-site</th>
-                                    <th>Price/Hour(US$)</th>
-                                </tr>
+                                    <tr>
+                                        <th>Logo</th>
+                                        <th>Software</th>
+                                        <th>Category</th>
+                                        <th>Company</th>
+                                        <th>US$/Hour</th>
+                                    </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <th></th>
-                                    <td>Photomod DPW</td>
-                                    <td>DPW</td>
-                                    <td></td>
-                                    <td>Racurs</td>
-                                    <td>Link to pdf</td>
-                                    <td>www.racurs.ru</td>
-                                    <td>2.5</td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>CS</td>
-                                    <td>Thornton</td>
-                                    <td></td>
-                                    <td>Racurs</td>
-                                    <td></td>
-                                    <td>www.racurs.ru</td>
-                                    <td>0.0</td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>...</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>...</td>
-                                    <td></td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>Photomod DPW</td>
-                                    <td>DPW</td>
-                                    <td></td>
-                                    <td>Racurs</td>
-                                    <td>Link to pdf</td>
-                                    <td>www.racurs.ru</td>
-                                    <td>2.5</td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>CS</td>
-                                    <td>Thornton</td>
-                                    <td></td>
-                                    <td>Racurs</td>
-                                    <td></td>
-                                    <td>www.racurs.ru</td>
-                                    <td>0.0</td>
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td>...</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>...</td>
-                                    <td></td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
+                                <tbody v-for="app in filteredApps">
+                                    <tr>
+                                        <th rowspan="2"><img src="img/products/3DReshaper-viewer.png" class="img-responsive product-logo" alt=""></th>
+                                        <td>${app.title}</td>
+                                        <td>${app.software}</td>
+                                        <td>${app.company}</td>
+                                        <td>${app.price|price}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            description ${app.description}
+                                        </td>
+                                        <td></td>
+                                        <!--<td>
+                                            <a  v-if="app.info_link"
+                                                target="_blank"
+                                                :href="app.info_link">link</a>
+                                            <span v-else>-</span>
+                                        </td>
+                                        <td>
+                                            <a  v-if="app.website"
+                                                target="_blank"
+                                                :href="app.website">${app.website_anchor}</a>
+                                            <span v-else>-</span>
+                                        </td>-->
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <a href="software.html" target="_blank" class="link-to-software">Show all software <i class="fa fa-external-link" aria-hidden="true" ></i></a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="container-fluid container-brands-carousel">
+            <div class="carousel-caption">
+                <h1 class="center-block">INDUSTRY LEADERS WORK WITH US</h1>
+            </div>
+            <div class="container-fluid">
+                <div class="brands-carousel">
+                    <div><img src="img/brands/agisoft_logo-w.png" alt="" class="agisoft_logo-w"></div>
+                    <div><img src="img/brands/bundle_adjustment-w.png" class="bundle_adjustment-w" alt=""></div>
+                    <div><img src="img/brands/ic_logo-w.png" alt="" class="ic_logo-w"></div>
+                    <div><img src="img/brands/logo-racurs-w.png" alt="" class="logo-racurs-w"></div>
+                    <div><img src="img/brands/super-map-logo-w.png" alt="" class="super-map-logo-w"></div>
+                </div>
+            </div>
+        </div>
 
         <section id="data" class="software">
             <div class="container">
@@ -782,6 +816,7 @@
 
 <!-- Mainly scripts -->
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/vue.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -790,6 +825,9 @@
 <!--<script src="js/inspinia.js"></script>-->
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/plugins/wow/wow.min.js"></script>
+
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/slick/slick.min.js"></script>
 
 
 <script>
@@ -819,6 +857,111 @@
             }
 
         }
+
+        $('.brands-carousel').slick({
+            dots: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 820,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /*$('.btn-clear-f').on('click', function(){
+         $("input[type='checkbox']").prop('checked',false)
+         console.log('fdfg');
+         });*/
+
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+
+        var filterBody = $('.filter-body');
+        var caretOpenFilter = $('.filter-header h3 i');
+        var bodyHtml = $("body");
+        var filter = $('.filter');
+        var rTableCol = $('.col-md-right');
+        var topOffset = $('.navbar').outerHeight() + $('.container-brands-carousel').outerHeight() + $('.navy-line').outerHeight() + $('.software h1').outerHeight();
+
+        function filterOpenScroll() {
+            if(caretOpenFilter.hasClass("open") && filter.hasClass("filter-fixed")) {
+                filterBody.addClass('filter-body-scroll');
+                bodyHtml.addClass("noscroll");
+            } else {
+                filterBody.removeClass('filter-body-scroll');
+                bodyHtml.removeClass("noscroll");
+            }
+        }
+
+        function filterDisplay() {
+            filterBody.css({
+                'height' : 'auto'
+            });
+            filterOpenScroll();
+            caretOpenFilter.removeClass("open");
+            bodyHtml.removeClass("noscroll");
+            if ($(window).width() < 991) {
+                filterBody.css('display', 'none');
+            }
+        }
+
+        function fixedFilter() {
+            if ($(window).scrollTop() > topOffset + 8) {
+                filter.addClass('filter-fixed');
+                rTableCol.addClass('top-padding');
+                filterOpenScroll();
+            }
+            if ($(window).scrollTop() < topOffset - 1 + 8) {
+                filter.removeClass('filter-fixed');
+                rTableCol.removeClass('top-padding');
+            }
+        }
+
+        $(window).scroll(function () {
+//            fixedFilter();
+        });
+
+        caretOpenFilter.click(function() {
+            filterBody.toggle("slide");
+            $(this).toggleClass("open");
+            filterOpenScroll();
+        });
+
+        filterDisplay();
+        $(window).on('resize', filterDisplay);
+        $(window).scroll();
     });
 
     var cbpAnimatedHeader = (function () {
@@ -859,6 +1002,71 @@
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();
 
+</script>
+
+<script>
+    (function (cfg) {
+        window.vm = new Vue({
+            el: '#wrapper',
+            delimiters: ['${', '}'],
+            data: {
+                apps: cfg.apps,
+                categories: cfg.categories,
+                companies: cfg.companies,
+                filters: {
+                    categories: [],
+                    companies: []
+                }
+            },
+            computed: {
+                filteredApps: function () {
+                    var vm = this,
+                            apps = vm.apps;
+                    apps = vm.filters.categories.length ? apps.filter(function (x) {
+                        return vm.filters.categories.indexOf(x.software) !== -1;
+                    }) : apps;
+                    apps = vm.filters.companies.length ? apps.filter(function (x) {
+                        return vm.filters.companies.indexOf(x.company) !== -1;
+                    }) : apps;
+                    return apps;
+                }
+            },
+            methods: {
+                clearFilters: function () {
+                    $('#filters input').iCheck('uncheck');
+                }
+            },
+            mounted: function () {
+                var vm = this;
+                $('input').on('ifChecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories.push(val.substr(9));
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies.push(val.substr(8));
+                    }
+                });
+                $('input').on('ifUnchecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories = vm.filters.categories.filter(function (x) {
+                            return x !== val.substr(9);
+                        });
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies = vm.filters.companies.filter(function (x) {
+                            return x !== val.substr(8);
+                        });
+                    }
+                });
+            },
+            filters: {
+                price: function (x) { return Number(x).toFixed(2); }
+            }
+        });
+
+    })({"apps": [{"id": 41, "featured": true, "itar": true, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Technodigit/Hexagon", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/3DReshaper_Viewer.png", "title": "3DReshaper Viewer", "description": "Visualize 3D data and share the results of your project", "info_link": "http://www.3dreshaper.com/en/software-en/download-software/free-viewer", "website": "http://www.3dreshaper.com/en/", "website_anchor": "www.3dreshaper.com", "price": "0.480000", "ext": {"rdp": [{"name": "3DReshaper"}]}}, {"id": 30, "featured": true, "itar": false, "software": "Viewer Acute3D", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Bentley", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Bentley_3d_acute.png", "title": "Acute3D Viewer", "description": "Explore and precisely measure reality meshes of any scale created with Bentley's ContextCapture software", "info_link": "http://www.bentley.com/en/products/product-line/reality-modeling-software/contextcapture", "website": "http://www.bentley.com", "website_anchor": "www.bentley.com", "price": "0.480000", "ext": {"rdp": [{"name": "CCViewer"}]}}, {"id": 53, "featured": true, "itar": false, "software": "Photogrammetry", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "AgiSoft", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photoscan_logo1.png", "title": "Agisoft PhotoScan Pro", "description": "Photogrammetric processing of digital images and 3D spatial data generation", "info_link": "http://www.agisoft.com/features/professional-edition/", "website": "http://www.agisoft.com", "website_anchor": "www.agisoft.com", "price": "1.000000", "ext": {"rdp": [{"name": "Photoscan"}]}}, {"id": 54, "featured": true, "itar": false, "software": "Photogrammetry", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "AgiSoft", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Agisoft_PhotoScan_Professional.png", "title": "Agisoft PhotoScan Pro", "description": "Photogrammetric processing of digital images and 3D spatial data generation", "info_link": "http://www.agisoft.com/features/professional-edition/", "website": "http://www.agisoft.com", "website_anchor": "www.agisoft.com", "price": "0.480000", "ext": {"rdp": [{"name": "Agisoft PhotoScan Pro 1.3.2 "}]}}, {"id": 69, "featured": true, "itar": false, "software": "AT & Camera calibration", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "GIP, Dr. Kruck & Co.", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/bingo_logo.png", "title": "Bingo", "description": "Bundle adjustment program. It includes full camera calibration, oblique and combined adjustment, close range and many more", "info_link": "http://bingo-atm.de/solutions/", "website": "http://bingo-atm.de/", "website_anchor": "bingo-atm.de", "price": "0.480000", "ext": {}}, {"id": 47, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Displaz", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Displaz.png", "title": "Displaz", "description": "A las viewer for geospatial point clouds", "info_link": "http://c42f.github.io/displaz/", "website": "http://c42f.github.io/displaz/", "website_anchor": "c42f.github.io", "price": "0.480000", "ext": {"rdp": [{"name": "displaz"}]}}, {"id": 31, "featured": true, "itar": false, "software": "Viewer Remote Sensing", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Hexagon Geospatial", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/ERDAS_ER_Viewer.png", "title": "ERDAS ER Viewer", "description": "Popular geospatial file types viewer", "info_link": "http://www.hexagongeospatial.com/brochure-pages/erdas-ermapper-professional-benefit-brochure", "website": "http://www.hexagongeospatial.com", "website_anchor": "www.hexagongeospatial.com", "price": "0.480000", "ext": {"rdp": [{"name": "ERViewer MFC Application"}]}}, {"id": 48, "featured": true, "itar": false, "software": "Viewer Faro", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "FARO", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Faro_Scene_LT.png", "title": "Faro Scene LT", "description": "FARO scans and workspaces viewer", "info_link": "http://www.faro.com/faro-3d-app-center/stand-alone-apps/scene-lt", "website": "http://www.faro.com", "website_anchor": "www.faro.com", "price": "0.480000", "ext": {"rdp": [{"name": "SCENE Application"}]}}, {"id": 39, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Fugro", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/FugroViewer.png", "title": "FugroViewer", "description": "A robust and  easy-to-use freeware designed to help users make the most of their geospatial data", "info_link": "http://www.fugro.com/about-fugro/our-expertise/technology/fugroviewer", "website": "http://www.fugro.com", "website_anchor": "www.fugro.com", "price": "0.480000", "ext": {"rdp": [{"name": "FugroViewer"}]}}, {"id": 35, "featured": true, "itar": false, "software": "GIS App", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Chicago University", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/GeoDA_pic.png", "title": "GeoDa", "description": "Introduction to Spatial Data Analysis: Exploratory (Spatial) Data Analysis & Spatial Regression", "info_link": "http://geodacenter.github.io/index.html", "website": "http://geodacenter.github.io/index.html", "website_anchor": "geodacenter.github.io", "price": "0.480000", "ext": {"rdp": [{"name": "GeoDa"}]}}, {"id": 44, "featured": true, "itar": false, "software": "GIS", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Blue Marble Geographics", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/GlobalMapper.png", "title": "GlobalMapper Trial", "description": "Global Mapper: GIS for Everyone", "info_link": "http://www.bluemarblegeo.com/docs/brochures/global-mapper-18-2-en.pdf", "website": "http://www.bluemarblegeo.com", "website_anchor": "www.bluemarblegeo.com", "price": "0.480000", "ext": {"rdp": [{"name": "Global Mapper 18"}]}}, {"id": 46, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Triple Water Geo", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/M_LiDAR_Viewer.png", "title": "M LiDAR Viewer", "description": "Stand-alone viewer for LiDAR point clouds", "info_link": "http://www.triplewatergeo.com", "website": "http://www.triplewatergeo.com", "website_anchor": "www.triplewatergeo.com", "price": "0.480000", "ext": {"rdp": [{"name": "MLidarViewer"}]}}, {"id": 51, "featured": true, "itar": false, "software": "Photo Editor", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Numerous", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/PhotoScape_3.7.png", "title": "Photo Editors", "description": "PhotoScape v3,7/ Photo Pos Lite 1.90.5 / Point.net / GIMP 2.8", "info_link": null, "website": null, "website_anchor": null, "price": "0.480000", "ext": {"rdp": [{"name": "GNU Image Manipulation Program"}, {"name": "paintnet"}, {"name": "PhotoScape"}, {"name": "Photo Pos lite"}]}}, {"id": 68, "featured": true, "itar": false, "software": "Photogrammetry", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Racurs", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photomod_DPW.png", "title": "Photomod", "description": "Complete Digital Photogrammetric Workstation", "info_link": "http://www.racurs.ru/?page=553", "website": "http://www.racurs.ru", "website_anchor": "www.racurs.ru", "price": "1.000000", "ext": {"rdp": [{"name": "PHOTOMOD RemoteApp"}]}}, {"id": 37, "featured": true, "itar": false, "software": "Coordinate Systems", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Racurs", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photomod_Lite.png", "title": "PhotoMod GeoCalculator", "description": "GeoCalculator & Direct Georeferensing & Datum Seven Parameters Calculation", "info_link": "http://www.racurs.ru/?page=577", "website": "http://www.racurs.ru", "website_anchor": "www.racurs.ru", "price": "0.480000", "ext": {"rdp": [{"name": "PHOTOMOD GeoCalculator"}, {"name": "DirectGeoref"}, {"name": "ComputeSevenParams"}]}}, {"id": 67, "featured": true, "itar": false, "software": "Coordinate Systems", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Racurs", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photomod_GeoMosaic.png", "title": "Photomod GeoMosaic", "description": "Combine georeferenced images from any sources into single seamless, color-balanced, geometrically perfect mosaic", "info_link": "http://www.racurs.ru/?page=291", "website": "http://www.racurs.ru", "website_anchor": "www.racurs.ru", "price": "0.480000", "ext": {"rdp": [{"name": "GEOMOSAIC RemoteApp"}]}}, {"id": 29, "featured": true, "itar": false, "software": "Photogrammetry", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Racurs", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photomod_Lite.png", "title": "Photomod Lite", "description": "Fully functional PHOTOMOD for small scientific and educational projects", "info_link": "http://www.racurs.ru/?page=453", "website": "http://www.racurs.ru", "website_anchor": "www.racurs.ru", "price": "0.480000", "ext": {"rdp": [{"name": "PHOTOMOD Framework"}]}}, {"id": 70, "featured": true, "itar": false, "software": "SAR Processing", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Racurs", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Photomod_Radar.png", "title": "Photomod Radar", "description": "SAR processing software", "info_link": "http://www.racurs.ru/index.php?page=86", "website": "http://www.racurs.ru", "website_anchor": "www.racurs.ru", "price": "0.480000", "ext": {"rdp": [{"name": "Ph Radar"}]}}, {"id": 45, "featured": true, "itar": false, "software": "Point Cloud to Vector", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Arithmetica Ltd.", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Pointfuse_Trial.png", "title": "Pointfuse Trial", "description": "The one-button solution for rapidly converting huge point clouds to accurate, textured vector models", "info_link": "http://pointfuse.com/", "website": "http://pointfuse.com/", "website_anchor": "pointfuse.com", "price": "0.480000", "ext": {"rdp": [{"name": "Pointfuse"}]}}, {"id": 38, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Bentley", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Bentley_Pointools.png", "title": "Pointools View", "description": "Large point-cloud datasets viewer", "info_link": "http://www.bentley.com/en/products/product-line/reality-modeling-software/bentley-pointools", "website": "http://www.bentley.com", "website_anchor": "www.bentley.com", "price": "0.480000", "ext": {"rdp": [{"name": "BentleyPointoolsView"}]}}, {"id": 32, "featured": true, "itar": false, "software": "GIS", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "QGIS", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/QGIS.png", "title": "QGIS & GRASS GIS", "description": "QGIS - Open Source Desktop GIS; GRASS - Geographic Resources Analysis Support System;", "info_link": "http://www.qgis.org/en/site/about/index.html", "website": "http://www.qgis.org/", "website_anchor": "www.qgis.org", "price": "0.480000", "ext": {"rdp": [{"name": "QGIS"}, {"name": "GrassGIS"}]}}, {"id": 43, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Applied Imagery", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/QT_Reader.png", "title": "QT Reader", "description": "3D point cloud and terrain visualization software package", "info_link": "http://appliedimagery.com/features/", "website": "http://appliedimagery.com/features/", "website_anchor": "appliedimagery.com", "price": "0.480000", "ext": {"rdp": [{"name": "QT Modeler"}]}}, {"id": 52, "featured": true, "itar": false, "software": "3D graphics", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Robert McNeel & Assoc.", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Rhinoceros_5_Trial.png", "title": "Rhinoceros 5 Trial", "description": "3D computer graphics and computer-aided design (CAD) application", "info_link": "http://www.rhino3d.com/features", "website": "http://www.rhino3d.com", "website_anchor": "www.rhino3d.com", "price": "0.480000", "ext": {"rdp": [{"name": "Rhinoceros 5.0 (64-bit)"}]}}, {"id": 33, "featured": true, "itar": false, "software": "GIS", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "University of Hamburg", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/SAGA.png", "title": "SAGA", "description": "System for Automated Geoscientific Analyses and effective implementation of spatial algorithms", "info_link": "http://www.saga-gis.org/en/index.html", "website": "http://www.saga-gis.org/en/index.html", "website_anchor": "www.saga-gis.org", "price": "0.480000", "ext": {"rdp": [{"name": "saga_gui"}]}}, {"id": 71, "featured": true, "itar": false, "software": "GIS", "software_option": "", "company": "SuperMap", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/SuperMap_iDesktop_8C.png", "title": "SuperMap iDesktop 8C", "description": "SuperMap iDesktop 8C  GIS", "info_link": "http://www.supermap.com/en/html/SuperMap_GIS_products9.html", "website": "http://www.supermap.com/en/", "website_anchor": "www.supermap.com", "price": "0.480000", "ext": {"rdp": [{"name": "iDesktop 8C"}]}}, {"id": 36, "featured": true, "itar": false, "software": "Coordinate Systems", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "TatukGIS", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/TatukGIS_Coordinate_Calculator.png", "title": "TatukGis Coordinate Calculator", "description": "TatukGIS Coordinate Calculator", "info_link": "http://www.tatukgis.com/Products/CoordinateCalculator/Description.aspx", "website": "http://www.tatukgis.com", "website_anchor": "www.tatukgis.com", "price": "0.480000", "ext": {"rdp": [{"name": "TatukGIS Calculator"}]}}, {"id": 34, "featured": true, "itar": false, "software": "Viewer GIS", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "TatukGIS", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/TatukGIS_Viewer.png", "title": "TatukGIS Viewer", "description": "TatukGIS Viewer is a slimmed-down version of TatukGIS Editor, without data editing, 3D mapping...", "info_link": "http://www.tatukgis.com/Products/EditorViewer/Description.aspx", "website": "http://www.tatukgis.com", "website_anchor": "www.tatukgis.com", "price": "0.480000", "ext": {"rdp": [{"name": "TatukGIS Viewer x64"}]}}, {"id": 42, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Trimble", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Trimble_RealWorks_Viewer.jpg", "title": "Trimble RealWorks Viewer", "description": "View and manipulate 3D data in the native Trimble RealWorks environment", "info_link": "http://www.trimble.com/3d-laser-scanning/realworks.aspx", "website": "http://www.trimble.com", "website_anchor": "www.trimble.com", "price": "0.480000", "ext": {"rdp": [{"name": "Trimble RealWorks"}]}}], "categories": ["3D graphics", "3D Vectorization", "Analyze 3D UAS Data", "AT & Camera calibration", "BIM", "Coordinate Systems", "Elevation Contour", "GIS", "GIS App", "Map Editor", "Obstacles Identification", "Orthophoto", "Photo Editor", "Photogrammetry", "Point Cloud", "PointCloud & 3D Model", "Point Cloud to Vector", "Precision Agriculture", "Remote Sensing", "SAR Processing", "Viewer Acute3D", "Viewer Agisoft", "Viewer Faro", "Viewer GIS", "Viewer Leica", "Viewer Point Cloud", "Viewer Remote Sensing", "Viewer SAR", "Viewer SURE", "Viewer Z+F"], "companies": ["AgiSoft", "Applied Imagery", "Arithmetica Ltd.", "Bentley", "Bingo", "Blue Marble Geographics", "Chicago University", "Cloudcompare.org", "Displaz", "FARO", "Fugro", "GeoCue Group", "Getpaint.net", "GIMP - team", "GIP, Dr. Kruck & Co.", "GRASS GIS", "Hexagon Geospatial", "Mooii Tech", "Novacenter", "Numerous", "Power Of Software Ltd.", "QGIS", "Racurs", "Robert McNeel & Assoc.", "SuperMap", "TatukGIS", "Technodigit/Hexagon", "Trimble", "Triple Water Geo", "University of Hamburg", "Z+F Zoller+Frohlich"]});
 </script>
 
 

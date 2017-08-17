@@ -1163,8 +1163,12 @@ a.link-to-software {
   margin-left: 0;
 }
 .col-md-right .table {
+  background-color: #fff;
   margin-left: 0;
   margin-top: 7px;
+}
+.col-md-right .table .product-logo {
+  width: 77px;
 }
 @media (min-width: 768px) {
   .filter-fixed {
@@ -1202,6 +1206,11 @@ a.link-to-software {
   .col-md-right .table-responsive {
     border-left: 1px solid #ddd;
     margin-left: -1px;
+  }
+  .col-md-right .table {
+    padding-left: 15px;
+    display: inline-block;
+    max-height: 850px;
   }
 }
 /* iCheck plugin Square skin, blue
@@ -1266,6 +1275,8 @@ a.link-to-software {
   margin: 0;
   border-bottom: 1px solid #ddd;
   overflow-x: visible;
+  position: absolute;
+  top: 0;
 }
 .filter .filter-header,
 .filter .filter-footer {
@@ -1312,6 +1323,10 @@ a.link-to-software {
   z-index: 1;
   left: 15px;
   right: 15px;
+}
+.filter .filter-body .list-unstyled {
+  max-height: 330px;
+  overflow-y: auto;
 }
 .filter h4 {
   margin: 25px 0 16px;
