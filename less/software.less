@@ -75,13 +75,20 @@ a.link-to-software {
     }
     tbody {
       tr {
-
         border-bottom: 1px solid #ddd;
       }
       tr:nth-child(odd) {
-        //color: red;
-        //border-bottom: 2px solid #fff;
         border-bottom: 0;
+        td {
+          vertical-align: bottom;
+          padding: 0 0 4px;
+          &.software-t-col-1 {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 8px 5px 0;
+            vertical-align: middle;
+          }
+
+        }
         &.odd {
           //border-bottom: 2px solid #f9f9f9;
         }
@@ -89,12 +96,8 @@ a.link-to-software {
       tr:nth-child(even) {
         td {
           vertical-align: top;
+          padding: 4px 0 0;
         }
-      }
-      .software-t-col-1 {
-        //border-bottom: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 5px 8px 5px 0;
       }
     }
   }
