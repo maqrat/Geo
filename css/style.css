@@ -1186,10 +1186,12 @@ a.link-to-software {
 }
 .col-md-right .table > tbody > tr > td {
   border: 0;
-  padding: 0!important;
+}
+.col-md-right .table td.col-xs-3 {
+  padding: 0;
 }
 .col-md-right .table > thead > tr > th {
-  padding: 8px 15px;
+  padding: 8px 0;
 }
 .col-md-right .table tbody tr {
   border-bottom: 1px solid #ddd;
@@ -1199,7 +1201,7 @@ a.link-to-software {
 }
 .col-md-right .table tbody .software-t-col-1 {
   border-bottom: 1px solid #ddd;
-  padding: 5px;
+  padding: 5px 8px;
 }
 .table-fixed {
   width: 100%;
@@ -1260,6 +1262,11 @@ a.link-to-software {
     display: inline-block;
     margin-bottom: 0;
   }
+  .col-md-right .table .software-t-col-1 {
+    min-width: inherit;
+  }
+}
+@media (min-width: 1200px) {
   .col-md-right .table .software-t-col-1 {
     min-width: 147px;
   }

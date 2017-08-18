@@ -64,10 +64,13 @@ a.link-to-software {
     }
     &>tbody>tr>td {
       border: 0;
-      padding: 0!important;
+      //padding: 0!important;
+    }
+    td.col-xs-3 {
+      padding: 0;
     }
     &>thead>tr>th {
-      padding: 8px 15px;
+      padding: 8px 0;
     }
     tbody {
       tr {
@@ -85,7 +88,7 @@ a.link-to-software {
       .software-t-col-1 {
         //border-bottom: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
-        padding: 5px;
+        padding: 5px 8px;
       }
     }
   }
@@ -154,11 +157,21 @@ a.link-to-software {
       display: inline-block;
       margin-bottom: 0;
       .software-t-col-1 {
+        min-width: inherit;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .col-md-right {
+    .table {
+      .software-t-col-1 {
         min-width: 147px; // products logo can be smaller sizes and if chosen one -> table row smaller than 100%
       }
     }
   }
 }
+
 
 
 
