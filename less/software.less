@@ -14,10 +14,10 @@ a.link-to-software {
   width: 100%;
   position: relative;
   .filter-fixed {
-    position: fixed;
+    position: absolute;
     left: 15px;
     right: 15px;
-    top: 51px; //navbar height
+    top: 0; //navbar height
     margin: auto;
     background-color: #fff;
     z-index: 1;
@@ -42,7 +42,8 @@ a.link-to-software {
 }
 .col-md-right {
   &.top-padding {
-    padding-top: 62px; //filter header height
+    //padding-top: 62px; //filter header height
+    padding-top: 38px;
   }
   .table {
     border-left: none;
@@ -133,7 +134,7 @@ a.link-to-software {
     .filter-fixed {
       top: 51px; //   navbar height
       right: inherit;
-      position: fixed;
+      position: static;
       left: inherit;
       //width: 229px;
       overflow: auto;

@@ -1,3 +1,7 @@
+.filter-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .filter {
   overflow: auto;
   z-index: 1;
@@ -10,8 +14,8 @@
     position: relative;
     min-height: 31px;
     h3 {
-      //margin: 15px 0;
-      margin: 13px 0 6px;
+      //margin: 13px 0 6px;
+      margin: 7px 0;
       cursor: pointer;
       line-height: 30px;
       i.visible-sm.visible-xs {
@@ -67,6 +71,10 @@
   }
 }
 @media (min-width:992px) {
+  .filter-container {
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
   .filter {
     border-bottom: 0;
     padding: 0 15px 20px 0;

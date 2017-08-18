@@ -93,7 +93,7 @@ h1 {
 .navy-line {
   width: 60px;
   height: 1px;
-  margin: 40px auto 0;
+  margin: 25px auto 0;
   border-bottom: 2px solid #0094e7;
 }
 .navy-line-sm {
@@ -484,6 +484,11 @@ fieldset[disabled] .btn-primary.active {
   }
   .featurette-heading {
     font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .navy-line {
+    margin: 40px auto 0;
   }
 }
 @media (max-width: 991px) {
@@ -1049,6 +1054,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .overview .flex-container img {
   max-height: 590px;
+  margin: auto;
 }
 .overview .wwc h2 {
   position: relative;
@@ -1139,10 +1145,10 @@ a.link-to-software {
   position: relative;
 }
 .col-md-left-affix-container .filter-fixed {
-  position: fixed;
+  position: absolute;
   left: 15px;
   right: 15px;
-  top: 51px;
+  top: 0;
   margin: auto;
   background-color: #fff;
   z-index: 1;
@@ -1163,7 +1169,7 @@ a.link-to-software {
   padding: 0;
 }
 .col-md-right.top-padding {
-  padding-top: 62px;
+  padding-top: 38px;
 }
 .col-md-right .table {
   border-left: none;
@@ -1239,7 +1245,7 @@ a.link-to-software {
   .col-md-left-affix-container .filter-fixed {
     top: 51px;
     right: inherit;
-    position: fixed;
+    position: static;
     left: inherit;
     overflow: auto;
     bottom: 0;
@@ -1327,6 +1333,10 @@ a.link-to-software {
     background-size: 240px 24px;
   }
 }
+.filter-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .filter {
   overflow: auto;
   z-index: 1;
@@ -1343,7 +1353,7 @@ a.link-to-software {
 }
 .filter .filter-header h3,
 .filter .filter-footer h3 {
-  margin: 13px 0 6px;
+  margin: 7px 0;
   cursor: pointer;
   line-height: 30px;
 }
@@ -1398,6 +1408,10 @@ a.link-to-software {
   cursor: pointer;
 }
 @media (min-width: 992px) {
+  .filter-container {
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
   .filter {
     border-bottom: 0;
     padding: 0 15px 20px 0;
