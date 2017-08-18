@@ -1159,7 +1159,7 @@ a.link-to-software {
 .col-md-left-affix-container .filter-fixed .filter-body.filter-body-scroll {
   position: fixed;
   overflow-y: auto;
-  top: 111px;
+  top: 165px;
   right: 15px;
   bottom: 0;
   left: 15px;
@@ -1194,7 +1194,7 @@ a.link-to-software {
   border: 0;
 }
 .col-md-right .table td.col-xs-3 {
-  padding: 0;
+  padding: 0px 0px;
 }
 .col-md-right .table > thead > tr > th {
   padding: 8px 0;
@@ -1205,6 +1205,9 @@ a.link-to-software {
 .col-md-right .table tbody tr:nth-child(odd) {
   border-bottom: 0;
 }
+.col-md-right .table tbody tr:nth-child(even) td {
+  vertical-align: top;
+}
 .col-md-right .table tbody .software-t-col-1 {
   border-bottom: 1px solid #ddd;
   padding: 5px 8px 5px 0;
@@ -1213,7 +1216,7 @@ a.link-to-software {
   width: 100%;
 }
 .table-fixed tbody {
-  height: 700px;
+  height: 640px;
   overflow-y: auto;
   width: 100%;
 }
@@ -1274,7 +1277,7 @@ a.link-to-software {
 }
 @media (min-width: 1200px) {
   .col-md-right .table .software-t-col-1 {
-    min-width: 147px;
+    min-width: 100px;
   }
 }
 /* iCheck plugin Square skin, blue
@@ -1390,14 +1393,14 @@ a.link-to-software {
   z-index: 1;
   left: 15px;
   right: 15px;
-}
-.filter .filter-body .list-unstyled {
-  max-height: 290px;
-  overflow-y: auto;
+  max-height: 640px;
   margin-bottom: 0;
 }
-.filter .filter-body .list-unstyled .slimScrollBar {
-  z-index: 100;
+.filter .filter-body .list-unstyled {
+  overflow-y: auto;
+}
+.filter .filter-body .slimScrollBar {
+  z-index: 100!important;
 }
 .filter h4 {
   margin: 25px 0 16px;

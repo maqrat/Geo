@@ -52,14 +52,15 @@
     z-index: 1;
     left: 15px;
     right: 15px;
+    max-height: 640px;
     .list-unstyled {
-      max-height: 290px;
+      //max-height: 230px;
       overflow-y: auto;
-      margin-bottom: 0;
-      .slimScrollBar {
-        z-index: 100;
-      }
     }
+    .slimScrollBar {
+      z-index: 100!important;
+    }
+    margin-bottom: 0;
   }
   h4 {
     margin: 25px 0 16px;
