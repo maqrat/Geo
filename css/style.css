@@ -1201,7 +1201,7 @@ a.link-to-software {
 }
 .col-md-right .table tbody .software-t-col-1 {
   border-bottom: 1px solid #ddd;
-  padding: 5px 8px;
+  padding: 5px 8px 5px 0;
 }
 .table-fixed {
   width: 100%;
