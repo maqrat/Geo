@@ -501,7 +501,7 @@
                             <div class="filter-body" id="filters">
                                 <div class="col-xs-12 col-sm-6 col-md-12">
                                     <h4>Companies</h4>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled filter-body-1">
                                         <li v-for="(company, index) in companies">
                                             <input
                                                     type="checkbox"
@@ -517,7 +517,7 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-12">
                                     <h4>Categories</h4>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled filter-body-2">
                                         <li v-for="(category, index) in categories">
                                             <input
                                                     type="checkbox"
@@ -827,6 +827,7 @@
 
 <script src="js/plugins/iCheck/icheck.min.js"></script>
 <script src="js/plugins/slick/slick.min.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 
 <script>
@@ -837,6 +838,28 @@
             target: '.navbar-fixed-top',
             offset: 80
         });
+
+        $('.filter-body-1').slimScroll({
+            position: 'right',
+            alwaysVisible: true
+        });
+        $('.filter-body-2').slimScroll({
+            position: 'right',
+            alwaysVisible: true
+        });
+        $('tbody').slimScroll({
+            position: 'right',
+            alwaysVisible: true,
+            height: '650px'
+        });
+        $('.filter .list-unstyled li label').on('click', function () {
+            console.log('dfgg');
+            $('tbody').mouseover();
+        });
+        /*$('.filter .list-unstyled li .icheckbox_square-blue').on('click', function () {
+            console.log('jhkh');
+            $('tbody').mouseover();
+        });*/
 
         // Page scrolling feature
         $('a.page-scroll').bind('click', function (event) {
