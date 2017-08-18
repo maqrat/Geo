@@ -1640,6 +1640,9 @@ a.link-to-software {
   color: black;
   opacity: 0.75;
 }
+.brands-carousel {
+  opacity: 0;
+}
 .container-brands-carousel {
   height: 150px;
   background-color: #003169;
