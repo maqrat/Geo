@@ -1186,6 +1186,10 @@ a.link-to-software {
 }
 .col-md-right .table > tbody > tr > td {
   border: 0;
+  padding: 0!important;
+}
+.col-md-right .table > thead > tr > th {
+  padding: 8px 15px;
 }
 .col-md-right .table tbody tr {
   border-bottom: 1px solid #ddd;
@@ -1195,6 +1199,7 @@ a.link-to-software {
 }
 .col-md-right .table tbody .software-t-col-1 {
   border-bottom: 1px solid #ddd;
+  padding: 5px;
 }
 .table-fixed {
   width: 100%;
@@ -1210,8 +1215,7 @@ a.link-to-software {
   display: block;
 }
 .table-fixed thead tr {
-  border-bottom: 1px solid #ddd;
-  background-color: #f9f9f9;
+  border-bottom: 2px solid #ddd;
 }
 .table-fixed thead tr th {
   border-bottom: 0;

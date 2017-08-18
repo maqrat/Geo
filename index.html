@@ -547,7 +547,7 @@
                             <table class="table table-fixed">
                                 <thead>
                                     <tr>
-                                        <th class="col-xs-2">Logo</th>
+                                        <th class="col-xs-2 software-t-col-1">Logo</th>
                                         <th class="col-xs-3">Software</th>
                                         <th class="col-xs-3">Category</th>
                                         <th class="col-xs-3">Company</th>
@@ -556,17 +556,17 @@
                                 </thead>
                                 <tbody>
                                     <template v-for="(app, index) in filteredApps">
-                                        <tr :class="{odd: index % 2}" class="row">
+                                        <tr :class="{odd: index % 2}" class="">
                                             <td class="col-xs-2 software-t-col-1" rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
                                             <td class="col-xs-3">${app.title}</td>
                                             <td class="col-xs-3">${app.software}</a></td>
                                             <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
                                             <td class="col-xs-1">${app.price|price}</td>
                                         </tr>
-                                        <tr :class="{odd: index % 2}" class="row">
-                                            <td colspan="3" class="description">
+                                        <tr :class="{odd: index % 2}" class="">
+                                            <td colspan="3" class="col-xs-3 description">
                                                 ${app.description} &nbsp;
-                                                <a :href="app.info_link" target="_blank"><i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                                <a :href="app.info_link" target="_blank">more info &nbsp;<i class="fa fa-external-link" aria-hidden="true" ></i></a>
                                             </td>
                                             <td></td>
                                             <!--<td>
@@ -850,7 +850,7 @@
         $('tbody').slimScroll({
             position: 'right',
             alwaysVisible: true,
-            height: '650px'
+            height: '670px'
         });
         $('.filter .list-unstyled li label').on('click', function () {
 //            console.log('dfgg');
