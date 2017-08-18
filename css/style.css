@@ -1675,7 +1675,7 @@ a.link-to-software {
   opacity: 0;
 }
 .container-brands-carousel {
-  height: 150px;
+  height: 130px;
   background-color: #003169;
   background-image: url("../img/bg.jpg");
   color: #fff;
@@ -1706,30 +1706,37 @@ a.link-to-software {
   margin: auto;
 }
 .container-brands-carousel img.bundle_adjustment-w {
-  max-height: 65px;
-  margin-top: 9px;
+  max-height: 55px;
 }
 .container-brands-carousel img.super-map-logo-w {
-  max-height: 75px;
-  margin-top: 7px;
+  max-height: 30px;
+  margin-top: 11px;
 }
 .container-brands-carousel img.agisoft_logo-w {
-  max-height: 68px;
+  max-height: 34px;
   margin-top: 14px;
 }
 .container-brands-carousel img.ic_logo-w {
-  max-height: 99px;
-  margin-top: 0;
+  max-height: 30px;
+  margin-top: 16px;
 }
 .container-brands-carousel img.logo-racurs-w {
-  margin-top: 17px;
-  max-height: 65px;
+  max-height: 41px;
+  margin-top: 11px;
+}
+.container-brands-carousel img.acute3D_Logo {
+  max-height: 34px;
+  margin-top: 14px;
+}
+.container-brands-carousel img.tatukGIS_logo_new {
+  max-height: 51px;
+}
+.container-brands-carousel img.qgis_trademark {
+  max-height: 41px;
+  margin-top: 11px;
 }
 .container-brands-carousel .slick-list {
   opacity: 0.95;
-}
-.container-brands-carousel .slick-dots {
-  bottom: 5px;
 }
 .container-brands-carousel .slick-dots li {
   margin: 0;
@@ -1742,7 +1749,7 @@ a.link-to-software {
 }
 .container-brands-carousel .slick-prev,
 .container-brands-carousel .slick-next {
-  top: 24%;
+  top: 37%;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
