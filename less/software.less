@@ -58,6 +58,27 @@ a.link-to-software {
     tr.odd {
       background-color: #f9f9f9;
     }
+    &>tbody>tr>td {
+      border: 0;
+    }
+    tbody {
+      tr {
+
+        border-bottom: 1px solid #ddd;
+      }
+      tr:nth-child(odd) {
+        //color: red;
+        //border-bottom: 2px solid #fff;
+        border-bottom: 0;
+        &.odd {
+          //border-bottom: 2px solid #f9f9f9;
+        }
+      }
+      .software-t-col-1 {
+        //border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+    }
   }
 }
 .table-fixed{

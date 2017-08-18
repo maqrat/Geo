@@ -1181,6 +1181,18 @@ a.link-to-software {
 .col-md-right .table tr.odd {
   background-color: #f9f9f9;
 }
+.col-md-right .table > tbody > tr > td {
+  border: 0;
+}
+.col-md-right .table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+.col-md-right .table tbody tr:nth-child(odd) {
+  border-bottom: 0;
+}
+.col-md-right .table tbody .software-t-col-1 {
+  border-bottom: 1px solid #ddd;
+}
 .table-fixed {
   width: 100%;
 }
