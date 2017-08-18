@@ -47,6 +47,7 @@ a.link-to-software {
     margin-top: 7px;
     .product-logo {
       width: 77px;
+      margin: auto;
     }
     .fa-external-link {
       font-size: 10px;
@@ -74,23 +75,8 @@ a.link-to-software {
       border-bottom: 1px solid #ddd;
       background-color: #f9f9f9;
       th{
-        float:left;
+        //float:left;
         border-bottom: 0;
-        &.software-t-col-1 {
-          width: 9%;
-        }
-        &.software-t-col-2 {
-          width: 32%;
-        }
-        &.software-t-col-3 {
-          width: 25%;
-        }
-        &.software-t-col-4 {
-          width: 23%;
-        }
-        &.software-t-col-5 {
-          width: 10%;
-        }
       }
     }
   }
@@ -137,6 +123,9 @@ a.link-to-software {
       padding-left: 15px;
       display: inline-block;
       margin-bottom: 0;
+      .software-t-col-1 {
+        min-width: 147px; // products logo can be smaller sizes and if chosen one -> table row smaller than 100%
+      }
     }
   }
 }

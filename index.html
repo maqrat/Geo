@@ -547,23 +547,23 @@
                             <table class="table table-fixed">
                                 <thead>
                                     <tr>
-                                        <th class="software-t-col-1">Logo</th>
-                                        <th class="software-t-col-2">Software</th>
-                                        <th class="software-t-col-3">Category</th>
-                                        <th class="software-t-col-4">Company</th>
-                                        <th class="software-t-col-5">US$/Hour</th>
+                                        <th class="col-xs-2">Logo</th>
+                                        <th class="col-xs-3 software-t-col-2">Software</th>
+                                        <th class="col-xs-3 software-t-col-3">Category</th>
+                                        <th class="col-xs-3 software-t-col-4">Company</th>
+                                        <th class="col-xs-1 software-t-col-5">US$/Hour</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <template v-for="(app, index) in filteredApps">
-                                        <tr :class="{odd: index % 2}">
-                                            <td rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
-                                            <td>${app.title}</td>
-                                            <td>${app.software}</a></td>
-                                            <td><a :href="app.website" target="_blank">${app.company}</td>
-                                            <td>${app.price|price}</td>
+                                        <tr :class="{odd: index % 2}" class="row">
+                                            <td class="col-xs-2 software-t-col-1" rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
+                                            <td class="col-xs-3">${app.title}</td>
+                                            <td class="col-xs-3">${app.software}</a></td>
+                                            <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
+                                            <td class="col-xs-1">${app.price|price}</td>
                                         </tr>
-                                        <tr :class="{odd: index % 2}">
+                                        <tr :class="{odd: index % 2}" class="row">
                                             <td colspan="3" class="description">
                                                 ${app.description} &nbsp;
                                                 <a :href="app.info_link" target="_blank"><i class="fa fa-external-link" aria-hidden="true" ></i></a>
