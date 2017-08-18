@@ -757,7 +757,7 @@ fieldset[disabled] .btn-primary.active {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 20;
+  z-index: 200;
 }
 .navbar-wrapper > .container {
   padding-right: 0;
