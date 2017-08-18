@@ -10,6 +10,7 @@
   overflow-x: visible;
   position: absolute;
   top: 0;
+  //height: 700px;
   .filter-header, .filter-footer {
     position: relative;
     min-height: 31px;
@@ -45,15 +46,19 @@
     border-bottom: 1px solid #ddd;
     display: none;
     overflow: hidden;
-    padding-bottom: 15px;
+    //padding-bottom: 15px;
     position: absolute;
     background-color: #fff;
     z-index: 1;
     left: 15px;
     right: 15px;
     .list-unstyled {
-      max-height: 230px;
+      max-height: 290px;
       overflow-y: auto;
+      margin-bottom: 0;
+      .slimScrollBar {
+        z-index: 100;
+      }
     }
   }
   h4 {
@@ -71,10 +76,10 @@
   }
 }
 @media (min-width:992px) {
-  .filter-container {
+  /*.filter-container {
     margin-top: 5px;
     margin-bottom: 25px;
-  }
+  }*/
   .filter {
     border-bottom: 0;
     padding: 0 15px 20px 0;

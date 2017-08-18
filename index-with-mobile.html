@@ -532,14 +532,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="filter-footer col-xs-12 hidden-sm hidden-xs">
+                            <!--<div class="filter-footer col-xs-12 hidden-sm hidden-xs">
                                 <button type="button" class="btn btn-default btn-sm">Clear Filters</button>
                                 <button
                                         type="button"
                                         class="btn btn-default btn-sm hidden-sm hidden-xs"
                                         @click="clearFilters"
                                 >Clear Filters</button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-right">
@@ -841,16 +841,19 @@
 
         $('.filter-body-1').slimScroll({
             position: 'right',
-            alwaysVisible: true
+            alwaysVisible: true,
+            height: '290px'
         });
         $('.filter-body-2').slimScroll({
             position: 'right',
-            alwaysVisible: true
+            alwaysVisible: true,
+            height: '290px'
         });
         $('tbody').slimScroll({
             position: 'right',
             alwaysVisible: true,
-            height: '670px'
+            height: '700px'
+
         });
         $('.filter .list-unstyled li label').on('click', function () {
             $('tbody').mouseover();
