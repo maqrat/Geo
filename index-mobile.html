@@ -557,47 +557,45 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-right">
-                        <div class="">
-                            <table class="table table-fixed">
-                                <thead>
-                                <tr>
-                                    <th class="col-xs-1 col-lg-1 software-t-col-1"></th>
-                                    <th class="col-xs-3">Software</th>
-                                    <th class="col-xs-3">Category</th>
-                                    <th class="col-xs-3">Company</th>
-                                    <th class="col-xs-1 text-center">US$/Hour</th>
+                        <table class="table table-fixed">
+                            <thead>
+                            <tr>
+                                <th class="col-xs-1 col-lg-1 software-t-col-1"></th>
+                                <th class="col-xs-3">Software</th>
+                                <th class="col-xs-3">Category</th>
+                                <th class="col-xs-3">Company</th>
+                                <th class="col-xs-1 text-center">US$/Hour</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template v-for="(app, index) in filteredApps">
+                                <tr :class="{odd: index % 2}" class="">
+                                    <td class="col-xs-1 col-lg-1 software-t-col-1" rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
+                                    <td class="col-xs-3">${app.title}</td>
+                                    <td class="col-xs-3">${app.software}</a></td>
+                                    <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
+                                    <td class="col-xs-1 text-center">${app.price|price}</td>
                                 </tr>
-                                </thead>
-                                <tbody>
-                                <template v-for="(app, index) in filteredApps">
-                                    <tr :class="{odd: index % 2}" class="">
-                                        <td class="col-xs-1 col-lg-1 software-t-col-1" rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
-                                        <td class="col-xs-3">${app.title}</td>
-                                        <td class="col-xs-3">${app.software}</a></td>
-                                        <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
-                                        <td class="col-xs-1 text-center">${app.price|price}</td>
-                                    </tr>
-                                    <tr :class="{odd: index % 2}" class="">
-                                        <td colspan="3" class="col-xs-3 description">
-                                            ${app.description} &nbsp;
-                                            <a :href="app.info_link" target="_blank">info &nbsp;<i class="fa fa-external-link" aria-hidden="true" ></i></a>
-                                        </td>
-                                        <td></td>
-                                        <!--<td>
-                                            <a  v-if="app.info_link"
-                                                target="_blank"
-                                                :href="app.info_link">link</a>
-                                            <span v-else>-</span>
-                                        </td>
-                                        <td>
-                                            <a :href="app.website">more info</a>
-                                            <span v-else>-</span>
-                                        </td>-->
-                                    </tr>
-                                </template>
-                                </tbody>
-                            </table>
-                        </div>
+                                <tr :class="{odd: index % 2}" class="">
+                                    <td colspan="3" class="col-xs-3 description">
+                                        ${app.description} &nbsp;
+                                        <a :href="app.info_link" target="_blank">info &nbsp;<i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                    </td>
+                                    <td></td>
+                                    <!--<td>
+                                        <a  v-if="app.info_link"
+                                            target="_blank"
+                                            :href="app.info_link">link</a>
+                                        <span v-else>-</span>
+                                    </td>
+                                    <td>
+                                        <a :href="app.website">more info</a>
+                                        <span v-else>-</span>
+                                    </td>-->
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

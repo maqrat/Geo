@@ -1716,6 +1716,7 @@ a.link-to-software {
   color: #fff;
   background-size: cover;
   background-position: top;
+  margin-top: -5px;
 }
 .container-brands-carousel > .container-fluid {
   max-width: 1170px;
