@@ -573,7 +573,7 @@
                                     <td class="col-xs-1 col-lg-1 software-t-col-1" rowspan="2"><img :src="app.image" class="img-responsive product-logo" alt=""></td>
                                     <td class="col-xs-3">${app.title}</td>
                                     <td class="col-xs-3">${app.software}</a></td>
-                                    <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
+                                    <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</a></td>
                                     <td class="col-xs-1 text-center">${app.price|price}</td>
                                 </tr>
                                 <tr :class="{odd: index % 2}" class="">
@@ -596,6 +596,40 @@
                             </template>
                             </tbody>
                         </table>
+                        <div class="visible-xs">
+                            <div class="col-xs-12 table-mobile visible-xs">
+                                <div v-for="app in filteredApps" class="product">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right">
+                                            <img :src="app.image" class="product-logo" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right"><strong>Software:</strong></div>
+                                        <div class="col-xs-6">${app.title}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right"><strong>Category:</strong></div>
+                                        <div class="col-xs-6">${app.software}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right"><strong>Company:</strong></div>
+                                        <div class="col-xs-6"><a :href="app.website" target="_blank">${app.company}</a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right"><strong>Description:</strong></div>
+                                        <div class="col-xs-6">
+                                            ${app.description} &nbsp;
+                                            <a :href="app.info_link" target="_blank">info &nbsp;<i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 text-right"><strong>US$/Hour:</strong></div>
+                                        <div class="col-xs-6"><a :href="app.website" target="_blank">${app.price|price}</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -876,6 +910,12 @@
             position: 'right',
             alwaysVisible: true,
             height: '642px'
+
+        });
+        $('.table-mobile').slimScroll({
+            position: 'right',
+            alwaysVisible: true,
+            height: '680px'
 
         });
         $('.filter .list-unstyled li label').on('click', function () {

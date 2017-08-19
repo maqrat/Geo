@@ -11,6 +11,9 @@ a.link-to-software {
   }
 }
 .software {
+  .table-mobile {
+    display: none;
+  }
   h1 {
     margin-bottom: 0;
   }
@@ -104,11 +107,6 @@ a.link-to-software {
         td {
           vertical-align: top;
           padding: 4px 0 0;
-          //white-space: nowrap;
-          //>div {
-          //  overflow: hidden;
-          //  width: 690px;
-          //}
         }
       }
     }
@@ -186,6 +184,25 @@ a.link-to-software {
     .table {
       .software-t-col-1 {
         min-width: 100px; // products logo can be smaller sizes and if chosen one -> table row smaller than 100%
+      }
+    }
+  }
+}
+
+//mobile table
+@media (max-width:767px) {
+  .software {
+    table {
+      display: none;
+    }
+    .table-mobile {
+      max-height: 675px;
+      .product {
+        margin: 0px 0 30px;
+        .product-logo {
+          max-width: 70px;
+          margin: 20px 0 5px;
+        }
       }
     }
   }
