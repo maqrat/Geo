@@ -884,11 +884,13 @@
             $('tbody').mouseover();
         });
         function filterHeightRebuild(){
-            if ($(window).outerWidth() < 991) {
-                $('.filter-body .slimScrollDiv').css('height', '345px');
-                $('.filter-body .slimScrollDiv ul').css('height', '325px');
-                filterBody.css('display', 'none');
-                caretOpenFilter.removeClass("open");
+            var windowWidth = $(window).outerWidth();
+            if (windowWidth < 768) {
+                $('.filter-body div:first-child .slimScrollDiv').css('height', '260px');
+                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '260px');
+            } else if (windowWidth < 991) {
+                $('.filter-body  div:first-child .slimScrollDiv').css('height', '345px');
+                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '325px');
             } else {
                 $('.filter-body div:first-child .slimScrollDiv').css('height', '260px');
                 $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '260px');

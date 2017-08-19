@@ -1414,6 +1414,7 @@ a.link-to-software {
   z-index: 100;
   left: 15px;
   right: 15px;
+  max-height: auto;
   max-height: 682px;
   margin-bottom: 0;
 }
