@@ -1145,28 +1145,32 @@ a.link-to-software {
   position: relative;
 }
 .col-md-left-affix-container .filter-fixed {
-  position: absolute;
-  left: 15px;
-  right: 15px;
+  /*position: absolute;
+    left: 15px;
+    right: 15px;*/
+  position: relative;
   top: 0;
   margin: auto;
   background-color: #fff;
   z-index: 1;
 }
 .col-md-left-affix-container .filter-fixed .filter-body {
-  position: static;
+  position: relative;
 }
 .col-md-left-affix-container .filter-fixed .filter-body.filter-body-scroll {
   position: fixed;
   overflow-y: auto;
-  top: 165px;
+  top: 146px;
   right: 15px;
   bottom: 0;
   left: 15px;
-  margin: auto;
+  margin: 0 auto;
 }
 .col-md-left-affix-container .col-sm-6 {
-  padding: 0;
+  padding: 0 15px;
+}
+.col-md-right {
+  position: relative;
 }
 .col-md-right.top-padding {
   padding-top: 38px;
@@ -1341,18 +1345,18 @@ a.link-to-software {
     background-size: 240px 24px;
   }
 }
-.filter-container {
+.software-container {
   margin-top: 0;
   margin-bottom: 0;
 }
 .filter {
-  overflow: auto;
-  z-index: 1;
   margin: 0;
   border-bottom: 1px solid #ddd;
+  /*overflow: auto;
+  z-index: 1;
   overflow-x: visible;
   position: absolute;
-  top: 0;
+  top: 0;*/
 }
 .filter .filter-header,
 .filter .filter-footer,
@@ -1407,7 +1411,7 @@ a.link-to-software {
   overflow: hidden;
   position: absolute;
   background-color: #fff;
-  z-index: 1;
+  z-index: 100;
   left: 15px;
   right: 15px;
   max-height: 682px;
@@ -1434,8 +1438,21 @@ a.link-to-software {
   }*/
   .filter {
     border-bottom: 0;
-    padding: 0 15px 20px 0;
     width: 244px;
+    position: absolute;
+    z-index: 100;
+    /* .chapter-header {
+      button {
+        right: 0;
+      }
+    }*/
+    /*.slimScrollDiv .filter-body-1 {
+      height: 260px!important;
+    }
+    .slimScrollDiv .filter-body-2 {
+      height: 235px!important;
+
+    }*/
   }
   .filter .filter-header h3,
   .filter .filter-footer h3 {

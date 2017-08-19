@@ -1,15 +1,15 @@
-.filter-container {
+.software-container {
   margin-top: 0;
   margin-bottom: 0;
 }
 .filter {
-  overflow: auto;
-  z-index: 1;
   margin: 0;
   border-bottom: 1px solid #ddd;
+  /*overflow: auto;
+  z-index: 1;
   overflow-x: visible;
   position: absolute;
-  top: 0;
+  top: 0;*/
   //height: 700px;
   .filter-header, .filter-footer, .chapter-header {
     position: relative;
@@ -52,7 +52,7 @@
     //padding-bottom: 15px;
     position: absolute;
     background-color: #fff;
-    z-index: 1;
+    z-index: 100;
     left: 15px;
     right: 15px;
     max-height: 682px;
@@ -84,8 +84,10 @@
   }*/
   .filter {
     border-bottom: 0;
-    padding: 0 15px 20px 0;
+    //padding: 0 15px 20px 0;
     width: 244px;
+    position: absolute;
+    z-index: 100;
     .filter-header, .filter-footer {
       h3 {
         cursor: auto;
@@ -100,5 +102,17 @@
       border-bottom: 0;
       position: static;
     }
+   /* .chapter-header {
+      button {
+        right: 0;
+      }
+    }*/
+    /*.slimScrollDiv .filter-body-1 {
+      height: 260px!important;
+    }
+    .slimScrollDiv .filter-body-2 {
+      height: 235px!important;
+
+    }*/
   }
 }

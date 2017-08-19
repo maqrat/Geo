@@ -21,33 +21,35 @@ a.link-to-software {
   width: 100%;
   position: relative;
   .filter-fixed {
-    position: absolute;
+    /*position: absolute;
     left: 15px;
-    right: 15px;
+    right: 15px;*/
+    position: relative;
     top: 0; //navbar height
     margin: auto;
     background-color: #fff;
     z-index: 1;
     .filter-body {
-      position: static;
+      position: relative;
 
       &.filter-body-scroll {
         position: fixed;
         overflow-y: auto;
-        top: 165px;
+        top: 146px;
         right: 15px;
         bottom: 0;
         left: 15px;
-        margin: auto;
+        margin: 0 auto;
       }
     }
   }
 
   .col-sm-6 {
-    padding: 0;
+    padding: 0 15px;
   }
 }
 .col-md-right {
+  position: relative;
   &.top-padding {
     padding-top: 38px;
   }
