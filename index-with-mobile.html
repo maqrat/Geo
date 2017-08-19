@@ -489,7 +489,7 @@
                 <div class="row filter-container">
                     <div class="col-xs-12 col-md-left-affix-container">
                         <div class="filter">
-                            <div class="filter-header">
+                            <div class="filter-header hidden-lg">
                                 <h3 class="fa-angle-down-cont">Filters <i id="fa-angle-down" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
                                 </h3>
                                 <button
@@ -500,7 +500,14 @@
                             </div>
                             <div class="filter-body" id="filters">
                                 <div class="col-xs-12 col-sm-6 col-md-12">
-                                    <h4>Companies</h4>
+                                    <div class="chapter-header">
+                                        <h4>Companies</h4>
+                                        <button
+                                                type="button"
+                                                class="btn btn-default btn-sm"
+                                                @click="clearFilters"
+                                        >Clear</button>
+                                    </div>
                                     <ul class="list-unstyled filter-body-1">
                                         <li v-for="(company, index) in companies">
                                             <input
@@ -516,7 +523,14 @@
                                     </ul>
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-12">
-                                    <h4>Categories</h4>
+                                    <div class="chapter-header">
+                                        <h4>Categories</h4>
+                                        <button
+                                                type="button"
+                                                class="btn btn-default btn-sm"
+                                                @click="clearFilters"
+                                        >Clear</button>
+                                    </div>
                                     <ul class="list-unstyled filter-body-2">
                                         <li v-for="(category, index) in categories">
                                             <input
@@ -561,7 +575,7 @@
                                         <td class="col-xs-3">${app.title}</td>
                                         <td class="col-xs-3">${app.software}</a></td>
                                         <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</td>
-                                        <td class="col-xs-1">${app.price|price}</td>
+                                        <td class="col-xs-1 text-center">${app.price|price}</td>
                                     </tr>
                                     <tr :class="{odd: index % 2}" class="">
                                         <td colspan="3" class="col-xs-3 description">
@@ -843,17 +857,17 @@
         $('.filter-body-1').slimScroll({
             position: 'right',
             alwaysVisible: true,
-            height: '230px'
+            height: '260px'
         });
         $('.filter-body-2').slimScroll({
             position: 'right',
             alwaysVisible: true,
-            height: '290px'
+            height: '325px'
         });
         $('tbody').slimScroll({
             position: 'right',
             alwaysVisible: true,
-            height: '640px'
+            height: '642px'
 
         });
         $('.filter .list-unstyled li label').on('click', function () {

@@ -1,12 +1,19 @@
 /* +Table styles */
+a.link-to-software {
+  text-decoration:none;
+  float: right;
+}
+.software, .data {
+  table {
+    tr {
+      height: 31px;
+    }
+  }
+}
 .software {
   h1 {
     margin-bottom: 0;
   }
-}
-a.link-to-software {
-  text-decoration:none;
-  float: right;
 }
 .col-md-left-affix-container {
   border-right: none;
@@ -42,7 +49,6 @@ a.link-to-software {
 }
 .col-md-right {
   &.top-padding {
-    //padding-top: 62px; //filter header height
     padding-top: 38px;
   }
   .table {
@@ -51,7 +57,7 @@ a.link-to-software {
     background-color: #fff;
     margin-top: 7px;
     .product-logo {
-      width: 57px;
+      width: 52px;
       margin: auto;
     }
     .fa-external-link {
@@ -65,10 +71,9 @@ a.link-to-software {
     }
     &>tbody>tr>td {
       border: 0;
-      //padding: 0!important;
     }
     td.col-xs-3 {
-      padding: 0px 0px;
+      padding: 0 0;
     }
     &>thead>tr>th {
       padding: 8px 0;
@@ -81,7 +86,7 @@ a.link-to-software {
         border-bottom: 0;
         td {
           vertical-align: bottom;
-          padding: 0 0 4px;
+          padding: 0 0 2px;
           &.software-t-col-1 {
             border-bottom: 1px solid #ddd;
             padding: 5px 8px 5px 0;
@@ -96,7 +101,7 @@ a.link-to-software {
       tr:nth-child(even) {
         td {
           vertical-align: top;
-          padding: 4px 0 0;
+          padding: 2px 0 0;
         }
       }
     }
@@ -115,9 +120,7 @@ a.link-to-software {
   thead {
     tr{
       border-bottom: 2px solid #ddd;
-      //background-color: #f9f9f9;
       th{
-        //float:left;
         border-bottom: 0;
       }
     }

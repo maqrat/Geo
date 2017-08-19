@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   //height: 700px;
-  .filter-header, .filter-footer {
+  .filter-header, .filter-footer, .chapter-header {
     position: relative;
     min-height: 31px;
     h3 {
@@ -33,7 +33,10 @@
           transition: transform .3s linear;
         }
       }
-
+    }
+    h4 {
+      margin: 10px 0 5px;
+      line-height: 30px;
     }
     button {
       position: absolute;
@@ -52,7 +55,7 @@
     z-index: 1;
     left: 15px;
     right: 15px;
-    max-height: 640px;
+    max-height: 682px;
     .list-unstyled {
       //max-height: 230px;
       overflow-y: auto;
@@ -62,9 +65,7 @@
     }
     margin-bottom: 0;
   }
-  h4 {
-    margin: 25px 0 16px;
-  }
+
   ul {
     li {
       padding: 4px 0 4px 0;

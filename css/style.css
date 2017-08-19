@@ -383,10 +383,6 @@ h1 {
 .features .big-icon {
   color: #0094e7;
 }
-.software table tr,
-.data table tr {
-  height: 37px;
-}
 .contact {
   background-image: url('../img/word_map.png');
   background-position: 50% 50%;
@@ -1131,12 +1127,16 @@ p.bottom-text {
   }
 }
 /* +Table styles */
-.software h1 {
-  margin-bottom: 0;
-}
 a.link-to-software {
   text-decoration: none;
   float: right;
+}
+.software table tr,
+.data table tr {
+  height: 31px;
+}
+.software h1 {
+  margin-bottom: 0;
 }
 .col-md-left-affix-container {
   border-right: none;
@@ -1178,7 +1178,7 @@ a.link-to-software {
   margin-top: 7px;
 }
 .col-md-right .table .product-logo {
-  width: 57px;
+  width: 52px;
   margin: auto;
 }
 .col-md-right .table .fa-external-link {
@@ -1194,7 +1194,7 @@ a.link-to-software {
   border: 0;
 }
 .col-md-right .table td.col-xs-3 {
-  padding: 0px 0px;
+  padding: 0 0;
 }
 .col-md-right .table > thead > tr > th {
   padding: 8px 0;
@@ -1207,7 +1207,7 @@ a.link-to-software {
 }
 .col-md-right .table tbody tr:nth-child(odd) td {
   vertical-align: bottom;
-  padding: 0 0 4px;
+  padding: 0 0 2px;
 }
 .col-md-right .table tbody tr:nth-child(odd) td.software-t-col-1 {
   border-bottom: 1px solid #ddd;
@@ -1216,7 +1216,7 @@ a.link-to-software {
 }
 .col-md-right .table tbody tr:nth-child(even) td {
   vertical-align: top;
-  padding: 4px 0 0;
+  padding: 2px 0 0;
 }
 .table-fixed {
   width: 100%;
@@ -1356,35 +1356,47 @@ a.link-to-software {
   top: 0;
 }
 .filter .filter-header,
-.filter .filter-footer {
+.filter .filter-footer,
+.filter .chapter-header {
   position: relative;
   min-height: 31px;
 }
 .filter .filter-header h3,
-.filter .filter-footer h3 {
+.filter .filter-footer h3,
+.filter .chapter-header h3 {
   margin: 7px 0;
   cursor: pointer;
   line-height: 30px;
 }
 .filter .filter-header h3 i.visible-sm.visible-xs,
-.filter .filter-footer h3 i.visible-sm.visible-xs {
+.filter .filter-footer h3 i.visible-sm.visible-xs,
+.filter .chapter-header h3 i.visible-sm.visible-xs {
   display: inline-block !important;
   position: absolute;
   top: 4px;
   left: 80px;
 }
 .filter .filter-header h3 i,
-.filter .filter-footer h3 i {
+.filter .filter-footer h3 i,
+.filter .chapter-header h3 i {
   transform: rotate(0deg);
   transition: transform .3s linear;
 }
 .filter .filter-header h3 i.open,
-.filter .filter-footer h3 i.open {
+.filter .filter-footer h3 i.open,
+.filter .chapter-header h3 i.open {
   transform: rotate(180deg);
   transition: transform .3s linear;
 }
+.filter .filter-header h4,
+.filter .filter-footer h4,
+.filter .chapter-header h4 {
+  margin: 10px 0 5px;
+  line-height: 30px;
+}
 .filter .filter-header button,
-.filter .filter-footer button {
+.filter .filter-footer button,
+.filter .chapter-header button {
   position: absolute;
   right: 0;
   top: 0;
@@ -1399,7 +1411,7 @@ a.link-to-software {
   z-index: 1;
   left: 15px;
   right: 15px;
-  max-height: 640px;
+  max-height: 682px;
   margin-bottom: 0;
 }
 .filter .filter-body .list-unstyled {
@@ -1407,9 +1419,6 @@ a.link-to-software {
 }
 .filter .filter-body .slimScrollBar {
   z-index: 100!important;
-}
-.filter h4 {
-  margin: 25px 0 16px;
 }
 .filter ul li {
   padding: 4px 0 4px 0;
