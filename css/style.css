@@ -1300,11 +1300,18 @@ a.link-to-software {
     max-height: 675px;
   }
   .software .table-mobile .product {
-    margin: 0px 0 30px;
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #ddd;
+  }
+  .software .table-mobile .product > .row {
+    padding: 3px 0;
   }
   .software .table-mobile .product .product-logo {
     max-width: 70px;
     margin: 20px 0 5px;
+  }
+  .software .table-mobile .product .prod-title {
+    padding-top: 25px;
   }
 }
 /* iCheck plugin Square skin, blue
