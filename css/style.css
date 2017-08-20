@@ -1158,9 +1158,6 @@ a.link-to-software {
   position: relative;
 }
 .col-md-left-affix-container .filter-fixed {
-  /*position: absolute;
-    left: 15px;
-    right: 15px;*/
   position: relative;
   top: 0;
   margin: auto;
@@ -1384,11 +1381,6 @@ a.link-to-software {
 .filter {
   margin: 0;
   border-bottom: 1px solid #ddd;
-  /*overflow: auto;
-  z-index: 1;
-  overflow-x: visible;
-  position: absolute;
-  top: 0;*/
 }
 .filter .fa-angle-down {
   display: inline-block;
@@ -1445,10 +1437,6 @@ a.link-to-software {
   border-bottom: 1px solid #ddd;
   display: none;
   overflow: hidden;
-  /*position: absolute;
-    left: 15px;
-    right: 15px;
-    z-index: 100;*/
   position: relative;
   background-color: #fff;
   max-height: auto;
@@ -1469,27 +1457,11 @@ a.link-to-software {
   cursor: pointer;
 }
 @media (min-width: 992px) {
-  /*.filter-container {
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }*/
   .filter {
     border-bottom: 0;
     width: 244px;
     position: absolute;
     z-index: 100;
-    /* .chapter-header {
-      button {
-        right: 0;
-      }
-    }*/
-    /*.slimScrollDiv .filter-body-1 {
-      height: 260px!important;
-    }
-    .slimScrollDiv .filter-body-2 {
-      height: 235px!important;
-
-    }*/
   }
   .filter .fa-angle-down,
   .filter .bottom-caret-row {
