@@ -1398,6 +1398,7 @@ a.link-to-software {
   height: 30px;
   cursor: pointer;
   position: relative;
+  margin-top: 10px;
 }
 .filter .bottom-caret-row .fa-angle-down.open {
   position: static;
@@ -1476,6 +1477,7 @@ a.link-to-software {
     display: block!important;
     border-bottom: 0;
     position: static;
+    max-height: 677px;
   }
 }
 /* Slider */

@@ -793,7 +793,6 @@
         });
 
         //slimScroll
-
         $('.filter-body-1').slimScroll({
             position: 'right',
             height: '260px',
@@ -813,22 +812,32 @@
         $('.filter .list-unstyled li label').on('click', function () {
             $('tbody').mouseover();
         });
+        var f1slimScrollDiv = $('.filter-body  div:first-child .slimScrollDiv');
+        var f1FilterBody1 = $('.filter-body .slimScrollDiv ul.filter-body-1');
+
+        var f2slimScrollDiv = $('.filter-body  div:first-child+div .slimScrollDiv');
+        var f2FilterBody2 = $('.filter-body .slimScrollDiv ul.filter-body-2');
         function filterHeightRebuild(){
             var windowWidth = $(window).outerWidth();
             if (windowWidth < 768) {
-                var f1 = $(".filter-body-1");
-                f1.slimScroll({destroy:true});
-                f1.slimScroll({height:'100%'});
+                console.log(windowWidth);
 
-                var f2 = $(".filter-body-2");
-                f2.slimScroll({destroy:true});
-                f2.slimScroll({height:'100%'});
+                f1slimScrollDiv.css('height', '100%');
+                f1FilterBody1.css('height', '100%');
+
+                f2slimScrollDiv.css('height', '100%');
+                f2FilterBody2.css('height', '100%');
+
             } else if (windowWidth < 991) {
-                $('.filter-body  div:first-child .slimScrollDiv').css('height', '345px');
-                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '325px');
+                f1slimScrollDiv.css('height', '325px');
+                f1FilterBody1.css('height', '325px');
+
+                f2slimScrollDiv.css('height', '325px');
+                f2FilterBody2.css('height', '325px');
+
             } else {
-                $('.filter-body div:first-child .slimScrollDiv').css('height', '260px');
-                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '260px');
+                f1slimScrollDiv.css('height', '260px');
+                f1FilterBody1.css('height', '260px');
             }
         }
         $(window).on('resize', filterHeightRebuild);
