@@ -8,7 +8,7 @@
   color: #fff;
   background-size: cover;
   background-position: top;
-  //border-top: 7px solid black;
+  margin-top: -5px;
   &>.container-fluid {
     max-width: 1170px;
   }
@@ -32,11 +32,8 @@
   }
   img {
     margin: auto;
-    //-webkit-filter: invert(.8);
-    //filter: invert(.8);
     &.bundle_adjustment-w {
       max-height: 55px;
-      //margin-top: 0;
     }
     &.super-map-logo-w {
       max-height: 30px;
@@ -61,7 +58,6 @@
     }
     &.tatukGIS_logo_new {
       max-height: 51px;
-      //margin-top: 0;
     }
     &.qgis_trademark {
       max-height: 41px;
@@ -72,7 +68,6 @@
     opacity: 0.95;
   }
   .slick-dots {
-    //bottom: 5px;
     li {
       margin: 0;
     }
@@ -95,6 +90,12 @@
         font-size: 15px;
       }
     }
+  }
+}
+//mobile table
+@media (max-width:767px) {
+  .container-brands-carousel {
+    margin-top: 0;
   }
 }
 @media (min-width: 1200px) {

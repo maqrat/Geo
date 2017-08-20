@@ -11,6 +11,9 @@ a.link-to-software {
   }
 }
 .software {
+  .table-mobile {
+    display: none;
+  }
   h1 {
     margin-bottom: 0;
   }
@@ -21,11 +24,8 @@ a.link-to-software {
   width: 100%;
   position: relative;
   .filter-fixed {
-    /*position: absolute;
-    left: 15px;
-    right: 15px;*/
     position: relative;
-    top: 0; //navbar height
+    top: 0;
     margin: auto;
     background-color: #fff;
     z-index: 1;
@@ -96,19 +96,11 @@ a.link-to-software {
           }
 
         }
-        &.odd {
-          //border-bottom: 2px solid #f9f9f9;
-        }
       }
       tr:nth-child(even) {
         td {
           vertical-align: top;
           padding: 4px 0 0;
-          //white-space: nowrap;
-          //>div {
-          //  overflow: hidden;
-          //  width: 690px;
-          //}
         }
       }
     }
@@ -154,7 +146,6 @@ a.link-to-software {
       right: inherit;
       position: static;
       left: inherit;
-      //width: 229px;
       overflow: auto;
       bottom: 0;
       .filter-body {
@@ -186,6 +177,31 @@ a.link-to-software {
     .table {
       .software-t-col-1 {
         min-width: 100px; // products logo can be smaller sizes and if chosen one -> table row smaller than 100%
+      }
+    }
+  }
+}
+
+//mobile table
+@media (max-width:767px) {
+  .software {
+    table {
+      display: none;
+    }
+    .table-mobile {
+      .product {
+        padding: 20px 0 30px;
+        border-bottom: 1px solid #ddd;
+        &>.row {
+          padding: 3px 0;
+        }
+        .product-logo {
+          max-width: 70px;
+          margin: 20px 0 5px;
+        }
+        .prod-title {
+          padding-top: 25px;
+        }
       }
     }
   }

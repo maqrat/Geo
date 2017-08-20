@@ -5,34 +5,39 @@
 .filter {
   margin: 0;
   border-bottom: 1px solid #ddd;
-  /*overflow: auto;
-  z-index: 1;
-  overflow-x: visible;
-  position: absolute;
-  top: 0;*/
-  //height: 700px;
+  .fa-angle-down {
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    transform: rotate(0deg);
+    transition: transform .3s linear;
+    &.open {
+      transform: rotate(180deg);
+      transition: transform .3s linear;
+    }
+  }
+  .bottom-caret-row {
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    .fa-angle-down.open {
+      position: static;
+      display: block;
+      margin: auto;
+      width: 20px;
+      font-size: 20px;
+    }
+  }
   .filter-header, .filter-footer, .chapter-header {
     position: relative;
     min-height: 31px;
     h3 {
-      //margin: 13px 0 6px;
       margin: 7px 0;
       cursor: pointer;
       line-height: 30px;
-      i.visible-sm.visible-xs {
-        display: inline-block!important;
-        position: absolute;
-        top: 4px;
-        left: 80px;
-      }
-      i {
-        transform: rotate(0deg);
-        transition: transform .3s linear;
-        &.open {
-          transform: rotate(180deg);
-          transition: transform .3s linear;
-        }
-      }
+
     }
     h4 {
       margin: 10px 0 5px;
@@ -49,15 +54,10 @@
     border-bottom: 1px solid #ddd;
     display: none;
     overflow: hidden;
-    //padding-bottom: 15px;
-    position: absolute;
+    position: relative;
     background-color: #fff;
-    z-index: 100;
-    left: 15px;
-    right: 15px;
-    max-height: 682px;
+    max-height: auto;
     .list-unstyled {
-      //max-height: 230px;
       overflow-y: auto;
     }
     .slimScrollBar {
@@ -78,22 +78,17 @@
   }
 }
 @media (min-width:992px) {
-  /*.filter-container {
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }*/
   .filter {
     border-bottom: 0;
-    //padding: 0 15px 20px 0;
     width: 244px;
     position: absolute;
     z-index: 100;
+    .fa-angle-down,.bottom-caret-row {
+      display: none!important;
+    }
     .filter-header, .filter-footer {
       h3 {
         cursor: auto;
-        i.visible-sm.visible-xs {
-          display: none!important;
-        }
       }
     }
     .filter-body {
@@ -101,18 +96,7 @@
       display: block!important;
       border-bottom: 0;
       position: static;
+      max-height: 677px;
     }
-   /* .chapter-header {
-      button {
-        right: 0;
-      }
-    }*/
-    /*.slimScrollDiv .filter-body-1 {
-      height: 260px!important;
-    }
-    .slimScrollDiv .filter-body-2 {
-      height: 235px!important;
-
-    }*/
   }
 }

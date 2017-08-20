@@ -764,6 +764,16 @@ fieldset[disabled] .btn-primary.active {
   padding-right: 0;
   padding-left: 0;
 }
+.navbar-fixed-top {
+  /* MAGIC HAPPENS HERE */
+  transform: translateZ(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  /* seems to do the same in Safari */
+}
 .navbar-fixed-top .navbar-bg {
   display: none;
 }
@@ -790,6 +800,21 @@ fieldset[disabled] .btn-primary.active {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+.navbar-default .navbar-header {
+  position: relative;
+}
+.navbar-default .navbar-header .sign-up-btn-mobile {
+  display: none;
+  position: absolute;
+  right: 67px;
+  bottom: 12px;
+  margin: auto;
+  width: 100px;
+  font-size: 17px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .navbar-default .nav.navbar-nav > li.active > a {
   background: transparent;
@@ -824,6 +849,12 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default .nav.navbar-nav > li > a.navy:hover {
   color: #0073b4;
 }
+.navbar-default .nav.navbar-nav > li > a.navy.sign-up-btn {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 6px 10px 9px;
+  margin-top: 18px;
+}
 .navbar-default.navbar-scroll {
   border-bottom: 1px solid #e7eaec;
   border-radius: 0;
@@ -853,6 +884,13 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy:hover {
   color: #0073b4;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy.sign-up-btn {
+  color: #0094e7;
+  background-color: #dbffd3;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy.sign-up-btn:hover {
+  background-color: #fffed3;
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
   color: #0073b4;
@@ -917,6 +955,9 @@ fieldset[disabled] .btn-primary.active {
   .navbar-default .navbar-brand .img-responsive {
     height: 106px;
     border-radius: 0 0 15px 15px;
+  }
+  .navbar-default .navbar-header {
+    position: static;
   }
   .navbar-default .nav.navbar-nav {
     margin: 0px -10px;
@@ -1135,6 +1176,9 @@ a.link-to-software {
 .data table tr {
   height: 31px;
 }
+.software .table-mobile {
+  display: none;
+}
 .software h1 {
   margin-bottom: 0;
 }
@@ -1145,9 +1189,6 @@ a.link-to-software {
   position: relative;
 }
 .col-md-left-affix-container .filter-fixed {
-  /*position: absolute;
-    left: 15px;
-    right: 15px;*/
   position: relative;
   top: 0;
   margin: auto;
@@ -1289,6 +1330,25 @@ a.link-to-software {
     min-width: 100px;
   }
 }
+@media (max-width: 767px) {
+  .software table {
+    display: none;
+  }
+  .software .table-mobile .product {
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #ddd;
+  }
+  .software .table-mobile .product > .row {
+    padding: 3px 0;
+  }
+  .software .table-mobile .product .product-logo {
+    max-width: 70px;
+    margin: 20px 0 5px;
+  }
+  .software .table-mobile .product .prod-title {
+    padding-top: 25px;
+  }
+}
 /* iCheck plugin Square skin, blue
 ----------------------------------- */
 .icheckbox_square-blue,
@@ -1352,11 +1412,31 @@ a.link-to-software {
 .filter {
   margin: 0;
   border-bottom: 1px solid #ddd;
-  /*overflow: auto;
-  z-index: 1;
-  overflow-x: visible;
+}
+.filter .fa-angle-down {
+  display: inline-block;
   position: absolute;
-  top: 0;*/
+  top: 4px;
+  left: 80px;
+  transform: rotate(0deg);
+  transition: transform .3s linear;
+}
+.filter .fa-angle-down.open {
+  transform: rotate(180deg);
+  transition: transform .3s linear;
+}
+.filter .bottom-caret-row {
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+}
+.filter .bottom-caret-row .fa-angle-down.open {
+  position: static;
+  display: block;
+  margin: auto;
+  width: 20px;
+  font-size: 20px;
 }
 .filter .filter-header,
 .filter .filter-footer,
@@ -1370,26 +1450,6 @@ a.link-to-software {
   margin: 7px 0;
   cursor: pointer;
   line-height: 30px;
-}
-.filter .filter-header h3 i.visible-sm.visible-xs,
-.filter .filter-footer h3 i.visible-sm.visible-xs,
-.filter .chapter-header h3 i.visible-sm.visible-xs {
-  display: inline-block !important;
-  position: absolute;
-  top: 4px;
-  left: 80px;
-}
-.filter .filter-header h3 i,
-.filter .filter-footer h3 i,
-.filter .chapter-header h3 i {
-  transform: rotate(0deg);
-  transition: transform .3s linear;
-}
-.filter .filter-header h3 i.open,
-.filter .filter-footer h3 i.open,
-.filter .chapter-header h3 i.open {
-  transform: rotate(180deg);
-  transition: transform .3s linear;
 }
 .filter .filter-header h4,
 .filter .filter-footer h4,
@@ -1409,12 +1469,9 @@ a.link-to-software {
   border-bottom: 1px solid #ddd;
   display: none;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   background-color: #fff;
-  z-index: 100;
-  left: 15px;
-  right: 15px;
-  max-height: 682px;
+  max-height: auto;
   margin-bottom: 0;
 }
 .filter .filter-body .list-unstyled {
@@ -1432,41 +1489,26 @@ a.link-to-software {
   cursor: pointer;
 }
 @media (min-width: 992px) {
-  /*.filter-container {
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }*/
   .filter {
     border-bottom: 0;
     width: 244px;
     position: absolute;
     z-index: 100;
-    /* .chapter-header {
-      button {
-        right: 0;
-      }
-    }*/
-    /*.slimScrollDiv .filter-body-1 {
-      height: 260px!important;
-    }
-    .slimScrollDiv .filter-body-2 {
-      height: 235px!important;
-
-    }*/
+  }
+  .filter .fa-angle-down,
+  .filter .bottom-caret-row {
+    display: none!important;
   }
   .filter .filter-header h3,
   .filter .filter-footer h3 {
     cursor: auto;
-  }
-  .filter .filter-header h3 i.visible-sm.visible-xs,
-  .filter .filter-footer h3 i.visible-sm.visible-xs {
-    display: none!important;
   }
   .filter .filter-body {
     border-top: none;
     display: block!important;
     border-bottom: 0;
     position: static;
+    max-height: 677px;
   }
 }
 /* Slider */
@@ -1715,6 +1757,7 @@ a.link-to-software {
   color: #fff;
   background-size: cover;
   background-position: top;
+  margin-top: -5px;
 }
 .container-brands-carousel > .container-fluid {
   max-width: 1170px;
@@ -1791,6 +1834,11 @@ a.link-to-software {
 @media (max-width: 500px) {
   .container-brands-carousel .carousel-caption h1 {
     font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .container-brands-carousel {
+    margin-top: 0;
   }
 }
 @media (min-width: 1200px) {
