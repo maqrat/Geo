@@ -48,6 +48,21 @@
       .transition();
     }
   }
+  .navbar-header {
+    position: relative;
+    .sign-up-btn-mobile {
+      display: none;
+      position: absolute;
+      right: 67px;
+      bottom: 12px;
+      margin: auto;
+      width: 100px;
+      font-size: 17px;
+      padding: 0 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
   .nav.navbar-nav {
     &>li {
       &.active {
@@ -82,6 +97,12 @@
           color: @navy;
           &:hover {
             color: darken(@navy, 10%);
+          }
+          &.sign-up-btn {
+            font-size: 16px;
+            border-radius: 6px;
+            padding: 6px 10px 9px;
+            margin-top: 18px;
           }
         }
       }
@@ -126,7 +147,13 @@
           color: @navy;
           &:hover {
             color: darken(@navy, 10%);
-
+          }
+          &.sign-up-btn {
+            color: @navy;
+            background-color: #dbffd3;
+            &:hover {
+              background-color: #fffed3;
+            }
           }
         }
         &:hover {
@@ -215,6 +242,9 @@
         height: 106px;
         border-radius: 0 0 15px 15px;
       }
+    }
+    .navbar-header {
+      position: static;
     }
     .nav.navbar-nav {
       margin: 0px -10px;

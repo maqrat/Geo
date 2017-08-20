@@ -801,6 +801,21 @@ fieldset[disabled] .btn-primary.active {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.navbar-default .navbar-header {
+  position: relative;
+}
+.navbar-default .navbar-header .sign-up-btn-mobile {
+  display: none;
+  position: absolute;
+  right: 67px;
+  bottom: 12px;
+  margin: auto;
+  width: 100px;
+  font-size: 17px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .navbar-default .nav.navbar-nav > li.active > a {
   background: transparent;
   color: #0094e7;
@@ -834,6 +849,12 @@ fieldset[disabled] .btn-primary.active {
 .navbar-default .nav.navbar-nav > li > a.navy:hover {
   color: #0073b4;
 }
+.navbar-default .nav.navbar-nav > li > a.navy.sign-up-btn {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 6px 10px 9px;
+  margin-top: 18px;
+}
 .navbar-default.navbar-scroll {
   border-bottom: 1px solid #e7eaec;
   border-radius: 0;
@@ -863,6 +884,13 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy:hover {
   color: #0073b4;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy.sign-up-btn {
+  color: #0094e7;
+  background-color: #dbffd3;
+}
+.navbar-default.navbar-scroll .nav.navbar-nav > li > a.navy.sign-up-btn:hover {
+  background-color: #fffed3;
 }
 .navbar-default.navbar-scroll .nav.navbar-nav > li > a:hover {
   color: #0073b4;
@@ -927,6 +955,9 @@ fieldset[disabled] .btn-primary.active {
   .navbar-default .navbar-brand .img-responsive {
     height: 106px;
     border-radius: 0 0 15px 15px;
+  }
+  .navbar-default .navbar-header {
+    position: static;
   }
   .navbar-default .nav.navbar-nav {
     margin: 0px -10px;
