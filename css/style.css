@@ -1390,6 +1390,30 @@ a.link-to-software {
   position: absolute;
   top: 0;*/
 }
+.filter .fa-angle-down {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 80px;
+  transform: rotate(0deg);
+  transition: transform .3s linear;
+}
+.filter .fa-angle-down.open {
+  transform: rotate(180deg);
+  transition: transform .3s linear;
+}
+.filter .bottom-caret-row {
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.filter .bottom-caret-row .fa-angle-down.open {
+  position: static;
+  display: block;
+  margin: auto;
+  width: 20px;
+  font-size: 20px;
+}
 .filter .filter-header,
 .filter .filter-footer,
 .filter .chapter-header {
@@ -1402,26 +1426,6 @@ a.link-to-software {
   margin: 7px 0;
   cursor: pointer;
   line-height: 30px;
-}
-.filter .filter-header h3 i.visible-sm.visible-xs,
-.filter .filter-footer h3 i.visible-sm.visible-xs,
-.filter .chapter-header h3 i.visible-sm.visible-xs {
-  display: inline-block !important;
-  position: absolute;
-  top: 4px;
-  left: 80px;
-}
-.filter .filter-header h3 i,
-.filter .filter-footer h3 i,
-.filter .chapter-header h3 i {
-  transform: rotate(0deg);
-  transition: transform .3s linear;
-}
-.filter .filter-header h3 i.open,
-.filter .filter-footer h3 i.open,
-.filter .chapter-header h3 i.open {
-  transform: rotate(180deg);
-  transition: transform .3s linear;
 }
 .filter .filter-header h4,
 .filter .filter-footer h4,
@@ -1441,13 +1445,13 @@ a.link-to-software {
   border-bottom: 1px solid #ddd;
   display: none;
   overflow: hidden;
-  position: absolute;
+  /*position: absolute;
+    left: 15px;
+    right: 15px;
+    z-index: 100;*/
+  position: relative;
   background-color: #fff;
-  z-index: 100;
-  left: 15px;
-  right: 15px;
   max-height: auto;
-  max-height: 682px;
   margin-bottom: 0;
 }
 .filter .filter-body .list-unstyled {
@@ -1487,13 +1491,13 @@ a.link-to-software {
 
     }*/
   }
+  .filter .fa-angle-down,
+  .filter .bottom-caret-row {
+    display: none!important;
+  }
   .filter .filter-header h3,
   .filter .filter-footer h3 {
     cursor: auto;
-  }
-  .filter .filter-header h3 i.visible-sm.visible-xs,
-  .filter .filter-footer h3 i.visible-sm.visible-xs {
-    display: none!important;
   }
   .filter .filter-body {
     border-top: none;

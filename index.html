@@ -490,7 +490,7 @@
                     <div class="col-xs-12 col-md-left-affix-container">
                         <div class="filter">
                             <div class="filter-header hidden-lg hidden-md">
-                                <h3 class="fa-angle-down-cont">Filters <i id="fa-angle-down" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
+                                <h3 class="fa-angle-down-cont">Filters <i id="" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
                                 </h3>
                                 <!--<button
                                         type="button"
@@ -544,6 +544,9 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                                <div class="col-xs-12 bottom-caret-row visible-sm visible-xs">
+                                    <i id="" class="fa fa-angle-down" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <!--<div class="filter-footer col-xs-12 hidden-sm hidden-xs">
@@ -888,11 +891,12 @@
 
     $(document).ready(function () {
 
-        var filterBody = $('.filter-body');
-        var caretOpenFilter = $('.filter-header h3 i');
-        var panelOpenFilter = $('.filter-header');
-        var bodyHtml = $("body");
         var filter = $('.filter');
+        var filterBody = $('.filter-body');
+        var caretOpenFilter = $('.filter .fa-angle-down');
+        var panelOpenFilter = $('.filter-header');
+        var panelCloseFilter = $('.bottom-caret-row');
+        var bodyHtml = $("body");
         var rTableCol = $('.col-md-right');
         var topOffset = $('.navbar').outerHeight() + $('.container-brands-carousel').outerHeight() + $('.navy-line').outerHeight() + $('.software h1').outerHeight();
 
@@ -931,8 +935,15 @@
         function filterHeightRebuild(){
             var windowWidth = $(window).outerWidth();
             if (windowWidth < 768) {
-                $('.filter-body div:first-child .slimScrollDiv').css('height', '260px');
-                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '260px');
+               /* $('.filter-body div:first-child .slimScrollDiv').css('height', '260px');
+                $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '260px');*/
+                var f1 = $(".filter-body-1");
+                f1.slimScroll({destroy:true});
+                f1.slimScroll({height:'100%'});
+
+                var f2 = $(".filter-body-2");
+                f2.slimScroll({destroy:true});
+                f2.slimScroll({height:'100%'});
             } else if (windowWidth < 991) {
                 $('.filter-body  div:first-child .slimScrollDiv').css('height', '345px');
                 $('.filter-body .slimScrollDiv ul.filter-body-1').css('height', '325px');
@@ -1024,6 +1035,12 @@
 
 
         panelOpenFilter.click(function() {
+            filterBody.toggle("slide");
+            caretOpenFilter.toggleClass("open");
+//            filterOpenScroll();
+        });
+
+        panelCloseFilter.click(function() {
             filterBody.toggle("slide");
             caretOpenFilter.toggleClass("open");
 //            filterOpenScroll();

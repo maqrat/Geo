@@ -11,6 +11,30 @@
   position: absolute;
   top: 0;*/
   //height: 700px;
+  .fa-angle-down {
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    transform: rotate(0deg);
+    transition: transform .3s linear;
+    &.open {
+      transform: rotate(180deg);
+      transition: transform .3s linear;
+    }
+  }
+  .bottom-caret-row {
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    .fa-angle-down.open {
+      position: static;
+      display: block;
+      margin: auto;
+      width: 20px;
+      font-size: 20px;
+    }
+  }
   .filter-header, .filter-footer, .chapter-header {
     position: relative;
     min-height: 31px;
@@ -19,20 +43,7 @@
       margin: 7px 0;
       cursor: pointer;
       line-height: 30px;
-      i.visible-sm.visible-xs {
-        display: inline-block!important;
-        position: absolute;
-        top: 4px;
-        left: 80px;
-      }
-      i {
-        transform: rotate(0deg);
-        transition: transform .3s linear;
-        &.open {
-          transform: rotate(180deg);
-          transition: transform .3s linear;
-        }
-      }
+
     }
     h4 {
       margin: 10px 0 5px;
@@ -49,14 +60,14 @@
     border-bottom: 1px solid #ddd;
     display: none;
     overflow: hidden;
-    //padding-bottom: 15px;
-    position: absolute;
-    background-color: #fff;
-    z-index: 100;
+    /*position: absolute;
     left: 15px;
     right: 15px;
+    z-index: 100;*/
+    position: relative;
+    background-color: #fff;
     max-height: auto;
-    max-height: 682px;
+    //max-height: 682px;
     .list-unstyled {
       //max-height: 230px;
       overflow-y: auto;
@@ -89,12 +100,12 @@
     width: 244px;
     position: absolute;
     z-index: 100;
+    .fa-angle-down,.bottom-caret-row {
+      display: none!important;
+    }
     .filter-header, .filter-footer {
       h3 {
         cursor: auto;
-        i.visible-sm.visible-xs {
-          display: none!important;
-        }
       }
     }
     .filter-body {
