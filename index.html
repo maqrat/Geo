@@ -632,7 +632,7 @@
                                     </div>-->
                                     <div class="row">
                                         <div class="col-xs-4 text-right"><strong>US$/Hour:</strong></div>
-                                        <div class="col-xs-6"><a :href="app.website" target="_blank">${app.price|price}</a></div>
+                                        <div class="col-xs-6">${app.price|price}</div>
                                     </div>
                                 </div>
                             </div>
@@ -919,12 +919,12 @@
             height: '642px'
 
         });
-        $('.table-mobile').slimScroll({
+        /*$('.table-mobile').slimScroll({
             position: 'right',
             alwaysVisible: true,
             height: '680px'
 
-        });
+        });*/
         $('.filter .list-unstyled li label').on('click', function () {
             $('tbody').mouseover();
         });

@@ -764,6 +764,16 @@ fieldset[disabled] .btn-primary.active {
   padding-right: 0;
   padding-left: 0;
 }
+.navbar-fixed-top {
+  /* MAGIC HAPPENS HERE */
+  transform: translateZ(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  /* seems to do the same in Safari */
+}
 .navbar-fixed-top .navbar-bg {
   display: none;
 }
@@ -1295,9 +1305,6 @@ a.link-to-software {
 @media (max-width: 767px) {
   .software table {
     display: none;
-  }
-  .software .table-mobile {
-    max-height: 675px;
   }
   .software .table-mobile .product {
     padding: 20px 0 30px;
