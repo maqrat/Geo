@@ -32,37 +32,8 @@
   }
   img {
     margin: auto;
-    &.bundle_adjustment-w {
-      max-height: 55px;
-    }
-    &.super-map-logo-w {
-      max-height: 30px;
-      margin-top: 10px;
-    }
-    &.agisoft_logo-w {
-      max-height: 34px;
-      margin-top: 12px
-    }
-    &.ic_logo-w {
-      max-height: 30px;
-      margin-top: 12px;
-    }
-    &.logo-racurs-w {
-      max-height: 41px;
-      margin-top: 10px;
-    }
-
-    &.acute3D_Logo {
-      max-height: 34px;
-      margin-top: 14px
-    }
-    &.tatukGIS_logo_new {
-      max-height: 51px;
-    }
-    &.qgis_trademark {
-      max-height: 41px;
-      margin-top: 10px;
-    }
+    height: 55px;
+    max-width: 149px;
   }
   .slick-list {
     opacity: 0.95;
@@ -79,7 +50,8 @@
     left: -20px;
   }
   .slick-prev, .slick-next {
-    top: 37%;
+    top: 43%;
+    z-index: 1;
     .transition(@duration:0.3s, @ease:ease-out);
   }
 }
