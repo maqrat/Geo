@@ -43,10 +43,8 @@ a.link-to-software {
       }
     }
   }
-
   .col-sm-6 {
-    padding: 0 15px;
-    padding: 0 15px 0 0;
+    padding: 0;
   }
 }
 .col-md-right {
@@ -128,12 +126,17 @@ a.link-to-software {
 }
 
 @media (min-width:768px) {
-  .filter-fixed {
-    width: 720px;
-    .filter-body {
-      &.filter-body-scroll {
-        width: 720px;
+  .col-md-left-affix-container {
+    .filter-fixed {
+      width: 720px;
+      .filter-body {
+        &.filter-body-scroll {
+          width: 720px;
+        }
       }
+    }
+    .col-sm-6 {
+      padding: 0 15px;
     }
   }
 }

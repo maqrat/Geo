@@ -1221,8 +1221,7 @@ a.link-to-software {
   margin: 0 auto;
 }
 .col-md-left-affix-container .col-sm-6 {
-  padding: 0 15px;
-  padding: 0 15px 0 0;
+  padding: 0;
 }
 .col-md-right {
   position: relative;
@@ -1296,11 +1295,14 @@ a.link-to-software {
   border-bottom: 0;
 }
 @media (min-width: 768px) {
-  .filter-fixed {
+  .col-md-left-affix-container .filter-fixed {
     width: 720px;
   }
-  .filter-fixed .filter-body.filter-body-scroll {
+  .col-md-left-affix-container .filter-fixed .filter-body.filter-body-scroll {
     width: 720px;
+  }
+  .col-md-left-affix-container .col-sm-6 {
+    padding: 0 15px;
   }
 }
 @media (min-width: 992px) {
