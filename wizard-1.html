@@ -180,6 +180,24 @@
                                         class="form-control"
                                         type="search"
                                         placeholder="Search">
+                                <span
+                                    style="margin-left: 5px"
+                                    v-for="company in filters.companies"
+                                    class="label label-primary">
+                                    ${company}
+                                    <a @click="uncheckCompany(company)">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </span>
+                                <span
+                                    style="margin-left: 5px"
+                                    v-for="category in filters.categories"
+                                    class="label label-warning">
+                                    ${category}
+                                    <a @click="uncheckCategory(category)">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </span>
                             </form>
                             <div v-show="selectedApps.length" class="col-md-6" style="text-align: right">
                                 <div style="display: inline-block; margin-top: 7px">
@@ -316,6 +334,12 @@
                     if (this.steps[step] === 'available') {
                         window.location.replace('/wizard/' + step);
                     }
+                },
+                uncheckCategory: function (category) {
+                    $('input[value="category-' + category + '"]').iCheck('uncheck');
+                },
+                uncheckCompany: function (category) {
+                    $('input[value="company-' + category + '"]').iCheck('uncheck');
                 }
             },
             mounted: function () {
