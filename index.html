@@ -9,14 +9,10 @@
 
     <title>GeoCloud - Landing Page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="node_modules/animate.css/animate.css" rel="stylesheet" type="text/css"/>
 
-    <!-- Animation CSS -->
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -763,25 +759,18 @@
     </div>
 </div>
 
-<!-- Mainly scripts -->
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/vue.js"></script>
-<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-<!-- Custom and plugin javascript -->
-<script src="js/plugins/wow/wow.min.js"></script>
-
-<script src="js/plugins/iCheck/icheck.min.js"></script>
-<script src="js/plugins/slick/slick.min.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./node_modules/metismenu/dist/metisMenu.min.js"></script>
+<script src="./node_modules/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="./node_modules/wowjs/dist/wow.min.js"></script>
+<script src="./node_modules/icheck/icheck.min.js"></script>
+<script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 
 
 <script>
-
     $(document).ready(function () {
-
         var filter = $('.filter');
         var filterBody = $('.filter-body');
         var caretOpenFilter = $('.filter .fa-angle-down');

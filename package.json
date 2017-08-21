@@ -1,0 +1,21 @@
+{
+  "name": "geocloudmgr",
+  "version": "1.0.0",
+  "author": " <>",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "icheck": "^1.0.2",
+    "jquery": "^3.1.1",
+    "jquery-slimscroll": "^1.3.8",
+    "metismenu": "^2.7.0",
+    "roboto-fontface": "^0.7.0",
+    "slick-carousel": "^1.6.0",
+    "vue": "^2.1.0",
+    "wowjs": "^1.1.3"
+  }
+}
