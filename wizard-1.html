@@ -86,10 +86,6 @@
         <div id="app" class="wrapper wrapper-content wizard white-bg" style="margin-top: 20px">
 
             <h1>Welcome to GeoCloud</h1>
-            <p>
-                Please select your desired configuration
-            </p>
-
 
             <ul class="nav nav-pills nav-justified">
                 <li :class="steps[1]"><a href="#" @click.prevent="goToStep(1)">1. Select applications</a></li>
@@ -111,17 +107,23 @@
                                 <div class="filter-body" id="filters">
                                     <div class="">
                                         <div class="chapter-header">
-                                            <h4>Companies</h4>
+                                            <h4>
+                                                Companies
+                                                <small v-show="filters.companies.length" style="padding-left: 5px;">
+                                                    ${filters.companies.length} of ${companies.length} selected
+                                                </small>
+                                            </h4>
                                             <button
                                                     type="button"
                                                     class="btn btn-default btn-sm"
-                                                    @click="clearFilters"
+                                                    @click="clearCompaniesFilter"
                                             >Clear</button>
                                         </div>
-                                        <ul class="list-unstyled filter-body-1">
+                                        <ul class="list-unstyled filter-body-1 js-companies-filter">
                                             <li v-for="(company, index) in companies">
                                                 <input
                                                         type="checkbox"
+                                                        :checked="filters.companies.indexOf(company) !== -1"
                                                         :id="'square-checkbox-companies-' + index"
                                                         :value="'company-' + company">
                                                 <label
@@ -134,17 +136,24 @@
                                     </div>
                                     <div class="">
                                         <div class="chapter-header">
-                                            <h4>Categories</h4>
+                                            <h4>
+                                                Categories
+                                                <small v-show="filters.categories.length" style="padding-left: 5px;">
+                                                    ${filters.categories.length} of ${categories.length} selected
+                                                </small>
+                                            </h4>
                                             <button
+                                                    v-show="filters.categories.length"
                                                     type="button"
                                                     class="btn btn-default btn-sm"
-                                                    @click="clearFilters"
+                                                    @click="clearCategoriesFilter"
                                             >Clear</button>
                                         </div>
-                                        <ul class="list-unstyled filter-body-2">
+                                        <ul class="list-unstyled filter-body-2 js-categories-filter">
                                             <li v-for="(category, index) in categories">
                                                 <input
                                                         type="checkbox"
+                                                        :checked="filters.categories.indexOf(category) !== -1"
                                                         :id="'square-checkbox-categories-' + index"
                                                         :value="'category-' + category">
                                                 <label
@@ -245,17 +254,6 @@
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script src="./node_modules/icheck/icheck.min.js"></script>
 
-<script >
-    $(document).ready(function () {
-        //iCheck
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
-        });
-    });
-</script>
-
 <script>
     (function (cfg) {
         window.vm = new Vue({
@@ -273,7 +271,7 @@
             computed: {
                 filteredApps: function () {
                     var vm = this,
-                            apps = vm.apps;
+                        apps = vm.apps;
                     apps = vm.filters.categories.length ? apps.filter(function (x) {
                         return vm.filters.categories.indexOf(x.software) !== -1;
                     }) : apps;
@@ -308,14 +306,47 @@
                         app.processing = false;
                     }, 300);
                 },
-                clearFilters: function () {
-                    this.filters = {categories: [], companies: []};
+                clearCompaniesFilter: function () {
+                    $('.js-companies-filter input').iCheck('uncheck');
+                },
+                clearCategoriesFilter: function () {
+                    $('.js-categories-filter input').iCheck('uncheck');
                 },
                 goToStep: function (step) {
                     if (this.steps[step] === 'available') {
                         window.location.replace('/wizard/' + step);
                     }
                 }
+            },
+            mounted: function () {
+                var vm = this;
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-blue',
+                    increaseArea: '20%' // optional
+                });
+                $('input').on('ifChecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories.push(val.substr(9));
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies.push(val.substr(8));
+                    }
+                });
+                $('input').on('ifUnchecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories = vm.filters.categories.filter(function (x) {
+                            return x !== val.substr(9);
+                        });
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies = vm.filters.companies.filter(function (x) {
+                            return x !== val.substr(8);
+                        });
+                    }
+                });
             },
             watch: {
                 filters: {
@@ -831,7 +862,7 @@
         }],
         "categories": ["3D graphics", "3D Vectorization", "AT & Camera calibration", "BIM", "CAD", "Coordinate Systems", "GIS", "GIS App", "GIS Viewer", "Map Editor", "Orthophoto", "Photo Editor", "Photogrammetry", "PointCloud & 3D Processing", "Point Cloud & 3D Viewer", "Point Cloud Processing", "Point Cloud to Vector", "Remote Sensing", "Remote Sensing Viewer", "SAR Processing", "Viewer Agisoft", "Viewer Leica", "Viewer Point Cloud", "Viewer SAR", "Viewer SURE", "Viewer Z+F"],
         "companies": ["AgiSoft", "Applied Imagery", "Arithmetica Ltd.", "Bentley", "Blue Marble Geographics", "Chicago University", "Cloudcompare.org", "Displaz", "FARO", "Fugro", "GeoCue Group", "Getpaint.net", "GIMP - team", "GIP, Dr. Kruck & Co.", "GRASS GIS", "Hexagon Geospatial", "Mooii Tech", "Mooii Tech", "Novacenter", "Numerous", "Power Of Software Ltd.", "QGIS", "Racurs", "Robert McNeel & Assoc.", "SuperMap", "TatukGIS", "Technodigit/Hexagon", "Trimble", "Triple Water Geo", "University of Hamburg", "Z+F Zoller+Frohlich"],
-        "filters": {"companies": [], "categories": ["GIS", "3D editor"]},
+        "filters": {"companies": [], "categories": ["GIS"]},
         "steps": {"1": "active", "2": "disabled", "3": "available", "4": "disabled"},
         "urls": {"toggleApp": "/api/wizard/toggle-app", "changeSoftwareFilter": "/api/wizard/change-software-filter"}
     });
