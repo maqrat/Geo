@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "author": " <>",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
@@ -12,6 +11,7 @@
     "icheck": "^1.0.2",
     "jquery": "^3.1.1",
     "jquery-slimscroll": "^1.3.8",
+    "jquery.nicescroll": "^3.7.6",
     "metismenu": "^2.7.0",
     "roboto-fontface": "^0.7.0",
     "slick-carousel": "^1.6.0",

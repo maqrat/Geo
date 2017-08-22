@@ -183,18 +183,18 @@
                                         type="search"
                                         placeholder="Search">
                                 <span
-                                        style="margin-left: 5px"
-                                        v-for="company in filters.companies"
-                                        class="label label-primary">
+                                    style="margin-left: 5px"
+                                    v-for="company in filters.companies"
+                                    class="label label-primary">
                                     ${company}
                                     <a @click="uncheckCompany(company)">
                                         <i class="fa fa-times"></i>
                                     </a>
                                 </span>
                                 <span
-                                        style="margin-left: 5px"
-                                        v-for="category in filters.categories"
-                                        class="label label-warning">
+                                    style="margin-left: 5px"
+                                    v-for="category in filters.categories"
+                                    class="label label-warning">
                                     ${category}
                                     <a @click="uncheckCategory(category)">
                                         <i class="fa fa-times"></i>
@@ -203,14 +203,14 @@
                             </form>
                         </div>
 
-                        <ul class="nav nav-tabs" role="tablist">
+						<ul class="nav nav-tabs" role="tablist">
                             <li :class="{active: !showSelected}">
                                 <a @click="showSelected = false">All Apps</a>
                             </li>
                             <li :class="{active: showSelected}">
                                 <a @click="showSelected = true">My apps (${selectedApps.length})</a>
                             </li>
-                        </ul>
+						</ul>
 
 
                         <div class="tab-content packages table-responsive">
@@ -295,7 +295,7 @@
             computed: {
                 filteredApps: function () {
                     var vm = this,
-                            apps = vm.apps;
+                        apps = vm.apps;
                     apps = vm.filters.categories.length ? apps.filter(function (x) {
                         return vm.filters.categories.indexOf(x.software) !== -1;
                     }) : apps;

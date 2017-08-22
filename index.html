@@ -9,9 +9,14 @@
 
     <title>GeoCloud - Landing Page</title>
 
-    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-    <link href="node_modules/animate.css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/animate.css/animate.css" rel="stylesheet" type="text/css"/>
+
+    <link href="./node_modules/icheck/skins/square/_all.css" rel="stylesheet" type="text/css"/>
+
+    <link href="./node_modules/slick-carousel/slick/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/slick-carousel/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
 
     <link href="css/style.css" rel="stylesheet">
 
@@ -763,11 +768,11 @@
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script src="./node_modules/metismenu/dist/metisMenu.min.js"></script>
+<script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
 <script src="./node_modules/jquery-slimscroll/jquery.slimscroll.js"></script>
 <script src="./node_modules/wowjs/dist/wow.min.js"></script>
 <script src="./node_modules/icheck/icheck.min.js"></script>
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
-
 
 <script>
     $(document).ready(function () {
@@ -810,8 +815,6 @@
         function filterHeightRebuild(){
             var windowWidth = $(window).outerWidth();
             if (windowWidth < 768) {
-                console.log(windowWidth);
-
                 f1slimScrollDiv.css('height', '100%');
                 f1FilterBody1.css('height', '100%');
 
