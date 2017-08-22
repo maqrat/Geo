@@ -1685,13 +1685,17 @@ a.link-to-software {
   z-index: 100;
 }
 .container-brands-carousel-wizard .slick-track {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .container-brands-carousel-wizard.container-brands-carousel {
-  height: 96px;
+  height: 75px;
+}
+.container-brands-carousel-wizard.container-brands-carousel .slick-prev,
+.container-brands-carousel-wizard.container-brands-carousel .slick-next {
+  top: 49%;
 }
 .wrapper-wizard-content {
-  padding: 200px 0;
+  padding: 153px 0 0;
   position: relative;
   min-height: 966px;
 }
@@ -1706,14 +1710,13 @@ a.link-to-software {
 }
 .wrapper-wizard-content .top-table-back-layer {
   background-color: #fff;
-  height: 132px;
-  top: 174px;
+  height: 106px;
+  top: 153px;
   left: 0;
   right: 0;
   position: fixed;
   bottom: 0;
   z-index: 2;
-  border-top: 20px solid #f4f4f4;
 }
 .wrapper-wizard-content .table {
   margin-top: 55px;
@@ -1744,7 +1747,7 @@ a.link-to-software {
   position: fixed;
   margin-top: 10px;
   bottom: 0;
-  top: 201px;
+  top: 155px;
 }
 .app-search-form {
   margin: 10px 0;
@@ -1754,7 +1757,7 @@ a.link-to-software {
 .nav-tabs-row {
   position: fixed;
   z-index: 3;
-  top: 213px;
+  top: 167px;
   background-color: #fff;
 }
 .tabs-app-container {
