@@ -1,5 +1,33 @@
-#wrapper {
-  padding-top: 77px;
+@import "navbar-wizard";
+.wrapper-wizard-content {
+  padding: 77px 0;
+  background-color: #676a6c;
+}
+
+
+
+.wizard {
+}
+/*max-width: 1024px;
+margin: 20px auto;*/
+ul.list-unstyled.filter-body-1 {
+  max-height: 260px;
+}
+ul.list-unstyled.filter-body-2 {
+  max-height: 297px;
+}
+.filter {
+  width: auto;
+}
+.filter ul li label {
+  font-size: 14px;
+}
+.filter .filter-header h4, .filter .filter-footer h4, .filter .chapter-header h4 {
+  line-height: 36px;
+}
+
+.filter .filter-header button, .filter .filter-footer button, .filter .chapter-header button {
+  top: 3px;
 }
 
 
@@ -10,103 +38,43 @@ td.price-td {
 .packages .added {
   background-color: #eee;
 }
-
-/*
-.filters {
-  margin-top: 25px;
+.table, .table-btns {
+  .btn-primary {
+    padding: 6px 12px!important;
+  }
+}
+.table, .table-btns {
+  .btn-primary {
+    padding: 6px 12px!important;
+  }
+}
+td.image-td {
+  width: 57px !important;
 }
 
-.filters h3, h4, label {
-  font-weight: normal;
+.packages.table-responsive {
+  height: 607px;
+  overflow: auto;
 }
 
-.filters h3 {
-  font-size: 24px;
+.packages h1 {
+  text-align: center;
 }
 
-.filters h4 {
-  font-size: 18px;
-  margin: 20px 0 15px 20px;
+.packages h2 {
+  margin-top: 0;
+  font-size: 130%;
 }
 
-.filters label {
-  vertical-align: text-bottom;
-  font-size: 14px;
+.packages img {
+  width: 57px;
+  display: block;
 }
 
-.filters input[type=checkbox] {
-  zoom: 1.4;
-}
-
-.filters ul {
-  margin-left: 20px;
-}
-*/
-
-.nav.navbar-top-links > li > a:hover, .nav.navbar-top-links > li > a:focus {
-  color: @navy;
-}
-
-.wizard {
-  max-width: 1024px;
-  margin: 20px auto;
-  ul.list-unstyled.filter-body-1 {
-    max-height: 260px;
-  }
-  ul.list-unstyled.filter-body-2 {
-    max-height: 297px;
-  }
-  .filter {
-    width: auto;
-  }
-  .filter ul li label {
-    font-size: 14px;
-  }
-  .filter .filter-header h4, .filter .filter-footer h4, .filter .chapter-header h4 {
-    line-height: 36px;
-  }
-
-  .filter .filter-header button, .filter .filter-footer button, .filter .chapter-header button {
-    top: 3px;
-  }
-  .table, .table-btns {
-    .btn-primary {
-      padding: 6px 12px!important;
-    }
-  }
-  .table, .table-btns {
-    .btn-primary {
-      padding: 6px 12px!important;
-    }
-  }
-  td.image-td {
-    width: 57px !important;
-  }
-
-  .packages.table-responsive {
-    height: 607px;
-    overflow: auto;
-  }
-
-  .packages h1 {
-    text-align: center;
-  }
-
-  .packages h2 {
-    margin-top: 0;
-    font-size: 130%;
-  }
-
-  .packages img {
-    width: 57px;
-    display: block;
-  }
-
-  .packages .size {
-    text-align: center;
-    font-size: 110%;
-    margin: 5px;
-  }
+.packages .size {
+  text-align: center;
+  font-size: 110%;
+  margin: 5px;
 }
 
 .nav-pills > li {

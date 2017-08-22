@@ -1564,8 +1564,68 @@ a.link-to-software {
     left: 0;
   }
 }
-#wrapper {
-  padding-top: 77px;
+.navbar-wizard ul.nav {
+  padding: 13px 0;
+}
+.navbar-wizard ul.nav > li {
+  display: inline-block;
+}
+.navbar-wizard ul.nav > li.dropdown > a {
+  font-weight: 600;
+  padding: 15px 20px;
+  color: #676a6c;
+}
+.navbar-wizard ul.nav > li.dropdown > a:hover,
+.navbar-wizard ul.nav > li.dropdown > a:focus {
+  color: #0094e7;
+  background-color: transparent;
+}
+.navbar-wizard ul.nav > li .open > a,
+.navbar-wizard ul.nav > li .open > a:hover,
+.navbar-wizard ul.nav > li .open > a:focus {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-wizard ul.nav > li ul.dropdown-menu {
+  margin: 0;
+  padding: 0;
+}
+.navbar-wizard ul.nav > li ul.dropdown-menu > li > a {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+}
+.navbar-wizard ul.nav > li ul.dropdown-menu > li > a:hover {
+  color: black;
+}
+.wrapper-wizard-content {
+  padding: 77px 0;
+  background-color: #676a6c;
+}
+/*max-width: 1024px;
+margin: 20px auto;*/
+ul.list-unstyled.filter-body-1 {
+  max-height: 260px;
+}
+ul.list-unstyled.filter-body-2 {
+  max-height: 297px;
+}
+.filter {
+  width: auto;
+}
+.filter ul li label {
+  font-size: 14px;
+}
+.filter .filter-header h4,
+.filter .filter-footer h4,
+.filter .chapter-header h4 {
+  line-height: 36px;
+}
+.filter .filter-header button,
+.filter .filter-footer button,
+.filter .chapter-header button {
+  top: 3px;
 }
 td.price-td {
   width: 215px;
@@ -1573,94 +1633,33 @@ td.price-td {
 .packages .added {
   background-color: #eee;
 }
-/*
-.filters {
-  margin-top: 25px;
-}
-
-.filters h3, h4, label {
-  font-weight: normal;
-}
-
-.filters h3 {
-  font-size: 24px;
-}
-
-.filters h4 {
-  font-size: 18px;
-  margin: 20px 0 15px 20px;
-}
-
-.filters label {
-  vertical-align: text-bottom;
-  font-size: 14px;
-}
-
-.filters input[type=checkbox] {
-  zoom: 1.4;
-}
-
-.filters ul {
-  margin-left: 20px;
-}
-*/
-.nav.navbar-top-links > li > a:hover,
-.nav.navbar-top-links > li > a:focus {
-  color: #0094e7;
-}
-.wizard {
-  max-width: 1024px;
-  margin: 20px auto;
-}
-.wizard ul.list-unstyled.filter-body-1 {
-  max-height: 260px;
-}
-.wizard ul.list-unstyled.filter-body-2 {
-  max-height: 297px;
-}
-.wizard .filter {
-  width: auto;
-}
-.wizard .filter ul li label {
-  font-size: 14px;
-}
-.wizard .filter .filter-header h4,
-.wizard .filter .filter-footer h4,
-.wizard .filter .chapter-header h4 {
-  line-height: 36px;
-}
-.wizard .filter .filter-header button,
-.wizard .filter .filter-footer button,
-.wizard .filter .chapter-header button {
-  top: 3px;
-}
-.wizard .table .btn-primary,
-.wizard .table-btns .btn-primary {
+.table .btn-primary,
+.table-btns .btn-primary {
   padding: 6px 12px!important;
 }
-.wizard .table .btn-primary,
-.wizard .table-btns .btn-primary {
+.table .btn-primary,
+.table-btns .btn-primary {
   padding: 6px 12px!important;
 }
-.wizard td.image-td {
+td.image-td {
   width: 57px !important;
 }
-.wizard .packages.table-responsive {
+.packages.table-responsive {
   height: 607px;
   overflow: auto;
 }
-.wizard .packages h1 {
+.packages h1 {
   text-align: center;
 }
-.wizard .packages h2 {
+.packages h2 {
   margin-top: 0;
   font-size: 130%;
 }
-.wizard .packages img {
+.packages img {
   width: 57px;
   display: block;
 }
-.wizard .packages .size {
+.packages .size {
   text-align: center;
   font-size: 110%;
   margin: 5px;

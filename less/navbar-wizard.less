@@ -1,0 +1,38 @@
+.navbar-wizard {
+  ul.nav {
+    padding: 13px 0;
+    &>li {
+      display: inline-block;
+      &.dropdown {
+        &>a {
+          font-weight: 600;
+          padding: 15px 20px;
+          color: @text-grey-color;
+          &:hover,&:focus {
+            color: @navy;
+            background-color: transparent;
+          }
+        }
+      }
+      .open > a,
+      .open > a:hover,
+      .open > a:focus {
+        background-color: transparent;
+        border-color: transparent;
+      }
+      ul.dropdown-menu {
+        margin: 0;
+        padding: 0;
+        &> li > a {
+          display: inline-block;
+          width: 100%;
+          margin: 0;
+          padding: 10px 15px;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
