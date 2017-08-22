@@ -1487,6 +1487,9 @@ a.link-to-software {
     max-height: 677px;
   }
 }
+.filter.wizard-filter {
+  width: 260px;
+}
 .brands-carousel {
   opacity: 0;
 }
@@ -1576,16 +1579,16 @@ a.link-to-software {
 .navbar-wizard .container-fluid {
   max-width: 2000px;
 }
-.navbar-wizard ul.nav {
-  padding: 13px 0;
-}
 .navbar-wizard ul.nav > li {
   display: inline-block;
+}
+.navbar-wizard ul.nav > li.dropdown {
+  padding: 16px 0 0;
 }
 .navbar-wizard ul.nav > li.dropdown > a {
   font-weight: 600;
   padding: 15px 20px;
-  color: #676a6c;
+  color: black;
 }
 .navbar-wizard ul.nav > li.dropdown > a:hover,
 .navbar-wizard ul.nav > li.dropdown > a:focus {
@@ -1610,6 +1613,15 @@ a.link-to-software {
 }
 .navbar-wizard ul.nav > li ul.dropdown-menu > li > a:hover {
   color: black;
+}
+.navbar-wizard ul.nav-steps {
+  width: 728px;
+}
+.navbar-wizard ul.nav-steps > li.disabled a {
+  color: #808486 !important;
+}
+.navbar-wizard ul.nav-steps > li.next a {
+  color: #0094e7 !important;
 }
 .navbar-wizard ul.nav-pills {
   display: inline-block;
@@ -1662,12 +1674,23 @@ a.link-to-software {
 .wrapper-wizard-content .top-table-back-layer {
   background-color: #fff;
   height: 98px;
-  top: 273px;
+  top: 282px;
   left: 0;
   right: 0;
   position: fixed;
   bottom: 0;
   z-index: 2;
+}
+.wrapper-wizard-content .table {
+  margin-top: 55px;
+}
+.wrapper-wizard-content .table-btns {
+  position: absolute;
+  right: -597px;
+  top: 7px;
+}
+.wrapper-wizard-content .col-md-9 {
+  position: relative;
 }
 .wizard-body {
   padding: 0 30px;
@@ -1690,14 +1713,20 @@ a.link-to-software {
   position: fixed;
   z-index: 3;
 }
-.nav-tabs-app {
+.nav-tabs-row {
   position: fixed;
   z-index: 3;
-  top: 330px;
+  top: 284px;
   background-color: #fff;
 }
-.row.wizard-container {
+.tabs-app-container {
   position: relative;
+}
+.tabs-app-container .apps-amount {
+  position: absolute;
+  top: 12px;
+  left: 303px;
+  width: 230px;
 }
 ul.list-unstyled.filter-body-1 {
   max-height: 260px;
@@ -1738,8 +1767,8 @@ td.price-td {
 td.image-td {
   width: 57px !important;
 }
-.packages.table-responsive {
-  padding-top: 98px;
+.packages {
+  padding-top: 56px;
 }
 .packages h1 {
   text-align: center;

@@ -4,14 +4,14 @@
     max-width: 2000px;
   }
   ul.nav {
-    padding: 13px 0;
     &>li {
       display: inline-block;
       &.dropdown {
+        padding: 16px 0 0;
         &>a {
           font-weight: 600;
           padding: 15px 20px;
-          color: @text-gray-color;
+          color: @text-color;
           &:hover,&:focus {
             color: @navy;
             background-color: transparent;
@@ -35,6 +35,21 @@
           &:hover {
             color: black;
           }
+        }
+      }
+    }
+  }
+  ul.nav-steps {
+    width: 728px;
+    &>li {
+      &.disabled {
+        a {
+          color: lighten(@text-gray-color,10%)!important;
+        }
+      }
+      &.next {
+        a {
+          color: @navy!important;
         }
       }
     }

@@ -13,15 +13,28 @@
     overflow: hidden;
   }
   .top-table-back-layer {
+    //border-bottom: 1px solid #ddd;
     background-color: #fff;
     height: 98px;
-    top: 273px;
+    top: 282px;
     left: 0;
     right: 0;
     position: fixed;
     bottom: 0;
     z-index: 2;
   }
+  .table {
+    margin-top: 55px;
+  }
+  .table-btns {
+    position: absolute;
+    right: -597px;
+    top: 7px;
+  }
+  .col-md-9 {
+    position: relative;
+  }
+
 }
 .wizard-body {
   padding: 0 30px;
@@ -45,14 +58,20 @@
   position: fixed;
   z-index: 3;
 }
-.nav-tabs-app {
+.nav-tabs-row {
   position: fixed;
   z-index: 3;
-  top: 330px;
+  top: 284px;
   background-color: #fff;
 }
-.row.wizard-container {
- position: relative;
+.tabs-app-container {
+  position: relative;
+  .apps-amount {
+    position: absolute;
+    top: 12px;
+    left: 303px;
+    width: 230px;
+  }
 }
 
 
@@ -98,8 +117,8 @@ td.image-td {
   width: 57px !important;
 }
 
-.packages.table-responsive {
-  padding-top: 98px;
+.packages {
+  padding-top: 56px;
 }
 
 .packages h1 {
