@@ -98,6 +98,21 @@ ul.list-unstyled.filter-body-2 {
 
 td.price-td {
   width: 215px;
+  .btn {
+    background-color: @navy;
+    color: #fff;
+    .transition();
+    &:hover {
+      background-color: darken(@navy,5%);
+    }
+    &.btn-success {
+      background-color: #5cb85c!important;
+      &:hover {
+        background-color: #449d44!important;
+      }
+    }
+
+  }
 }
 
 .packages .added {

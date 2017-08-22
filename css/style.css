@@ -1618,7 +1618,7 @@ a.link-to-software {
   width: 728px;
 }
 .navbar-wizard ul.nav-steps > li.disabled a {
-  color: #808486 !important;
+  color: #a7aaab !important;
 }
 .navbar-wizard ul.nav-steps > li.next a {
   color: #0094e7 !important;
@@ -1752,6 +1752,22 @@ ul.list-unstyled.filter-body-2 {
 }
 td.price-td {
   width: 215px;
+}
+td.price-td .btn {
+  background-color: #0094e7;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+td.price-td .btn:hover {
+  background-color: #0084ce;
+}
+td.price-td .btn.btn-success {
+  background-color: #5cb85c!important;
+}
+td.price-td .btn.btn-success:hover {
+  background-color: #449d44!important;
 }
 .packages .added {
   background-color: #eee;
