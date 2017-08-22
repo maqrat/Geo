@@ -200,21 +200,16 @@
                                         <ul class="nav nav-tabs " role="tablist">
                                             <li :class="{active: !showSelected}">
                                                 <a @click="showSelected = false">
-                                                    All Apps
+                                                    Available Apps
                                                     <span class="apps-amount">
-                                                        (${filteredApps.length} out of ${apps.length})
+                                                        (${filteredApps.length} of ${apps.length})
                                                     </span>
                                                 </a>
                                             </li>
                                             <li :class="{active: showSelected}">
-                                                <a @click="showSelected = true">My apps (${selectedApps.length})</a>
+                                                <a @click="showSelected = true">My Apps (${selectedApps.length})</a>
                                             </li>
                                         </ul>
-                                        <!--<p class="apps-amount">
-                                            Showing ${filteredApps.length}
-                                            ${'application'|pluralize(filteredApps.length)}
-                                            out of ${apps.length}
-                                        </p>-->
                                     </div>
                                     <div style="text-align: right" class="table-btns">
                                         <button class="btn" disabled>
@@ -231,34 +226,31 @@
                                     </div>
                                 </div>
 
-                                <div class="app-search-form"
-                                     v-for="app in (showSelected ? selectedApps : filteredApps)"
-                                     :class="{selected: app.selected}">
+                                <div v-if="!showSelected" class="app-search-form">
                                     <form class="form-inline">
                                         <input
-                                                :disabled="showSelected"
                                                 v-model="searchQuery"
                                                 class="form-control"
                                                 type="search"
                                                 placeholder="Search">
                                         <span
-                                                style="margin-left: 5px"
-                                                v-for="company in filters.companies"
-                                                class="label label-primary">
-                                    ${company}
-                                    <a @click="uncheckCompany(company)">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </span>
+                                            style="margin-left: 5px"
+                                            v-for="company in filters.companies"
+                                            class="label label-primary">
+                                            ${company}
+                                            <a @click="uncheckCompany(company)">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </span>
                                         <span
-                                                style="margin-left: 5px"
-                                                v-for="category in filters.categories"
-                                                class="label label-warning">
-                                    ${category}
-                                    <a @click="uncheckCategory(category)">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </span>
+                                            style="margin-left: 5px"
+                                            v-for="category in filters.categories"
+                                            class="label label-warning">
+                                            ${category}
+                                            <a @click="uncheckCategory(category)">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </span>
                                     </form>
                                 </div>
 
