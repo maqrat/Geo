@@ -1,15 +1,61 @@
 @import "navbar-wizard";
+@import "brands-carousel-wizard";
 .wrapper-wizard-content {
-  padding: 77px 0;
-  background-color: #676a6c;
+  padding: 273px 0;
+  position: relative;
+  .container.white-bg.layer-bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  .top-table-back-layer {
+    background-color: #fff;
+    height: 98px;
+    top: 273px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+.wizard-body {
+  padding: 0 30px;
+}
+.wizard-header {
+  padding: 0 40px;
+  position: fixed;
+  top: 208px;
+  left: 0;
+  right: 0;
+  border-top: 20px solid @bg-light-gray;
+  z-index: 1;
+}
+
+.wizard-filter {
+  position: fixed;
+  margin-top: 10px;
+}
+.app-search-form {
+  margin: 10px 0;
+  position: fixed;
+  z-index: 3;
+}
+.nav-tabs-app {
+  position: fixed;
+  z-index: 3;
+  top: 330px;
+  background-color: #fff;
+}
+.row.wizard-container {
+ position: relative;
 }
 
 
-
-.wizard {
-}
-/*max-width: 1024px;
-margin: 20px auto;*/
 ul.list-unstyled.filter-body-1 {
   max-height: 260px;
 }
@@ -53,8 +99,7 @@ td.image-td {
 }
 
 .packages.table-responsive {
-  height: 607px;
-  overflow: auto;
+  padding-top: 98px;
 }
 
 .packages h1 {
@@ -77,33 +122,3 @@ td.image-td {
   margin: 5px;
 }
 
-.nav-pills > li {
-  padding: 0px 7px;
-  color: white !important;
-}
-
-.nav-pills > li > a {
-  background: #bbb;
-  color: white !important;
-}
-
-.nav-pills > li > a:hover {
-  background: #bbb !important;
-}
-
-.nav-pills > li.active > a {
-  background: @navy;
-  color: white;
-}
-
-.nav-pills > li.active > a:hover {
-  background: @navy !important;
-}
-
-.nav-pills > li.available > a {
-  background: lighten(@navy,20%);
-}
-
-.nav-pills > li.available > a:hover {
-  background: @navy !important;
-}

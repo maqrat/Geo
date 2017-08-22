@@ -1,4 +1,8 @@
 .navbar-wizard {
+  text-align: center;
+  .container-fluid {
+    max-width: 2000px;
+  }
   ul.nav {
     padding: 13px 0;
     &>li {
@@ -7,7 +11,7 @@
         &>a {
           font-weight: 600;
           padding: 15px 20px;
-          color: @text-grey-color;
+          color: @text-gray-color;
           &:hover,&:focus {
             color: @navy;
             background-color: transparent;
@@ -34,5 +38,40 @@
         }
       }
     }
+  }
+
+  ul.nav-pills {
+    display: inline-block;
+    padding: 19px 10px 0 10px;
+  }
+  .nav-pills > li {
+    padding: 0px 7px;
+    color: white !important;
+  }
+
+  .nav-pills > li > a {
+    background: @navy;
+    color: white !important;
+  }
+
+  .nav-pills > li > a:hover {
+    background: #bbb !important;
+  }
+
+  .nav-pills > li.active > a {
+    background: @navy;
+    color: white;
+  }
+
+  .nav-pills > li.active > a:hover {
+    background: @navy !important;
+  }
+
+  .nav-pills > li.available > a {
+    background: lighten(@navy,20%);
+  }
+
+  .nav-pills > li.available > a:hover {
+    background: @navy !important;
   }
 }

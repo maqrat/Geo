@@ -13,6 +13,9 @@
 
     <link href="./node_modules/icheck/skins/square/_all.css" rel="stylesheet" type="text/css"/>
 
+    <link href="./node_modules/slick-carousel/slick/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/slick-carousel/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -34,6 +37,12 @@
                 <a class=" btn btn-primary navy sign-up-btn-mobile visible-xs visible-sm" href="#">Sign Up</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav nav-pills">
+                    <li :class="steps[1]"><a href="#" @click.prevent="goToStep(1)">1. Select applications</a></li>
+                    <li :class="steps[2]"><a href="#" @click.prevent="goToStep(2)">2. Select storage</a></li>
+                    <li :class="steps[3]"><a href="#" @click.prevent="goToStep(3)">3. Review and activate</a></li>
+                    <li :class="steps[4]"><a href="#" @click.prevent="goToStep(4)">4. Finish</a></li>
+                </ul>
                 <ul class="nav navbar-right">
                     <li class="dropdown">
                         <a href="#"
@@ -54,8 +63,6 @@
                             <li><a href="/wizard/reset">Reset Wizard</a></li>
                         </ul>
                     </li>
-
-
                     <li class="dropdown">
                         <a href="#"
                            class="dropdown-toggle"
@@ -80,25 +87,38 @@
     </nav>
 </div>
 
+<div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
+    <div class="carousel-caption">
+        <h1 class="center-block">INDUSTRY LEADERS WORK WITH US</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="brands-carousel">
+            <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/agisoft_logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/bundle_adjustment-w.png" class="" alt=""></div>
+            <div><img src="img/brands/ic_logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/logo-racurs-w.png" alt="" class=""></div>
+            <div><img src="img/brands/acute3D_Logo.png" alt="" class=""></div>
+            <div><img src="img/brands/tatukGIS_logo_new.png" alt="" class=""></div>
+            <div><img src="img/brands/qgis_trademark.png" alt="" class=""></div>
+        </div>
+    </div>
+</div>
 
 <div class="wrapper-wizard-content gray-bg">
+    <div class="container white-bg layer-bg"></div>
+    <div class="container top-table-back-layer"></div>
     <div id="app" class="container white-bg">
 
-        <h1>Welcome to GeoCloud</h1>
+        <div class="wizard-header container white-bg">
+            <h1>Welcome to GeoCloud</h1>
+        </div>
+        <div class="wizard-body" style="display:none" v-show="true">
+            <div class="row wizard-container">
 
-        <ul class="nav nav-pills nav-justified">
-            <li :class="steps[1]"><a href="#" @click.prevent="goToStep(1)">1. Select applications</a></li>
-            <li :class="steps[2]"><a href="#" @click.prevent="goToStep(2)">2. Select storage</a></li>
-            <li :class="steps[3]"><a href="#" @click.prevent="goToStep(3)">3. Review and activate</a></li>
-            <li :class="steps[4]"><a href="#" @click.prevent="goToStep(4)">4. Finish</a></li>
-        </ul>
-
-
-        <div style="display:none" v-show="true">
-            <div class="row" style="margin: 20px -15px">
                 <div class="col-md-3">
                     <div class="">
-                        <div class="filter">
+                        <div class="filter wizard-filter">
                             <div class="filter-header hidden-lg hidden-md">
                                 <h3 class="fa-angle-down-cont">Filters <i id="" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
                                 </h3>
@@ -171,7 +191,8 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <div style="margin: 10px 0 7px">
+
+                    <div class="app-search-form">
                         <form class="form-inline">
                             <input
                                     :disabled="showSelected"
@@ -200,7 +221,7 @@
                         </form>
                     </div>
 
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs-app" role="tablist">
                         <li :class="{active: !showSelected}">
                             <a @click="showSelected = false">All Apps</a>
                         </li>
@@ -266,11 +287,66 @@
 <script src="./node_modules/metismenu/dist/metisMenu.min.js"></script>
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script src="./node_modules/icheck/icheck.min.js"></script>
+<script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
 <script src="./js/niceScrollCustom.js"></script>
 <script >
     $(document).ready(function () {
+        //brands-carousel slick
+        setTimeout(function(){
+            $('.brands-carousel').animate({opacity: 1}, 300);
+        }, 500);
 
+        $('.brands-carousel').slick({
+            dots: true,
+            speed: 1000,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 4,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 820,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
 
     });
 </script>
