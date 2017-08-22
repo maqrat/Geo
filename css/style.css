@@ -1489,6 +1489,28 @@ a.link-to-software {
 }
 .filter.wizard-filter {
   width: 260px;
+  height: 77%;
+  max-height: none;
+}
+.filter.wizard-filter .filter-body {
+  max-height: none;
+  height: 100%;
+}
+.filter.wizard-filter .filter-body .f1 {
+  height: 35%;
+  max-height: none;
+}
+.filter.wizard-filter .filter-body .f2 {
+  height: 55%;
+  max-height: none;
+}
+.filter.wizard-filter .filter-body ul.list-unstyled.filter-body-1 {
+  height: 76%;
+  max-height: none;
+}
+.filter.wizard-filter .filter-body ul.list-unstyled.filter-body-2 {
+  height: 89%;
+  max-height: none;
 }
 .brands-carousel {
   opacity: 0;
@@ -1617,11 +1639,15 @@ a.link-to-software {
 .navbar-wizard ul.nav-steps {
   width: 728px;
 }
+.navbar-wizard ul.nav-steps > li {
+  /*&.next {
+        a {
+          color: @navy!important;
+        }
+      }*/
+}
 .navbar-wizard ul.nav-steps > li.disabled a {
   color: #a7aaab !important;
-}
-.navbar-wizard ul.nav-steps > li.next a {
-  color: #0094e7 !important;
 }
 .navbar-wizard ul.nav-pills {
   display: inline-block;
@@ -1658,9 +1684,16 @@ a.link-to-software {
   top: 83px;
   z-index: 100;
 }
+.container-brands-carousel-wizard .slick-track {
+  padding: 20px 0;
+}
+.container-brands-carousel-wizard.container-brands-carousel {
+  height: 96px;
+}
 .wrapper-wizard-content {
-  padding: 273px 0;
+  padding: 200px 0;
   position: relative;
+  min-height: 966px;
 }
 .wrapper-wizard-content .container.white-bg.layer-bg {
   position: absolute;
@@ -1673,24 +1706,28 @@ a.link-to-software {
 }
 .wrapper-wizard-content .top-table-back-layer {
   background-color: #fff;
-  height: 98px;
-  top: 282px;
+  height: 132px;
+  top: 174px;
   left: 0;
   right: 0;
   position: fixed;
   bottom: 0;
   z-index: 2;
+  border-top: 20px solid #f4f4f4;
 }
 .wrapper-wizard-content .table {
   margin-top: 55px;
 }
 .wrapper-wizard-content .table-btns {
   position: absolute;
-  right: -597px;
+  right: -516px;
   top: 7px;
 }
 .wrapper-wizard-content .col-md-9 {
   position: relative;
+}
+.wrapper-wizard-content h4 small {
+  font-size: 70%;
 }
 .wizard-body {
   padding: 0 30px;
@@ -1701,12 +1738,13 @@ a.link-to-software {
   top: 208px;
   left: 0;
   right: 0;
-  border-top: 20px solid #f4f4f4;
   z-index: 1;
 }
 .wizard-filter {
   position: fixed;
   margin-top: 10px;
+  bottom: 0;
+  top: 201px;
 }
 .app-search-form {
   margin: 10px 0;
@@ -1716,17 +1754,14 @@ a.link-to-software {
 .nav-tabs-row {
   position: fixed;
   z-index: 3;
-  top: 284px;
+  top: 213px;
   background-color: #fff;
 }
 .tabs-app-container {
   position: relative;
 }
 .tabs-app-container .apps-amount {
-  position: absolute;
-  top: 12px;
-  left: 303px;
-  width: 230px;
+  font-size: 14px;
 }
 ul.list-unstyled.filter-body-1 {
   max-height: 260px;
@@ -1784,7 +1819,7 @@ td.image-td {
   width: 57px !important;
 }
 .packages {
-  padding-top: 56px;
+  padding-top: 54px;
 }
 .packages h1 {
   text-align: center;

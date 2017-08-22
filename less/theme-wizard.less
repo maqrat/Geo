@@ -1,8 +1,9 @@
 @import "navbar-wizard";
 @import "brands-carousel-wizard";
 .wrapper-wizard-content {
-  padding: 273px 0;
+  padding: 200px 0;
   position: relative;
+  min-height: 966px;
   .container.white-bg.layer-bg {
     position: absolute;
     top:0;
@@ -15,24 +16,28 @@
   .top-table-back-layer {
     //border-bottom: 1px solid #ddd;
     background-color: #fff;
-    height: 98px;
-    top: 282px;
+    height: 132px;
+    top: 174px;
     left: 0;
     right: 0;
     position: fixed;
     bottom: 0;
     z-index: 2;
+    border-top: 20px solid @bg-light-gray;
   }
   .table {
     margin-top: 55px;
   }
   .table-btns {
     position: absolute;
-    right: -597px;
+    right: -516px;
     top: 7px;
   }
   .col-md-9 {
     position: relative;
+  }
+  h4 small {
+    font-size: 70%;
   }
 
 }
@@ -45,13 +50,14 @@
   top: 208px;
   left: 0;
   right: 0;
-  border-top: 20px solid @bg-light-gray;
   z-index: 1;
 }
 
 .wizard-filter {
   position: fixed;
   margin-top: 10px;
+  bottom: 0;
+  top: 201px;
 }
 .app-search-form {
   margin: 10px 0;
@@ -61,16 +67,13 @@
 .nav-tabs-row {
   position: fixed;
   z-index: 3;
-  top: 284px;
+  top: 213px;
   background-color: #fff;
 }
 .tabs-app-container {
   position: relative;
   .apps-amount {
-    position: absolute;
-    top: 12px;
-    left: 303px;
-    width: 230px;
+    font-size: 14px;
   }
 }
 
@@ -115,6 +118,8 @@ td.price-td {
   }
 }
 
+
+
 .packages .added {
   background-color: #eee;
 }
@@ -133,7 +138,7 @@ td.image-td {
 }
 
 .packages {
-  padding-top: 56px;
+  padding-top: 54px;
 }
 
 .packages h1 {

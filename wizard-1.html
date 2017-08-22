@@ -89,9 +89,9 @@
 </div>
 
 <div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
-    <div class="carousel-caption">
+    <!--<div class="carousel-caption">
         <h1 class="center-block">INDUSTRY LEADERS WORK WITH US</h1>
-    </div>
+    </div>-->
     <div class="container-fluid">
         <div class="brands-carousel">
             <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
@@ -112,9 +112,6 @@
     <div  id="app" class="wrapper wrapper-content wizard">
         <div class="container white-bg">
 
-            <div class="wizard-header container white-bg">
-                <h1>Welcome to GeoCloud</h1>
-            </div>
             <div style="display:none" v-show="true">
                 <div class="wizard-body">
                     <div class="row wizard-container">
@@ -126,7 +123,7 @@
                                     </h3>
                                 </div>
                                 <div class="filter-body" id="filters">
-                                    <div class="">
+                                    <div class="f1">
                                         <div class="chapter-header">
                                             <h4>
                                                 Companies
@@ -155,7 +152,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="">
+                                    <div class="f2">
                                         <div class="chapter-header">
                                             <h4>
                                                 Categories
@@ -202,17 +199,22 @@
                                     <div class="tabs-app-container">
                                         <ul class="nav nav-tabs " role="tablist">
                                             <li :class="{active: !showSelected}">
-                                                <a @click="showSelected = false">All Apps</a>
+                                                <a @click="showSelected = false">
+                                                    All Apps
+                                                    <span class="apps-amount">
+                                                        (${filteredApps.length} out of ${apps.length})
+                                                    </span>
+                                                </a>
                                             </li>
                                             <li :class="{active: showSelected}">
                                                 <a @click="showSelected = true">My apps (${selectedApps.length})</a>
                                             </li>
                                         </ul>
-                                        <p class="apps-amount">
+                                        <!--<p class="apps-amount">
                                             Showing ${filteredApps.length}
                                             ${'application'|pluralize(filteredApps.length)}
                                             out of ${apps.length}
-                                        </p>
+                                        </p>-->
                                     </div>
                                     <div style="text-align: right" class="table-btns">
                                         <button class="btn" disabled>
@@ -315,7 +317,7 @@
         }, 500);
 
         $('.brands-carousel').slick({
-            dots: true,
+            dots: false,
             speed: 1000,
             slidesToShow: 6,
             slidesToScroll: 1,
