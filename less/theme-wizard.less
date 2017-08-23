@@ -1,74 +1,35 @@
-@import "navbar-wizard";
-@import "brands-carousel-wizard";
+
 .wrapper-wizard-content {
-  padding: 153px 0 0;
-  position: relative;
-  min-height: 966px;
-  .container.white-bg.layer-bg {
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-  .top-table-back-layer {
-    //border-bottom: 1px solid #ddd;
-    background-color: #fff;
-    height: 106px;
-    top: 153px;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top:78px;
+  bottom: 75px;
+  left: 0;
+  right: 0;
+  .container.white-bg {
     position: fixed;
-    bottom: 0;
-    z-index: 2;
-    //border-top: 20px solid @bg-light-gray;
-  }
-  .table {
-    margin-top: 55px;
-  }
-  .table-btns {
-    position: absolute;
-    right: -516px;
-    top: 7px;
-  }
-  .col-md-9 {
-    position: relative;
+    top:78px;
+    bottom: 75px;
+    left: 0;
+    right: 0;
   }
   h4 small {
     font-size: 70%;
   }
 
 }
-.wizard-body {
+.row.wizard-row {
   padding: 0 30px;
-}
-.wizard-header {
-  padding: 0 40px;
-  position: fixed;
-  top: 208px;
-  left: 0;
-  right: 0;
-  z-index: 1;
+  height: 100%;
+  &>div { //div.col-..
+    height: 100%;
+  }
 }
 
-.wizard-filter {
-  position: fixed;
-  margin-top: 10px;
-  bottom: 0;
-  top: 155px;
-}
-.app-search-form {
-  margin: 10px 0;
-  position: fixed;
-  z-index: 3;
-}
 .nav-tabs-row {
-  position: fixed;
-  z-index: 3;
-  top: 167px;
-  background-color: #fff;
+  //position: fixed;
+  //z-index: 3;
+  //top: 167px;
+  //background-color: #fff;
 }
 .tabs-app-container {
   position: relative;
@@ -138,7 +99,7 @@ td.image-td {
 }
 
 .packages {
-  padding-top: 54px;
+  padding-top: 20px;
 }
 
 .packages h1 {

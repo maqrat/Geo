@@ -88,214 +88,187 @@
     </nav>
 </div>
 
-<div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
-    <!--<div class="carousel-caption">
-        <h1 class="center-block">INDUSTRY LEADERS WORK WITH US</h1>
-    </div>-->
-    <div class="container-fluid">
-        <div class="brands-carousel">
-            <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
-            <div><img src="img/brands/agisoft_logo-w.png" alt="" class=""></div>
-            <div><img src="img/brands/bundle_adjustment-w.png" class="" alt=""></div>
-            <div><img src="img/brands/ic_logo-w.png" alt="" class=""></div>
-            <div><img src="img/brands/logo-racurs-w.png" alt="" class=""></div>
-            <div><img src="img/brands/acute3D_Logo.png" alt="" class=""></div>
-            <div><img src="img/brands/tatukGIS_logo_new.png" alt="" class=""></div>
-            <div><img src="img/brands/qgis_trademark.png" alt="" class=""></div>
-        </div>
-    </div>
-</div>
-
-<div id="wrapper" class="wrapper-wizard-content gray-bg">
-    <div class="container white-bg layer-bg"></div>
-    <div class="container top-table-back-layer"></div>
-    <div  id="app" class="wrapper wrapper-content wizard">
+<div id="wrapper" class="wizard wrapper-wizard-content gray-bg">
+    <div  id="app">
         <div class="container white-bg">
-
-            <div style="display:none" v-show="true">
-                <div class="wizard-body">
-                    <div class="row wizard-container">
-
-                        <div class="col-md-3">
-                            <div class="filter wizard-filter">
-                                <div class="filter-header hidden-lg hidden-md">
-                                    <h3 class="fa-angle-down-cont">Filters <i id="" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
-                                    </h3>
+            <div class="row wizard-row">
+                <div class="col-md-3">
+                    <div class="filter wizard-filter">
+                        <div class="filter-header hidden-lg hidden-md">
+                            <h3 class="fa-angle-down-cont">Filters <i id="" class="fa fa-angle-down visible-sm visible-xs" aria-hidden="true"></i>
+                            </h3>
+                        </div>
+                        <div class="filter-body" id="filters">
+                            <div class="f1">
+                                <div class="chapter-header">
+                                    <h4>
+                                        Companies
+                                        <small v-show="filters.companies.length" style="padding-left: 5px;">
+                                            ${filters.companies.length} of ${companies.length} selected
+                                        </small>
+                                    </h4>
+                                    <button
+                                            type="button"
+                                            class="btn btn-default btn-sm"
+                                            @click="clearCompaniesFilter"
+                                    >Clear</button>
                                 </div>
-                                <div class="filter-body" id="filters">
-                                    <div class="f1">
-                                        <div class="chapter-header">
-                                            <h4>
-                                                Companies
-                                                <small v-show="filters.companies.length" style="padding-left: 5px;">
-                                                    ${filters.companies.length} of ${companies.length} selected
-                                                </small>
-                                            </h4>
-                                            <button
-                                                    type="button"
-                                                    class="btn btn-default btn-sm"
-                                                    @click="clearCompaniesFilter"
-                                            >Clear</button>
-                                        </div>
-                                        <ul class="list-unstyled filter-body-1 js-companies-filter">
-                                            <li v-for="(company, index) in companies">
-                                                <input
-                                                        type="checkbox"
-                                                        :checked="filters.companies.indexOf(company) !== -1"
-                                                        :id="'square-checkbox-companies-' + index"
-                                                        :value="'company-' + company">
-                                                <label
-                                                        :for="'square-checkbox-companies-' + index"
-                                                        class="">
-                                                    ${company}
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="f2">
-                                        <div class="chapter-header">
-                                            <h4>
-                                                Categories
-                                                <small v-show="filters.categories.length" style="padding-left: 5px;">
-                                                    ${filters.categories.length} of ${categories.length} selected
-                                                </small>
-                                            </h4>
-                                            <button
-                                                    v-show="filters.categories.length"
-                                                    type="button"
-                                                    class="btn btn-default btn-sm"
-                                                    @click="clearCategoriesFilter"
-                                            >Clear</button>
-                                        </div>
-                                        <ul class="list-unstyled filter-body-2 js-categories-filter">
-                                            <li v-for="(category, index) in categories">
-                                                <input
-                                                        type="checkbox"
-                                                        :checked="filters.categories.indexOf(category) !== -1"
-                                                        :id="'square-checkbox-categories-' + index"
-                                                        :value="'category-' + category">
-                                                <label
-                                                        :for="'square-checkbox-categories-' + index"
-                                                        class="">
-                                                    ${category}
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 bottom-caret-row visible-sm visible-xs">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </div>
+                                <ul class="list-unstyled filter-body-1 js-companies-filter">
+                                    <li v-for="(company, index) in companies">
+                                        <input
+                                                type="checkbox"
+                                                :checked="filters.companies.indexOf(company) !== -1"
+                                                :id="'square-checkbox-companies-' + index"
+                                                :value="'company-' + company">
+                                        <label
+                                                :for="'square-checkbox-companies-' + index"
+                                                class="">
+                                            ${company}
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="f2">
+                                <div class="chapter-header">
+                                    <h4>
+                                        Categories
+                                        <small v-show="filters.categories.length" style="padding-left: 5px;">
+                                            ${filters.categories.length} of ${categories.length} selected
+                                        </small>
+                                    </h4>
+                                    <button
+                                            v-show="filters.categories.length"
+                                            type="button"
+                                            class="btn btn-default btn-sm"
+                                            @click="clearCategoriesFilter"
+                                    >Clear</button>
                                 </div>
+                                <ul class="list-unstyled filter-body-2 js-categories-filter">
+                                    <li v-for="(category, index) in categories">
+                                        <input
+                                                type="checkbox"
+                                                :checked="filters.categories.indexOf(category) !== -1"
+                                                :id="'square-checkbox-categories-' + index"
+                                                :value="'category-' + category">
+                                        <label
+                                                :for="'square-checkbox-categories-' + index"
+                                                class="">
+                                            ${category}
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 bottom-caret-row visible-sm visible-xs">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="col-md-9">
 
-                            <div class="fixed-top-panel">
-
-                            </div>
-
-                            <div class="tab-content packages table-responsive">
-                                <div class="nav-tabs-row">
-                                    <div class="tabs-app-container">
-                                        <ul class="nav nav-tabs " role="tablist">
-                                            <li :class="{active: !showSelected}">
-                                                <a @click="showSelected = false">
-                                                    All Apps
-                                                    <span class="apps-amount">
-                                                        (${filteredApps.length} out of ${apps.length})
+                    <div class="tab-content packages table-responsive">
+                        <div class="nav-tabs-row">
+                            <div class="tabs-app-container">
+                                <ul class="nav nav-tabs " role="tablist">
+                                    <li :class="{active: !showSelected}">
+                                        <a @click="showSelected = false">
+                                            Available Apps
+                                            <span class="apps-amount">
+                                                        (${filteredApps.length} of ${apps.length})
                                                     </span>
-                                                </a>
-                                            </li>
-                                            <li :class="{active: showSelected}">
-                                                <a @click="showSelected = true">My apps (${selectedApps.length})</a>
-                                            </li>
-                                        </ul>
-                                        <!--<p class="apps-amount">
-                                            Showing ${filteredApps.length}
-                                            ${'application'|pluralize(filteredApps.length)}
-                                            out of ${apps.length}
-                                        </p>-->
-                                    </div>
-                                    <div style="text-align: right" class="table-btns">
-                                        <button class="btn" disabled>
-                                            <span class="glyphicon glyphicon-chevron-left"></span>
-                                            Previous
-                                        </button>
-                                        <button
-                                                :disabled="steps[2] !== 'available'"
-                                                @click="goToStep(2)"
-                                                class="btn btn-primary">
-                                            Next
-                                            <span class="glyphicon glyphicon-chevron-right"></span>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="app-search-form"
-                                     v-for="app in (showSelected ? selectedApps : filteredApps)"
-                                     :class="{selected: app.selected}">
-                                    <form class="form-inline">
-                                        <input
-                                                :disabled="showSelected"
-                                                v-model="searchQuery"
-                                                class="form-control"
-                                                type="search"
-                                                placeholder="Search">
-                                        <span
-                                                style="margin-left: 5px"
-                                                v-for="company in filters.companies"
-                                                class="label label-primary">
-                                    ${company}
-                                    <a @click="uncheckCompany(company)">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </span>
-                                        <span
-                                                style="margin-left: 5px"
-                                                v-for="category in filters.categories"
-                                                class="label label-warning">
-                                    ${category}
-                                    <a @click="uncheckCategory(category)">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </span>
-                                    </form>
-                                </div>
-
-                                <table class="table">
-                                    <tbody>
-                                    <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
-                                        :class="{selected: app.selected}">
-                                        <td class="image-td">
-                                            <img :src="app.image">
-                                            <div class="size">${app.size}</div>
-                                        </td>
-                                        <td style="vertical-align: middle">
-                                            <b>${app.title}</b>
-                                            <br>${app.description}
-                                        </td>
-                                        <td class="price-td">
-                                            <h2>Price ${app.price|price}$ Per Hour</h2>
-                                            <button
-                                                    @click="toggleApp(app)"
-                                                    :disabled="app.processing"
-                                                    :class="{'btn-success': app.selected}"
-                                                    class="btn btn-price btn-block">
-                                                ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
+                                        </a>
+                                    </li>
+                                    <li :class="{active: showSelected}">
+                                        <a @click="showSelected = true">My Apps (${selectedApps.length})</a>
+                                    </li>
+                                </ul>
                             </div>
+                            <!--<div style="text-align: right" class="table-btns">
+                                <button class="btn" disabled>
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    Previous
+                                </button>
+                                <button
+                                        :disabled="steps[2] !== 'available'"
+                                        @click="goToStep(2)"
+                                        class="btn btn-primary">
+                                    Next
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </button>
+                            </div>-->
+                        </div>
 
+                        <div v-if="!showSelected" class="app-search-form">
+                            <form class="form-inline">
+                                <input
+                                        v-model="searchQuery"
+                                        class="form-control"
+                                        type="search"
+                                        placeholder="Search">
+                                <span
+                                        v-for="company in filters.companies"
+                                        class="label label-primary">
+                                        ${company}
+                                        <a @click="uncheckCompany(company)">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                </span>
+                                <span
+                                        v-for="category in filters.categories"
+                                        class="label label-warning">
+                                        ${category}
+                                        <a @click="uncheckCategory(category)">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                </span>
+                            </form>
+                        </div>
+
+                        <div class="table-wizard">
+                            <table class="table">
+                                <tbody>
+                                <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
+                                    :class="{selected: app.selected}">
+                                    <td class="image-td">
+                                        <img :src="app.image">
+                                        <div class="size">${app.size}</div>
+                                    </td>
+                                    <td style="vertical-align: middle">
+                                        <b>${app.title}</b>
+                                        <br>${app.description}
+                                    </td>
+                                    <td class="price-td">
+                                        <h2>Price ${app.price|price}$ Per Hour</h2>
+                                        <button
+                                                @click="toggleApp(app)"
+                                                :disabled="app.processing"
+                                                :class="{'btn-success': app.selected}"
+                                                class="btn btn-price btn-block">
+                                            ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
                 </div>
             </div>
-
+        </div>
+    </div>
+    <div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
+        <div class="container-fluid">
+            <div class="brands-carousel">
+                <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
+                <div><img src="img/brands/agisoft_logo-w.png" alt="" class=""></div>
+                <div><img src="img/brands/bundle_adjustment-w.png" class="" alt=""></div>
+                <div><img src="img/brands/ic_logo-w.png" alt="" class=""></div>
+                <div><img src="img/brands/logo-racurs-w.png" alt="" class=""></div>
+                <div><img src="img/brands/acute3D_Logo.png" alt="" class=""></div>
+                <div><img src="img/brands/tatukGIS_logo_new.png" alt="" class=""></div>
+                <div><img src="img/brands/qgis_trademark.png" alt="" class=""></div>
+            </div>
         </div>
     </div>
 </div>
