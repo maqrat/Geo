@@ -1579,29 +1579,33 @@ a.link-to-software {
     left: 0;
   }
 }
+.container.white-bg.white-bg-back {
+  position: fixed;
+  top: 78px;
+  bottom: 75px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: #fff;
+}
 .wrapper-wizard-content {
   position: fixed;
   top: 78px;
   bottom: 75px;
   left: 0;
   right: 0;
-}
-.wrapper-wizard-content .container.white-bg {
-  position: fixed;
-  top: 78px;
-  bottom: 75px;
-  left: 0;
-  right: 0;
+  z-index: 1;
+  height: 0;
 }
 .wrapper-wizard-content h4 small {
   font-size: 70%;
 }
 .row.wizard-row {
   padding: 0 30px;
-  height: 100%;
+  background-color: #fff;
 }
-.row.wizard-row > div {
-  height: 100%;
+.nav-tabs-row {
+  margin-top: 20px;
 }
 .tabs-app-container {
   position: relative;
@@ -1664,9 +1668,9 @@ td.price-td .btn.btn-success:hover {
 td.image-td {
   width: 57px !important;
 }
-.packages {
+/*.packages {
   padding-top: 20px;
-}
+}*/
 .packages h1 {
   text-align: center;
 }
@@ -1770,6 +1774,7 @@ td.image-td {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 2;
 }
 .container-brands-carousel-wizard .slick-track {
   padding: 10px 0;
@@ -1781,12 +1786,25 @@ td.image-td {
 .container-brands-carousel-wizard.container-brands-carousel .slick-next {
   top: 49%;
 }
-.table-wizard {
-  bottom: 0;
-  position: relative;
-  top: 0;
+.table-wizard .table > tbody > tr > td {
+  vertical-align: middle;
+  padding: 6px 8px;
+}
+.table-wizard-container {
+  position: absolute;
+  top: 195px;
   left: 0;
   right: 0;
+  bottom: 75px;
+  z-index: 1;
+}
+.table-wizard-container .container {
+  padding-bottom: 75px;
+  height: 100%;
+  position: relative;
+}
+.table-wizard-container .container .row.wizard-row > div {
+  margin-bottom: 75px;
 }
 .app-search-form form {
   margin: 10px 0;

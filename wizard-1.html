@@ -19,7 +19,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="gray-bg">
 
 <div class="navbar-wrapper navbar-wizard">
     <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
@@ -88,9 +88,47 @@
     </nav>
 </div>
 
-<div id="wrapper" class="wizard wrapper-wizard-content gray-bg">
-    <div  id="app">
-        <div class="container white-bg">
+<div id="app" class="gray-bg">
+    <div class="container white-bg white-bg-back"></div>
+
+    <div class="table-wizard-container">
+        <div class="container">
+            <div class="row wizard-row">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <div class="table-wizard packages table-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
+                                :class="{selected: app.selected}">
+                                <td class="image-td">
+                                    <img :src="app.image">
+                                    <div class="size">${app.size}</div>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <b>${app.title}</b>
+                                    <br>${app.description}
+                                </td>
+                                <td class="price-td">
+                                    <h2>Price ${app.price|price}$ Per Hour</h2>
+                                    <button
+                                            @click="toggleApp(app)"
+                                            :disabled="app.processing"
+                                            :class="{'btn-success': app.selected}"
+                                            class="btn btn-price btn-block">
+                                        ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wizard wrapper-wizard-content">
+        <div class="container">
             <div class="row wizard-row">
                 <div class="col-md-3">
                     <div class="filter wizard-filter">
@@ -166,7 +204,8 @@
                 </div>
                 <div class="col-md-9">
 
-                    <div class="tab-content packages table-responsive">
+                    <div class="tab-content">
+
                         <div class="nav-tabs-row">
                             <div class="tabs-app-container">
                                 <ul class="nav nav-tabs " role="tablist">
@@ -183,19 +222,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div style="text-align: right" class="table-btns">
-                                <button class="btn" disabled>
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                    Previous
-                                </button>
-                                <button
-                                        :disabled="steps[2] !== 'available'"
-                                        @click="goToStep(2)"
-                                        class="btn btn-primary">
-                                    Next
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </button>
-                            </div>-->
                         </div>
 
                         <div v-if="!showSelected" class="app-search-form">
@@ -224,7 +250,7 @@
                             </form>
                         </div>
 
-                        <div class="table-wizard">
+                        <!--<div class="table-wizard">
                             <table class="table">
                                 <tbody>
                                 <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
@@ -250,29 +276,31 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div>-->
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
-        <div class="container-fluid">
-            <div class="brands-carousel">
-                <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
-                <div><img src="img/brands/agisoft_logo-w.png" alt="" class=""></div>
-                <div><img src="img/brands/bundle_adjustment-w.png" class="" alt=""></div>
-                <div><img src="img/brands/ic_logo-w.png" alt="" class=""></div>
-                <div><img src="img/brands/logo-racurs-w.png" alt="" class=""></div>
-                <div><img src="img/brands/acute3D_Logo.png" alt="" class=""></div>
-                <div><img src="img/brands/tatukGIS_logo_new.png" alt="" class=""></div>
-                <div><img src="img/brands/qgis_trademark.png" alt="" class=""></div>
-            </div>
+
+</div>
+
+
+<div class="container-fluid container-brands-carousel container-brands-carousel-wizard">
+    <div class="container-fluid">
+        <div class="brands-carousel">
+            <div><img src="img/brands/super-map-logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/agisoft_logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/bundle_adjustment-w.png" class="" alt=""></div>
+            <div><img src="img/brands/ic_logo-w.png" alt="" class=""></div>
+            <div><img src="img/brands/logo-racurs-w.png" alt="" class=""></div>
+            <div><img src="img/brands/acute3D_Logo.png" alt="" class=""></div>
+            <div><img src="img/brands/tatukGIS_logo_new.png" alt="" class=""></div>
+            <div><img src="img/brands/qgis_trademark.png" alt="" class=""></div>
         </div>
     </div>
 </div>
-
 
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -284,6 +312,7 @@
 <script src="./js/niceScrollCustom.js"></script>
 <script >
     $(document).ready(function () {
+
         //brands-carousel slick
         setTimeout(function(){
             $('.brands-carousel').animate({opacity: 1}, 300);

@@ -1,35 +1,31 @@
-
+.container.white-bg.white-bg-back {
+  position: fixed;
+  top:78px;
+  bottom: 75px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: #fff;
+}
 .wrapper-wizard-content {
   position: fixed;
   top:78px;
   bottom: 75px;
   left: 0;
   right: 0;
-  .container.white-bg {
-    position: fixed;
-    top:78px;
-    bottom: 75px;
-    left: 0;
-    right: 0;
-  }
+  z-index: 1;
+  height: 0;
   h4 small {
     font-size: 70%;
   }
-
 }
 .row.wizard-row {
   padding: 0 30px;
-  height: 100%;
-  &>div { //div.col-..
-    height: 100%;
-  }
+  background-color: #fff;
 }
 
 .nav-tabs-row {
-  //position: fixed;
-  //z-index: 3;
-  //top: 167px;
-  //background-color: #fff;
+  margin-top: 20px;
 }
 .tabs-app-container {
   position: relative;
@@ -98,9 +94,9 @@ td.image-td {
   width: 57px !important;
 }
 
-.packages {
+/*.packages {
   padding-top: 20px;
-}
+}*/
 
 .packages h1 {
   text-align: center;
