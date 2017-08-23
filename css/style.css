@@ -1692,6 +1692,16 @@ td.image-td {
 .navbar-wizard .container-fluid {
   max-width: 2000px;
 }
+.navbar-wizard .navbar-default .nav.navbar-nav > li.active > a {
+  color: #0094e7;
+  border-top: 6px solid transparent;
+}
+.navbar-wizard .navbar-default .nav.navbar-nav > li.active > a:hover {
+  color: #0094e7;
+}
+.navbar-wizard .navbar-default .nav.navbar-nav > li.active > a .fa-angle-right {
+  color: #0094e7;
+}
 .navbar-wizard ul.nav > li {
   display: inline-block;
 }
@@ -1731,6 +1741,8 @@ td.image-td {
   width: 728px;
 }
 .navbar-wizard ul.nav-steps > li {
+  position: relative;
+  margin: 0 5px;
   /*&.next {
         a {
           color: @navy!important;
@@ -1739,6 +1751,25 @@ td.image-td {
 }
 .navbar-wizard ul.nav-steps > li.disabled a {
   color: #a7aaab !important;
+}
+.navbar-wizard ul.nav-steps > li.disabled .fa-angle-right {
+  color: #a7aaab;
+}
+.navbar-wizard ul.nav-steps > li.available a:hover .fa-angle-right {
+  color: #0094e7;
+}
+.navbar-wizard ul.nav-steps > li.available .fa-angle-right {
+  color: black;
+}
+.navbar-wizard ul.nav-steps > li.available.active .fa-angle-right {
+  color: #0094e7;
+}
+.navbar-wizard ul.nav-steps > li .fa-angle-right {
+  position: absolute;
+  top: 3px;
+  right: -14px;
+  font-size: 58px;
+  color: #0094e7;
 }
 .navbar-wizard ul.nav-pills {
   display: inline-block;

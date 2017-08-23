@@ -3,6 +3,16 @@
   .container-fluid {
     max-width: 2000px;
   }
+  .navbar-default .nav.navbar-nav > li.active > a {
+    color: @navy;
+    border-top: 6px solid transparent;
+    &:hover {
+      color: @navy;
+    }
+    .fa-angle-right {
+      color: @navy;
+    }
+  }
   ul.nav {
     &>li {
       display: inline-block;
@@ -42,9 +52,24 @@
   ul.nav-steps {
     width: 728px;
     &>li {
+      position: relative;
+      margin: 0 5px;
       &.disabled {
         a {
           color: lighten(@text-gray-color,25%)!important;
+        }
+        .fa-angle-right {
+          color: lighten(@text-gray-color,25%);
+        }
+      }
+      &.available {
+        a:hover {
+          .fa-angle-right {
+            color: @navy;
+          }
+        }
+        .fa-angle-right {
+          color: black;
         }
       }
       /*&.next {
@@ -52,6 +77,18 @@
           color: @navy!important;
         }
       }*/
+      &.available.active {
+        .fa-angle-right {
+          color: @navy;
+        }
+      }
+      .fa-angle-right {
+        position: absolute;
+        top: 3px;
+        right: -14px;
+        font-size: 58px;
+        color: @navy;
+      }
     }
   }
 
