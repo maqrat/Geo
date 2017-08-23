@@ -1441,7 +1441,6 @@ a.link-to-software {
   overflow: hidden;
   position: relative;
   background-color: #fff;
-  max-height: auto;
 }
 .filter .filter-body ul.list-unstyled {
   margin-bottom: 0;
@@ -1812,4 +1811,41 @@ td.image-td {
 .app-search-form form span.label {
   margin: 5px;
   display: inline-block;
+  background-color: #fff;
+  padding: 6px 10px;
+  font-size: 80%;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.app-search-form form span.label.label-primary {
+  color: #0094e7;
+  border: 1px solid #0094e7;
+}
+.app-search-form form span.label.label-primary:hover {
+  background-color: #0094e7;
+  color: #fff!important;
+  border-color: #0084ce;
+}
+.app-search-form form span.label.label-primary:hover a {
+  color: #fff;
+}
+.app-search-form form span.label.label-primary a {
+  color: #0094e7;
+}
+.app-search-form form span.label.label-success {
+  color: #5cb85c!important;
+  border: 1px solid #5cb85c!important;
+}
+.app-search-form form span.label.label-success:hover {
+  background-color: #5cb85c!important;
+  color: #fff!important;
+  border-color: #449d44!important;
+}
+.app-search-form form span.label.label-success:hover a {
+  color: #fff;
+}
+.app-search-form form span.label.label-success a {
+  color: #5cb85c;
 }

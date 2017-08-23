@@ -4,6 +4,41 @@
     span.label {
       margin: 5px;
       display: inline-block;
+      background-color: #fff;
+      padding: 6px 10px;
+      font-size: 80%;
+      font-weight: 600;
+      .transition();
+      &.label-primary {
+        color: @navy;
+        border: 1px solid @navy;
+        &:hover {
+          background-color: @navy;
+          color: #fff!important;
+          border-color: darken(@navy, 5%);
+          a {
+            color: #fff;
+          }
+        }
+        a {
+          color: @navy;
+        }
+      }
+      &.label-success {
+        color: #5cb85c!important;
+        border: 1px solid #5cb85c!important;
+        &:hover {
+          background-color: #5cb85c!important;
+          color: #fff!important;
+          border-color: #449d44!important;
+          a {
+            color: #fff;
+          }
+        }
+        a {
+          color: #5cb85c;
+        }
+      }
     }
   }
 }

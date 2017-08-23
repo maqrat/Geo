@@ -241,7 +241,7 @@
                                 </span>
                                 <span
                                         v-for="category in filters.categories"
-                                        class="label label-warning">
+                                        class="label label-success">
                                         ${category}
                                         <a @click="uncheckCategory(category)">
                                             <i class="fa fa-times"></i>
@@ -441,8 +441,13 @@
             },
             mounted: function () {
                 var vm = this;
-                $('input').iCheck({
+                $('.js-companies-filter input').iCheck({
                     checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-blue',
+                    increaseArea: '20%' // optional
+                });
+                $('.js-categories-filter input').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
                     radioClass: 'iradio_square-blue',
                     increaseArea: '20%' // optional
                 });
