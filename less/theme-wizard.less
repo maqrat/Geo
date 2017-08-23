@@ -26,6 +26,14 @@
 
 .nav-tabs-row {
   margin-top: 20px;
+  ul.nav-tabs {
+    li:first-child {
+      float: left;
+    }
+    li:last-child {
+      float: right;
+    }
+  }
 }
 .tabs-app-container {
   position: relative;
@@ -61,16 +69,25 @@ td.price-td {
   .btn {
     background-color: @navy;
     color: #fff;
+    font-weight: 700;
     .transition();
     &:hover {
       background-color: darken(@navy,5%);
     }
-    &.btn-success {
+    &.btn-warning{
+      background-color: #f0ad4e;
+      border-color: #eea236;
+      &:hover {
+        background-color: #ec971f;
+        border-color: #d58512;
+      }
+    }
+    /*&.btn-success {
       background-color: #5cb85c!important;
       &:hover {
         background-color: #449d44!important;
       }
-    }
+    }*/
 
   }
 }

@@ -1606,6 +1606,12 @@ a.link-to-software {
 .nav-tabs-row {
   margin-top: 20px;
 }
+.nav-tabs-row ul.nav-tabs li:first-child {
+  float: left;
+}
+.nav-tabs-row ul.nav-tabs li:last-child {
+  float: right;
+}
 .tabs-app-container {
   position: relative;
 }
@@ -1640,18 +1646,27 @@ td.price-td {
 td.price-td .btn {
   background-color: #0094e7;
   color: #fff;
+  font-weight: 700;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  /*&.btn-success {
+      background-color: #5cb85c!important;
+      &:hover {
+        background-color: #449d44!important;
+      }
+    }*/
 }
 td.price-td .btn:hover {
   background-color: #0084ce;
 }
-td.price-td .btn.btn-success {
-  background-color: #5cb85c!important;
+td.price-td .btn.btn-warning {
+  background-color: #f0ad4e;
+  border-color: #eea236;
 }
-td.price-td .btn.btn-success:hover {
-  background-color: #449d44!important;
+td.price-td .btn.btn-warning:hover {
+  background-color: #ec971f;
+  border-color: #d58512;
 }
 .packages .added {
   background-color: #eee;
@@ -1837,7 +1852,8 @@ td.image-td {
   margin-bottom: 75px;
 }
 .app-search-form form {
-  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 .app-search-form form span.label {
   margin: 5px;

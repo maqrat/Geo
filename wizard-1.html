@@ -117,7 +117,7 @@
                                     <button
                                             @click="toggleApp(app)"
                                             :disabled="app.processing"
-                                            :class="{'btn-success': app.selected}"
+                                            :class="{'btn-warning': app.selected}"
                                             class="btn btn-price btn-block">
                                         ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
                                     </button>
@@ -272,7 +272,7 @@
                                         <button
                                                 @click="toggleApp(app)"
                                                 :disabled="app.processing"
-                                                :class="{'btn-success': app.selected}"
+                                                :class="{'btn-warning': app.selected}"
                                                 class="btn btn-price btn-block">
                                             ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
                                         </button>
