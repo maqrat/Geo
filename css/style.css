@@ -1738,11 +1738,11 @@ td.image-td {
   color: black;
 }
 .navbar-wizard ul.nav-steps {
-  width: 728px;
+  width: 770px;
 }
 .navbar-wizard ul.nav-steps > li {
   position: relative;
-  margin: 0 5px;
+  margin: 0 10px;
   /*&.next {
         a {
           color: @navy!important;
