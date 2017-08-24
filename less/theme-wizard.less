@@ -26,14 +26,14 @@
 
 .nav-tabs-row {
   margin-top: 20px;
-  ul.nav-tabs {
+  /*ul.nav-tabs {
     li:first-child {
       float: left;
     }
     li:last-child {
       float: right;
     }
-  }
+  }*/
 }
 .tabs-app-container {
   position: relative;
@@ -42,26 +42,51 @@
   }
 }
 
+.label-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  span.label {
+    margin: 5px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 6px 10px;
+    font-size: 80%;
+    font-weight: 600;
+    .transition();
+    &.label-primary {
+      color: @navy;
+      border: 1px solid @navy;
+      &:hover {
+        background-color: @navy;
+        color: #fff!important;
+        border-color: darken(@navy, 5%);
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        color: @navy;
+      }
+    }
+    &.label-success {
+      color: #5cb85c!important;
+      border: 1px solid #5cb85c!important;
+      &:hover {
+        background-color: #5cb85c!important;
+        color: #fff!important;
+        border-color: #449d44!important;
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        color: #5cb85c;
+      }
+    }
+  }
+}
 
-ul.list-unstyled.filter-body-1 {
-  max-height: 260px;
-}
-ul.list-unstyled.filter-body-2 {
-  max-height: 297px;
-}
-.filter {
-  width: auto;
-}
-.filter ul li label {
-  font-size: 14px;
-}
-.filter .filter-header h4, .filter .filter-footer h4, .filter .chapter-header h4 {
-  line-height: 36px;
-}
 
-.filter .filter-header button, .filter .filter-footer button, .filter .chapter-header button {
-  top: 3px;
-}
 
 
 td.price-td {

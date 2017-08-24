@@ -34,7 +34,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="page-scroll navbar-brand" href="/app/"><img src="img/logo.jpg" class="img-responsive" alt=""></a>
-                <a class=" btn btn-primary navy sign-up-btn-mobile visible-xs visible-sm" href="#">Sign Up</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
                 <ul class="nav navbar-right">
@@ -209,7 +208,6 @@
                 <div class="col-md-9">
 
                     <div class="tab-content">
-
                         <div class="nav-tabs-row">
                             <div class="tabs-app-container">
                                 <ul class="nav nav-tabs " role="tablist">
@@ -224,63 +222,39 @@
                                     <li :class="{active: showSelected}">
                                         <a @click="showSelected = true">My Apps (${selectedApps.length})</a>
                                     </li>
+                                    <li class=" pull-right">
+                                        <div class="app-search-form">
+                                            <form class="form-inline">
+                                                <input
+                                                v-model="searchQuery"
+                                                class="form-control"
+                                                type="search"
+                                                placeholder="Search">
+                                            </form>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div v-if="!showSelected" class="app-search-form">
-                            <form class="form-inline">
-                                <input
-                                        v-model="searchQuery"
-                                        class="form-control"
-                                        type="search"
-                                        placeholder="Search">
-                                <span
-                                        v-for="company in filters.companies"
-                                        class="label label-primary">
+                        <div v-if="!showSelected" class="label-row">
+                        <span
+                                v-for="company in filters.companies"
+                                class="label label-primary">
                                         ${company}
                                         <a @click="uncheckCompany(company)">
                                             <i class="fa fa-times"></i>
                                         </a>
                                 </span>
-                                <span
-                                        v-for="category in filters.categories"
-                                        class="label label-success">
+                            <span
+                                    v-for="category in filters.categories"
+                                    class="label label-success">
                                         ${category}
                                         <a @click="uncheckCategory(category)">
                                             <i class="fa fa-times"></i>
                                         </a>
                                 </span>
-                            </form>
                         </div>
-
-                        <!--<div class="table-wizard">
-                            <table class="table">
-                                <tbody>
-                                <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
-                                    :class="{selected: app.selected}">
-                                    <td class="image-td">
-                                        <img :src="app.image">
-                                        <div class="size">${app.size}</div>
-                                    </td>
-                                    <td style="vertical-align: middle">
-                                        <b>${app.title}</b>
-                                        <br>${app.description}
-                                    </td>
-                                    <td class="price-td">
-                                        <h2>Price ${app.price|price}$ Per Hour</h2>
-                                        <button
-                                                @click="toggleApp(app)"
-                                                :disabled="app.processing"
-                                                :class="{'btn-warning': app.selected}"
-                                                class="btn btn-price btn-block">
-                                            ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
-                                        </button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>-->
                     </div>
 
                 </div>
@@ -314,6 +288,7 @@
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
 <script src="./js/niceScrollCustom.js"></script>
+<script src="./js/label-wizard-position.js"></script>
 <script >
     $(document).ready(function () {
 
