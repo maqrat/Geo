@@ -21,7 +21,7 @@ $(document).ready(function () {
                 "padding": "0",
                 "border": "0"
             });
-            elTableWizard.css("top", labelBottom + "px");
+            elTableWizard.css("top", labelBottom - 20 + "px"); // - "padding": "10px 0"
         } else {
             el.css({
                 "padding": "10px 0",
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 return;
 
-  tab.on('click', function () {
+  /*tab.on('click', function () {
     if ( secondTab.hasClass('active')) {
       elTableWizard.css("top", labelTop + "px");
     } else {
@@ -74,5 +74,5 @@ return;
         }
       }
     }
-  });
+  });*/
 });
