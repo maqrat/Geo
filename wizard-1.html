@@ -110,7 +110,7 @@
                                 <td style="vertical-align: middle">
                                     <b>${app.title}</b><span class="version"><small>v11.1.9.25134</small></span>
                                     <br><span class="params">8CPU,15GB RAM, NVIDIA(4GB))</span>
-                                    <br><small>${app.description}</small>
+                                    <br><span class="description"><small>${app.description}</small> </span>
                                 </td>
                                 <td class="price-td">
                                     <h2>Price ${app.price|price}$ Per Hour</h2>
@@ -298,8 +298,6 @@
 
         function filterWizardHeightSet() {
             var filterElement = $(".filter.wizard-filter .filter-body");
-            var filterElementF1 = $(".filter.wizard-filter .filter-body .f1");
-            var filterElementF2 = $(".filter.wizard-filter .filter-body .f2");
 
             var filterElementF1List = $(".filter.wizard-filter .filter-body ul.list-unstyled.filter-body-1");
             var filterElementF2List = $(".filter.wizard-filter .filter-body ul.list-unstyled.filter-body-2");
@@ -308,23 +306,13 @@
             var navHeight = $(".navbar-wrapper nav").outerHeight();
             var containerBrandsHeight = $(".container-brands-carousel-wizard").outerHeight();
             var windowHeight = $(window).outerHeight();
-           /* console.log("navHeight - " + navHeight);
-            console.log("containerBrandsHeight - " + containerBrandsHeight);
-            console.log("windowHeight - " + windowHeight);*/
             var filterHeight = windowHeight - navHeight - containerBrandsHeight;
 
-            console.log("filterHeight - " + filterHeight);
 
-            var filterF1Height = filterHeight * 0.4 - filterChapterHeight - 20;
-            var filterF2Height = filterHeight * 0.6 - filterChapterHeight - 20;
-
-            console.log("filterF1Height - " + filterF1Height);
-            console.log("filterF2Height - " + filterF2Height);
+            var filterF1Height = filterHeight * 0.4 - filterChapterHeight - 30;
+            var filterF2Height = filterHeight * 0.6 - filterChapterHeight - 30;
 
             filterElement.css('height', filterHeight + 'px');
-
-            /*filterElementF1.css('height', filterF1Height + 'px');
-            filterElementF2.css('height', filterF2Height + 'px');*/
 
             filterElementF1List.css('height', filterF1Height + 'px');
             filterElementF2List.css('height', filterF2Height + 'px');
