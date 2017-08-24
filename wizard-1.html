@@ -295,6 +295,24 @@
 <script >
 
     $(document).ready(function () {
+
+        function filterWizardHeightSet() {
+            var filterElement = $(".filter.wizard-filter .filter-body");
+            var navHeight = $(".navbar-wrapper nav").outerHeight();
+            var containerBrandsHeight = $(".container-brands-carousel-wizard").outerHeight();
+            var windowHeight = $(window).outerHeight();
+            console.log("navHeight - " + navHeight);
+            console.log("containerBrandsHeight - " + containerBrandsHeight);
+            console.log("windowHeight - " + windowHeight);
+            var filterHeight = windowHeight - navHeight - containerBrandsHeight;
+
+            filterElement.css('height', filterHeight + 'px');
+        }
+
+        $(window).on('resize', filterWizardHeightSet);
+
+        filterWizardHeightSet();
+
         //brands-carousel slick
         setTimeout(function(){
             $('.brands-carousel').animate({opacity: 1}, 300);
