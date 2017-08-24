@@ -216,11 +216,11 @@
                                         <a @click="showSelected = false">
                                             Available Apps
                                             <span class="apps-amount">
-                                                        (${filteredApps.length} of ${apps.length})
-                                                    </span>
+                                                (${filteredApps.length} of ${apps.length})
+                                            </span>
                                         </a>
                                     </li>
-                                    <li :class="{active: showSelected}">
+                                    <li v-show="selectedApps.length" :class="{active: showSelected}">
                                         <a @click="showSelected = true">My Apps (${selectedApps.length})</a>
                                     </li>
                                     <li class=" pull-right">
@@ -228,6 +228,7 @@
                                             <form class="form-inline">
                                                 <input
                                                 v-model="searchQuery"
+                                                v-show="!showSelected"
                                                 class="form-control"
                                                 type="search"
                                                 placeholder="Search">
