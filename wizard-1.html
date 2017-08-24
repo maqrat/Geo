@@ -288,7 +288,7 @@
 <script src="./node_modules/icheck/icheck.min.js"></script>
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
-<script src="./js/niceScrollCustom.js"></script>
+<!--<script src="./js/niceScrollCustom.js"></script>-->
 <script src="./node_modules/css-element-queries/src/ResizeSensor.js"></script>
 <script src="./node_modules/css-element-queries/src/ElementQueries.js"></script>
 <script src="./js/label-wizard-position.js"></script>
@@ -298,15 +298,36 @@
 
         function filterWizardHeightSet() {
             var filterElement = $(".filter.wizard-filter .filter-body");
+            var filterElementF1 = $(".filter.wizard-filter .filter-body .f1");
+            var filterElementF2 = $(".filter.wizard-filter .filter-body .f2");
+
+            var filterElementF1List = $(".filter.wizard-filter .filter-body ul.list-unstyled.filter-body-1");
+            var filterElementF2List = $(".filter.wizard-filter .filter-body ul.list-unstyled.filter-body-2");
+
+            var filterChapterHeight = $(".chapter-header").outerHeight();
             var navHeight = $(".navbar-wrapper nav").outerHeight();
             var containerBrandsHeight = $(".container-brands-carousel-wizard").outerHeight();
             var windowHeight = $(window).outerHeight();
-            console.log("navHeight - " + navHeight);
+           /* console.log("navHeight - " + navHeight);
             console.log("containerBrandsHeight - " + containerBrandsHeight);
-            console.log("windowHeight - " + windowHeight);
+            console.log("windowHeight - " + windowHeight);*/
             var filterHeight = windowHeight - navHeight - containerBrandsHeight;
 
+            console.log("filterHeight - " + filterHeight);
+
+            var filterF1Height = filterHeight * 0.4 - filterChapterHeight - 20;
+            var filterF2Height = filterHeight * 0.6 - filterChapterHeight - 20;
+
+            console.log("filterF1Height - " + filterF1Height);
+            console.log("filterF2Height - " + filterF2Height);
+
             filterElement.css('height', filterHeight + 'px');
+
+            /*filterElementF1.css('height', filterF1Height + 'px');
+            filterElementF2.css('height', filterF2Height + 'px');*/
+
+            filterElementF1List.css('height', filterF1Height + 'px');
+            filterElementF2List.css('height', filterF2Height + 'px');
         }
 
         $(window).on('resize', filterWizardHeightSet);
@@ -366,14 +387,14 @@
         document.addEventListener('scroll', function (event) {
 //           $('.line').css('position', 'fixed');
         }, true );
-
+/*
         $('.f1, .f2').on( 'mousewheel DOMMouseScroll', function (e) {
             var e0 = e.originalEvent;
             var delta = e0.wheelDelta || -e0.detail;
 
             this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
             e.preventDefault();
-        });
+        });*/
 
     });
 </script>

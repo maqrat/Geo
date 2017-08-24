@@ -1489,36 +1489,30 @@ a.link-to-software {
 .filter.wizard-filter {
   width: 260px;
   max-height: 100%;
-  margin-top: 7px;
 }
 .filter.wizard-filter .filter-body {
   max-height: none;
 }
 .filter.wizard-filter .filter-body .f1 {
-  height: 42%;
   max-height: none;
 }
 .filter.wizard-filter .filter-body .f2 {
-  height: 54%;
   max-height: none;
-  padding-top: 20px;
 }
 .filter.wizard-filter .filter-body ul.list-unstyled.filter-body-1 {
-  height: 88%;
   max-height: none;
-  overflow: hidden;
+  overflow: auto;
 }
 .filter.wizard-filter .filter-body ul.list-unstyled.filter-body-2 {
-  height: 90%;
   max-height: none;
-  overflow: hidden;
+  overflow: auto;
 }
-ul.list-unstyled.filter-body-1 {
+/*ul.list-unstyled.filter-body-1 {
   max-height: 260px;
 }
 ul.list-unstyled.filter-body-2 {
   max-height: 297px;
-}
+}*/
 .filter {
   width: auto;
 }
@@ -1535,11 +1529,17 @@ ul.list-unstyled.filter-body-2 {
 .filter .chapter-header button {
   top: 3px;
 }
+/*
 @media (min-width: 1300px) {
-  .filter.wizard-filter .filter-body .f2 {
-    padding-top: 0;
+  .filter.wizard-filter {
+    .filter-body {
+      .f2 {
+        padding-top: 0;
+
+      }
+    }
   }
-}
+}*/
 .brands-carousel {
   opacity: 0;
 }
