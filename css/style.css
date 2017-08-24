@@ -1536,7 +1536,9 @@ ul.list-unstyled.filter-body-2 {
   top: 3px;
 }
 @media (min-width: 1300px) {
-  padding-top: 0;
+  .filter.wizard-filter .filter-body .f2 {
+    padding-top: 0;
+  }
 }
 .brands-carousel {
   opacity: 0;
