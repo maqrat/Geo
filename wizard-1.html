@@ -108,8 +108,9 @@
                                     <div class="size">${app.size}</div>
                                 </td>
                                 <td style="vertical-align: middle">
-                                    <b>${app.title}</b>
-                                    <br>${app.description}
+                                    <b>${app.title}</b><span class="version"><small>v11.1.9.25134</small></span>
+                                    <br><span class="params">8CPU,15GB RAM, NVIDIA(4GB))</span>
+                                    <br><small>${app.description}</small>
                                 </td>
                                 <td class="price-td">
                                     <h2>Price ${app.price|price}$ Per Hour</h2>
@@ -288,10 +289,12 @@
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
 <script src="./js/niceScrollCustom.js"></script>
+<script src="./node_modules/css-element-queries/src/ResizeSensor.js"></script>
+<script src="./node_modules/css-element-queries/src/ElementQueries.js"></script>
 <script src="./js/label-wizard-position.js"></script>
 <script >
-    $(document).ready(function () {
 
+    $(document).ready(function () {
         //brands-carousel slick
         setTimeout(function(){
             $('.brands-carousel').animate({opacity: 1}, 300);
@@ -346,9 +349,18 @@
 //           $('.line').css('position', 'fixed');
         }, true );
 
+        $('.f1, .f2').on( 'mousewheel DOMMouseScroll', function (e) {
+            var e0 = e.originalEvent;
+            var delta = e0.wheelDelta || -e0.detail;
+
+            this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+            e.preventDefault();
+        });
+
     });
 </script>
 <script>
+
     (function (cfg) {
         window.vm = new Vue({
             el: '#app',
