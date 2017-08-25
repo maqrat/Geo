@@ -99,7 +99,7 @@
             <div class="row wizard-row">
                 <div class="col-xs-offset-3 col-xs-9">
                     <div class="table-wizard packages table-responsive">
-                        <table class="table">
+                        <table v-if="!showSelected || selectedApps.length" class="table">
                             <tbody>
                             <tr v-for="app in (showSelected ? selectedApps : filteredApps)"
                                 :class="{selected: app.selected}">
@@ -125,6 +125,9 @@
                             </tr>
                             </tbody>
                         </table>
+                        <div v-else style="text-align: center; color: gray; padding-top: 15px">
+                            Please, select you apps
+                        </div>
                     </div>
                 </div>
             </div>
