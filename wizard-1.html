@@ -154,6 +154,7 @@
                                         </small>
                                     </h4>
                                     <button
+                                            v-show="filters.companies.length"
                                             type="button"
                                             class="btn btn-default btn-sm"
                                             @click="clearCompaniesFilter"
