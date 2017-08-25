@@ -556,7 +556,10 @@
                     },
                     deep: true
                 },
-                showSelected: stylesUpdater.tabChanged,
+                showSelected: function () {
+                    $(window).scrollTop(0);
+                    stylesUpdater.tabChanged();
+                },
                 selectedApps: function (val) {
                     if (!val.length) {
                         this.showSelected = false;
