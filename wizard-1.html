@@ -302,6 +302,7 @@
 
     $(document).ready(function () {
 
+        //Filter % height
         function filterWizardHeightSet() {
             var filterElement = $(".filter.wizard-filter .filter-body");
 
@@ -327,6 +328,14 @@
         $(window).on('resize', filterWizardHeightSet);
 
         filterWizardHeightSet();
+
+        $('.f1, .f2').on( 'mousewheel DOMMouseScroll', function (e) {
+            var e0 = e.originalEvent;
+            var delta = e0.wheelDelta || -e0.detail;
+
+            this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+            //e.preventDefault();
+        });
 
         //brands-carousel slick
         setTimeout(function(){
@@ -382,14 +391,6 @@
 //           $('.line').css('position', 'fixed');
         }, true );
 
-        $('.f1, .f2').on( 'mousewheel DOMMouseScroll', function (e) {
-            var e0 = e.originalEvent;
-            var delta = e0.wheelDelta || -e0.detail;
-
-            this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-            //e.preventDefault();
-        });
-
     });
 </script>
 <script>
@@ -412,23 +413,32 @@
                 console.log('Labels or screen changed');
                 var el = $('.label-row');
                 var elHeight = el.outerHeight();
+                var elTableWizard = $(".table-wizard-container");
+                var labelBottom = el.offset().top + elHeight;
+
+                console.log("labelBottom out" + labelBottom);
 
                 if (elHeight <= '21') {
+
                     el.css({
                         "padding": "0",
                         "border": "0"
                     });
+                    var labelBottom = el.offset().top + el.outerHeight(true);
+                    elTableWizard.css("top", labelBottom + "px");
+
                 } else {
                     el.css({
                         "padding": "10px 0",
                         "border-bottom": "1px solid #ddd"
                     });
+                    var labelBottom = el.offset().top + el.outerHeight(true);
+                    elTableWizard.css("top", labelBottom + "px");
                 }
-                tableWizardTopSet();
             }
 
             function tabChanged () {
-                console.log('Tab changed')
+                console.log('Tab changed');
                 if (secondTab.hasClass('active')) {
                     elTableWizard.css("top", labelTop + "px");
                 } else {
@@ -553,11 +563,13 @@
                     handler: function (val) {
                         // $.postJSON(cfg.urls.changeSoftwareFilter, {filters: val});
                         stylesUpdater.labelsChanged();
+                        console.log('watch filters');
                     },
                     deep: true
                 },
                 showSelected: stylesUpdater.tabChanged,
                 selectedApps: function (val) {
+                    console.log('watch selectedApps');
                     if (!val.length) {
                         this.showSelected = false;
                     }
