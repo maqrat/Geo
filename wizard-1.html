@@ -293,11 +293,6 @@
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script src="./node_modules/icheck/icheck.min.js"></script>
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
-<script src="./node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
-<!--<script src="./js/niceScrollCustom.js"></script>-->
-<script src="./node_modules/css-element-queries/src/ResizeSensor.js"></script>
-<script src="./node_modules/css-element-queries/src/ElementQueries.js"></script>
-<!--<script src="./js/label-wizard-position.js"></script>-->
 <script >
 
     $(document).ready(function () {
@@ -406,21 +401,15 @@
             }
 
             function labelsOrScreenChanged() {
-                console.log('Labels or screen changed');
                 var el = $('.label-row');
                 var elHeight = el.outerHeight();
                 var labelBottom = el.offset().top + elHeight;
-
-                console.log("labelBottom out" + labelBottom);
-
                 if (elHeight <= '21') {
-
                     el.css({
                         "padding": "0",
                         "border": "0"
                     });
                     tableWizardTopSet();
-
                 } else {
                     el.css({
                         "padding": "10px 0",
@@ -431,10 +420,7 @@
             }
 
             function tabChanged () {
-                console.log('Tab changed');
-
                 var secondTab = $('.tabs-app-container ul li:nth-child(2)');
-
                 var elTableWizard = $(".table-wizard-container");
                 var varTab = $(".nav-tabs-row");
                 var varTabHeight = $(".nav-tabs-row").outerHeight();
@@ -564,13 +550,11 @@
                     handler: function (val) {
                         // $.postJSON(cfg.urls.changeSoftwareFilter, {filters: val});
                         stylesUpdater.labelsChanged();
-                        console.log('watch filters');
                     },
                     deep: true
                 },
                 showSelected: stylesUpdater.tabChanged,
                 selectedApps: function (val) {
-                    console.log('watch selectedApps');
                     if (!val.length) {
                         this.showSelected = false;
                     }
