@@ -549,7 +549,9 @@
                 filters: {
                     handler: function (val) {
                         // $.postJSON(cfg.urls.changeSoftwareFilter, {filters: val});
-                        stylesUpdater.labelsChanged();
+                        if (!this.showSelected) {
+                            stylesUpdater.labelsChanged();
+                        }
                     },
                     deep: true
                 },
