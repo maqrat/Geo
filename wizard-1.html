@@ -109,8 +109,8 @@
                                 </td>
                                 <td style="vertical-align: middle">
                                     <b>${app.title}</b><span class="version"><small>v11.1.9.25134</small></span>
-                                    <br><span class="params">8CPU,15GB RAM, NVIDIA(4GB))</span>
-                                    <br><span class="description"><small>${app.description}</small> </span>
+                                    <span class="params">&ensp; 8CPU,15GB RAM, NVIDIA(4GB))</span>
+                                    <br><span class="description">${app.description}</span>
                                 </td>
                                 <td class="price-td">
                                     <h2>Price ${app.price|price}$ Per Hour</h2>
@@ -220,7 +220,7 @@
                                             </span>
                                         </a>
                                     </li>
-                                    <li v-show="selectedApps.length" :class="{active: showSelected}">
+                                    <li :class="{active: showSelected}">
                                         <a @click="showSelected = true">My Apps (${selectedApps.length})</a>
                                     </li>
                                     <li class=" pull-right">
@@ -239,7 +239,7 @@
                             </div>
                         </div>
 
-                        <div v-if="!showSelected" class="label-row">
+                        <div v-show="!showSelected" class="label-row">
                         <span
                                 v-for="company in filters.companies"
                                 class="label label-primary">
