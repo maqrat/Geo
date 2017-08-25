@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="/static/assets/img/favicon/48.png">
+
+        <title>GeoCloud</title>
+
+
+		<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="./node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="./node_modules/animate.css/animate.css" rel="stylesheet" type="text/css" />
+		<link href="./theme/css/style.css" rel="stylesheet" type="text/css" />
+
+		<style>
+			td.price-td {
+				width: 300px;
+			}
+			#app h2 {
+				margin-top: 0;
+				font-size: 130%;
+			}
+		</style>
+    </head>
+
+    <body class="top-navigation" >
+
+    <style>
+        #app {
+			max-width: 1024px;
+			margin: 20px auto;
+        }
+        .nav-pills > li {
+            padding: 0px 7px;
+            color: white !important;
+        }
+            .nav-pills > li > a {
+                background: #bbb;
+                color: white !important;
+            }
+                .nav-pills > li > a:hover {
+                    background: #bbb !important;
+                }
+
+            .nav-pills > li.active > a {
+                background: #1ab394;
+                color: white;
+            }
+                .nav-pills > li.active > a:hover {
+                    background: #1ab394 !important;
+                }
+
+            .nav-pills > li.available > a {
+                background: #5EE8CD;
+            }
+                .nav-pills > li.available > a:hover {
+                    background: #1ab394 !important;
+                }
+    </style>
+
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom white-bg">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+                        <a href="/app/" class="navbar-brand">GeoCloud</a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+
+
+    <li class="dropdown">
+        <a href="#"
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Admin
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" style="margin-right:10px">
+            <li><a href="/admin/">Database</a></li>
+            <li><a href="/admin-change-company">Change Company</a></li>
+            <li><a href="/billing/aws-charges">Amazon Charges</a></li>
+            <li><a href="/billing/realtime-usage">Realtime Usage</a></li>
+            <li><a href="/wizard/1">Start Wizard</a></li>
+            <li><a href="/wizard/reset">Reset Wizard</a></li>
+        </ul>
+    </li>
+
+
+                            <li class="dropdown">
+                                <a href="#"
+                                    class="dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">
+                                    imbolc
+
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" style="margin-right:10px">
+                                    <li><a href="/accounts/logout/">Logout</a></li>
+                                </ul>
+                            </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="app" class="wrapper wrapper-content white-bg" style="margin-top: 20px">
+
+                    <h1>Welcome to GeoCloud</h1>
+                    <p>
+                        Please select your desired configuration
+                    </p>
+
+
+                    <ul class="nav nav-pills nav-justified">
+                        <li :class="steps[1]"><a href="#" @click.prevent="goToStep(1)">1. Select applications</a></li>
+                        <li :class="steps[2]"><a href="#" @click.prevent="goToStep(2)">2. Select storage</a></li>
+                        <li :class="steps[3]"><a href="#" @click.prevent="goToStep(3)">3. Review and activate</a></li>
+                        <li :class="steps[4]"><a href="#" @click.prevent="goToStep(4)">4. Finish</a></li>
+                    </ul>
+
+
+    <div style="display:none" v-show="true">
+        <div class="table-responsive" style="margin-top: 10px">
+            <table class="table">
+                <tbody>
+                    <tr v-for="size in sizes">
+                        <td style="vertical-align: middle">
+                            <b>${(size * 1024 * 1024 * 1024)|fileSize} of storage network disk</b>
+                        </td>
+                        <td class="price-td">
+                            <h2>Price ${(size * pricePerMonthPerGB)|price}$ Per Week</h2>
+                            <button
+                                @click="toggleStorage(size)"
+                                :disabled="processing"
+                                :class="{'btn-warning': selected == size}"
+                                class="btn btn-primary btn-block">
+                                ${processing == size ? 'Selecting' : selected == size ? 'Selected' : 'Select'}
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: right">
+            <button
+                @click="goToStep(1)"
+                class="btn btn-primary">
+                Previous
+            </button>
+            <button
+                :disabled="steps[3] !== 'available'"
+                @click="goToStep(3)"
+                class="btn btn-primary">
+                Next
+            </button>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./node_modules/metismenu/dist/metisMenu.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./node_modules/jquery-slimscroll/jquery.slimscroll.js" charset="utf-8"></script>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        (function (cfg) {
+            window.vm = new Vue({
+                el: '#app',
+                delimiters: ['${', '}'],
+                data: {
+                    selected: cfg.selected,
+                    sizes: cfg.sizes,
+                    steps: cfg.steps,
+                    pricePerMonthPerGB: cfg.pricePerMonthPerGB,
+                    processing: null
+                },
+                filters: {
+                    price: function (x) { return Number(x).toFixed(2); },
+                    pluralize: function (str, count) { return count === 1 ? str : str + 's' },
+                    fileSize: function (bytes) {
+                        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+                        if (bytes === 0) return 'Bytes';
+                        var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+                        if (i === 0) return bytes + ' ' + sizes[i];
+                        return (bytes / Math.pow(1024, i)).toFixed(0) + ' ' + sizes[i];
+                    }
+                },
+                methods: {
+                    toggleStorage: function (size) {
+                        var vm = this;
+                        vm.processing = size;
+                        setTimeout(function () {
+                            vm.selected = vm.selected === size ? null : size;
+                            vm.processing = null;
+                        }, 300);
+                    },
+                    goToStep: function (step) {
+                        if (this.steps[step] === 'available') {
+                            window.location.replace('/wizard/' + step);
+                        }
+                    }
+                }
+            });
+        })({"selected": null, "sizes": [100, 500, 1024, 2048], "pricePerMonthPerGB": 0.2, "steps": {"1": "available", "2": "active", "3": "disabled", "4": "disabled"}, "urls": {"toggleStorage": "/api/wizard/toggle-storage"}});
+    </script>
+
+    </body>
+</html>
