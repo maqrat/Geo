@@ -77,10 +77,10 @@
 
                 </ul>
                 <ul class="nav  navbar-nav nav-steps navbar-left">
-                    <li :class="steps[1]" class="active available">
+                    <li :class="steps[1]" class="active">
                         <a href="#" @click.prevent="goToStep(1)">1. Select applications<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </li>
-                    <li :class="steps[2]" class="next available">
+                    <li :class="steps[2]" class="available">
                         <a href="#" @click.prevent="goToStep(2)">2. Select storage<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </li>
                     <li :class="steps[3]" class="disabled"><a href="#" @click.prevent="goToStep(3)">3. Review and activate<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
@@ -1067,7 +1067,7 @@
         }],
         "categories": ["3D graphics", "3D Vectorization", "AT & Camera calibration", "BIM", "CAD", "Coordinate Systems", "GIS", "GIS App", "GIS Viewer", "Map Editor", "Orthophoto", "Photo Editor", "Photogrammetry", "PointCloud & 3D Processing", "Point Cloud & 3D Viewer", "Point Cloud Processing", "Point Cloud to Vector", "Remote Sensing", "Remote Sensing Viewer", "SAR Processing", "Viewer Agisoft", "Viewer Leica", "Viewer Point Cloud", "Viewer SAR", "Viewer SURE", "Viewer Z+F"],
         "companies": ["AgiSoft", "Applied Imagery", "Arithmetica Ltd.", "Bentley", "Blue Marble Geographics", "Chicago University", "Cloudcompare.org", "Displaz", "FARO", "Fugro", "GeoCue Group", "Getpaint.net", "GIMP - team", "GIP, Dr. Kruck & Co.", "GRASS GIS", "Hexagon Geospatial", "Mooii Tech", "Mooii Tech", "Novacenter", "Numerous", "Power Of Software Ltd.", "QGIS", "Racurs", "Robert McNeel & Assoc.", "SuperMap", "TatukGIS", "Technodigit/Hexagon", "Trimble", "Triple Water Geo", "University of Hamburg", "Z+F Zoller+Frohlich"],
-        "filters": {"companies": [], "categories": ["GIS"]},
+        "filters": {"companies": [], "categories": []},
         "steps": {"1": "active", "2": "disabled", "3": "available", "4": "disabled"},
         "urls": {"toggleApp": "/api/wizard/toggle-app", "changeSoftwareFilter": "/api/wizard/change-software-filter"}
     });
