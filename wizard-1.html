@@ -298,12 +298,11 @@
 
     $(document).ready(function () {
 
-
-            var elTableWizard = $(".table-wizard-container");
-            var varTab = $(".tab-content");
-            var varTabHeight = $(".tab-content").outerHeight();
-            var tabRowBottom = varTab.offset().top + varTabHeight;
-            elTableWizard.css("top", tabRowBottom - 1 + "px");
+        var elTableWizard = $(".table-wizard-container");
+        var varTab = $(".tab-content");
+        var varTabHeight = $(".tab-content").outerHeight();
+        var tabRowBottom = varTab.offset().top + varTabHeight;
+        elTableWizard.css("top", tabRowBottom - 1 + "px");
 
         //Filter % height
         function filterWizardHeightSet() {
@@ -402,50 +401,16 @@
         var stylesUpdater = (function () {
 
             function tableWizardTopSet() {
-                var el = $('.label-row');
+                var el = $('.tab-content');
                 var elTableWizard = $(".table-wizard-container");
-                var labelBottom = el.offset().top + el.outerHeight(true);
-                elTableWizard.css("top", labelBottom + "px");
-            }
-
-            function labelsOrScreenChanged() {
-                var el = $('.label-row');
-                var elHeight = el.outerHeight();
-                if (elHeight <= 21) {
-                    el.css({
-                        "padding": "0",
-                        "border": "0"
-                    });
-                } else {
-                    el.css({
-                        "padding": "10px 0",
-                        "border-bottom": "1px solid #ddd"
-                    });
-                }
-                tableWizardTopSet();
-            }
-
-            function tabChanged () {
-                var el = $('.label-row');
-                var elTableWizard = $(".table-wizard-container");
-                var varTab = $(".tab-content");
-                var varTabHeight = $(".tab-content").outerHeight();
-                var tabRowBottom = varTab.offset().top + varTabHeight;
-                console.log("varTabHeight - " + varTabHeight);
-                console.log("tabRowBottom - " + tabRowBottom);
-
-                if (el.length) {
-                    elTableWizard.css("top", tabRowBottom - 1 + "px");
-                } else {
-                    tableWizardTopSet();
-                    labelsOrScreenChanged();
-                }
+                var labelBottom = el.offset().top + el.height();
+                elTableWizard.css("top", labelBottom - 1 + "px");
             }
 
             return {
-                labelsChanged: function() { setTimeout(labelsOrScreenChanged, 0) },
-                screenChanged: labelsOrScreenChanged,
-                tabChanged: function() { setTimeout(tabChanged, 0) }
+                labelsChanged: function() { setTimeout(tableWizardTopSet, 0) },
+                screenChanged: tableWizardTopSet,
+                tabChanged: function() { setTimeout(tableWizardTopSet, 0) }
             };
         })();
 
