@@ -244,7 +244,7 @@
                             </div>
                         </div>
 
-                        <div v-show="filters.companies.length || filters.categories.length" class="label-row">
+                        <div v-show="(filters.companies.length || filters.categories.length) && !showSelected" class="label-row">
                             <span
                                 v-for="company in filters.companies"
                                 class="label label-primary">
@@ -299,10 +299,9 @@
     $(document).ready(function () {
 
 
-            var el = $('.label-row');
             var elTableWizard = $(".table-wizard-container");
-            var varTab = $(".nav-tabs-row");
-            var varTabHeight = $(".nav-tabs-row").outerHeight();
+            var varTab = $(".tab-content");
+            var varTabHeight = $(".tab-content").outerHeight();
             var tabRowBottom = varTab.offset().top + varTabHeight;
             elTableWizard.css("top", tabRowBottom - 1 + "px");
 
@@ -412,8 +411,7 @@
             function labelsOrScreenChanged() {
                 var el = $('.label-row');
                 var elHeight = el.outerHeight();
-                var labelBottom = el.offset().top + elHeight;
-                if (elHeight <= '21') {
+                if (elHeight <= 21) {
                     el.css({
                         "padding": "0",
                         "border": "0"
@@ -428,13 +426,15 @@
             }
 
             function tabChanged () {
-                var secondTab = $('.tabs-app-container ul li:nth-child(2)');
+                var el = $('.label-row');
                 var elTableWizard = $(".table-wizard-container");
-                var varTab = $(".nav-tabs-row");
-                var varTabHeight = $(".nav-tabs-row").outerHeight();
+                var varTab = $(".tab-content");
+                var varTabHeight = $(".tab-content").outerHeight();
                 var tabRowBottom = varTab.offset().top + varTabHeight;
+                console.log("varTabHeight - " + varTabHeight);
+                console.log("tabRowBottom - " + tabRowBottom);
 
-                if (secondTab.hasClass('active')) {
+                if (el.length) {
                     elTableWizard.css("top", tabRowBottom - 1 + "px");
                 } else {
                     tableWizardTopSet();
