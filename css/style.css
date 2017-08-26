@@ -1834,6 +1834,12 @@ td.image-td {
 .navbar-wizard ul.nav-steps > li.available .fa-angle-right {
   color: black;
 }
+.navbar-wizard ul.nav-steps > li.active a:hover .fa-angle-right {
+  color: #0094e7;
+}
+.navbar-wizard ul.nav-steps > li.active .fa-angle-right {
+  color: black;
+}
 .navbar-wizard ul.nav-steps > li .fa-angle-right {
   position: absolute;
   top: 3px;

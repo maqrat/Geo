@@ -244,23 +244,23 @@
                             </div>
                         </div>
 
-                        <div v-show="!showSelected" class="label-row">
-                        <span
+                        <div v-show="filters.companies.length || filters.categories.length" class="label-row">
+                            <span
                                 v-for="company in filters.companies"
                                 class="label label-primary">
-                                        ${company}
-                                        <a @click="uncheckCompany(company)">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                </span>
+                                ${company}
+                                <a @click="uncheckCompany(company)">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </span>
                             <span
-                                    v-for="category in filters.categories"
-                                    class="label label-success">
-                                        ${category}
-                                        <a @click="uncheckCategory(category)">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                </span>
+                                v-for="category in filters.categories"
+                                class="label label-success">
+                                ${category}
+                                <a @click="uncheckCategory(category)">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </span>
                         </div>
                     </div>
 
@@ -297,6 +297,14 @@
 <script >
 
     $(document).ready(function () {
+
+
+            var el = $('.label-row');
+            var elTableWizard = $(".table-wizard-container");
+            var varTab = $(".nav-tabs-row");
+            var varTabHeight = $(".nav-tabs-row").outerHeight();
+            var tabRowBottom = varTab.offset().top + varTabHeight;
+            elTableWizard.css("top", tabRowBottom - 1 + "px");
 
         //Filter % height
         function filterWizardHeightSet() {
@@ -1067,7 +1075,7 @@
         }],
         "categories": ["3D graphics", "3D Vectorization", "AT & Camera calibration", "BIM", "CAD", "Coordinate Systems", "GIS", "GIS App", "GIS Viewer", "Map Editor", "Orthophoto", "Photo Editor", "Photogrammetry", "PointCloud & 3D Processing", "Point Cloud & 3D Viewer", "Point Cloud Processing", "Point Cloud to Vector", "Remote Sensing", "Remote Sensing Viewer", "SAR Processing", "Viewer Agisoft", "Viewer Leica", "Viewer Point Cloud", "Viewer SAR", "Viewer SURE", "Viewer Z+F"],
         "companies": ["AgiSoft", "Applied Imagery", "Arithmetica Ltd.", "Bentley", "Blue Marble Geographics", "Chicago University", "Cloudcompare.org", "Displaz", "FARO", "Fugro", "GeoCue Group", "Getpaint.net", "GIMP - team", "GIP, Dr. Kruck & Co.", "GRASS GIS", "Hexagon Geospatial", "Mooii Tech", "Mooii Tech", "Novacenter", "Numerous", "Power Of Software Ltd.", "QGIS", "Racurs", "Robert McNeel & Assoc.", "SuperMap", "TatukGIS", "Technodigit/Hexagon", "Trimble", "Triple Water Geo", "University of Hamburg", "Z+F Zoller+Frohlich"],
-        "filters": {"companies": [], "categories": ["GIS"]},
+        "filters": {"companies": [], "categories": []},
         "steps": {"1": "active", "2": "disabled", "3": "available", "4": "disabled"},
         "urls": {"toggleApp": "/api/wizard/toggle-app", "changeSoftwareFilter": "/api/wizard/change-software-filter"}
     });
