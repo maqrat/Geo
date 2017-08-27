@@ -110,7 +110,7 @@
                                             <h2>Price ${(size * pricePerMonthPerGB)|price}$ Per Week</h2>
                                             <button
                                                     @click="toggleStorage(size)"
-                                                    :disabled="processing"
+                                                    :disabled="processing === size"
                                                     :class="{'btn-warning': selected == size}"
                                                     class="btn btn-primary btn-block">
                                                 ${processing == size ? 'Selecting' : selected == size ? 'Selected' : 'Select'}
