@@ -5,11 +5,11 @@
   }
   .navbar-default .nav.navbar-nav > li.active > a {
     border-top: 6px solid transparent;
-   /* border-top: 4px solid black;
+    border-top: 4px solid black;
     padding: 3px;
     border-bottom: 4px solid black;
     border-left: 4px solid black;
-    margin-top: 21px;*/
+    margin-top: 21px;
   }
   ul.nav {
     &>li {
@@ -47,11 +47,12 @@
       }
     }
   }
-  ul.nav-steps {
+  ul.nav-steps.navbar-nav {
     width: 790px;
     &>li {
       position: relative;
       margin: 0 10px;
+      padding: 0 4px;
       &.active {
         a {
           color: black;
@@ -90,24 +91,22 @@
         }
       }
       a {
-        //padding: 3px;
-        //margin-top: 21px;
-        //border: 4px solid transparent;
+        padding: 3px;
+        margin-top: 21px;
+        border: 4px solid transparent;
       }
       .fa-angle-right {
         position: absolute;
-        top: 3px;
-        right: -14px;
+        /*top: 3px;
+        right: -14px;*/
         font-size: 58px;
-/*
-        position: absolute;
         top: -18px;
         right: -22px;
-        font-size: 58px;*/
       }
     }
   }
 
+/*
   ul.nav-pills {
     display: inline-block;
     padding: 19px 10px 0 10px;
@@ -141,5 +140,5 @@
 
   .nav-pills > li.available > a:hover {
     background: @navy !important;
-  }
+  }*/
 }

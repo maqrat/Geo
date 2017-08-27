@@ -1765,17 +1765,52 @@ td.image-td {
 }
 .navbar-wizard {
   text-align: center;
+  /*
+  ul.nav-pills {
+    display: inline-block;
+    padding: 19px 10px 0 10px;
+  }
+  .nav-pills > li {
+    padding: 0 7px;
+    color: white !important;
+  }
+
+  .nav-pills > li > a {
+    background: @navy;
+    color: white !important;
+  }
+
+  .nav-pills > li > a:hover {
+    background: #bbb !important;
+  }
+
+  .nav-pills > li.active > a {
+    background: @navy;
+    color: white;
+  }
+
+  .nav-pills > li.active > a:hover {
+    background: @navy !important;
+  }
+
+  .nav-pills > li.available > a {
+    background: lighten(@navy,20%);
+  }
+
+  .nav-pills > li.available > a:hover {
+    background: @navy !important;
+  }*/
 }
 .navbar-wizard .container-fluid {
   max-width: 2000px;
 }
 .navbar-wizard .navbar-default .nav.navbar-nav > li.active > a {
   border-top: 6px solid transparent;
-  /* border-top: 4px solid black;
-    padding: 3px;
-    border-bottom: 4px solid black;
-    border-left: 4px solid black;
-    margin-top: 21px;*/
+  border-top: 4px solid black;
+  padding: 3px;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+  margin-top: 21px;
 }
 .navbar-wizard ul.nav > li {
   display: inline-block;
@@ -1812,81 +1847,56 @@ td.image-td {
 .navbar-wizard ul.nav > li ul.dropdown-menu > li > a:hover {
   color: black;
 }
-.navbar-wizard ul.nav-steps {
+.navbar-wizard ul.nav-steps.navbar-nav {
   width: 790px;
 }
-.navbar-wizard ul.nav-steps > li {
+.navbar-wizard ul.nav-steps.navbar-nav > li {
   position: relative;
   margin: 0 10px;
+  padding: 0 4px;
 }
-.navbar-wizard ul.nav-steps > li.active a {
+.navbar-wizard ul.nav-steps.navbar-nav > li.active a {
   color: black;
 }
-.navbar-wizard ul.nav-steps > li.active a:hover {
+.navbar-wizard ul.nav-steps.navbar-nav > li.active a:hover {
   color: black!important;
 }
-.navbar-wizard ul.nav-steps > li.active a:hover .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li.active a:hover .fa-angle-right {
   color: black;
 }
-.navbar-wizard ul.nav-steps > li.active a .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li.active a .fa-angle-right {
   color: black;
 }
-.navbar-wizard ul.nav-steps > li.available a {
+.navbar-wizard ul.nav-steps.navbar-nav > li.available a {
   color: #0094e7 !important;
 }
-.navbar-wizard ul.nav-steps > li.available a:hover {
+.navbar-wizard ul.nav-steps.navbar-nav > li.available a:hover {
   color: black!important;
 }
-.navbar-wizard ul.nav-steps > li.available a:hover .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li.available a:hover .fa-angle-right {
   color: black;
 }
-.navbar-wizard ul.nav-steps > li.available a .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li.available a .fa-angle-right {
   color: #0094e7;
 }
-.navbar-wizard ul.nav-steps > li.disabled a {
+.navbar-wizard ul.nav-steps.navbar-nav > li.disabled a {
   color: #a7aaab !important;
 }
-.navbar-wizard ul.nav-steps > li.disabled .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li.disabled .fa-angle-right {
   color: #a7aaab;
 }
-.navbar-wizard ul.nav-steps > li .fa-angle-right {
+.navbar-wizard ul.nav-steps.navbar-nav > li a {
+  padding: 3px;
+  margin-top: 21px;
+  border: 4px solid transparent;
+}
+.navbar-wizard ul.nav-steps.navbar-nav > li .fa-angle-right {
   position: absolute;
-  top: 3px;
-  right: -14px;
+  /*top: 3px;
+        right: -14px;*/
   font-size: 58px;
-  /*
-        position: absolute;
-        top: -18px;
-        right: -22px;
-        font-size: 58px;*/
-}
-.navbar-wizard ul.nav-pills {
-  display: inline-block;
-  padding: 19px 10px 0 10px;
-}
-.navbar-wizard .nav-pills > li {
-  padding: 0 7px;
-  color: white !important;
-}
-.navbar-wizard .nav-pills > li > a {
-  background: #0094e7;
-  color: white !important;
-}
-.navbar-wizard .nav-pills > li > a:hover {
-  background: #bbb !important;
-}
-.navbar-wizard .nav-pills > li.active > a {
-  background: #0094e7;
-  color: white;
-}
-.navbar-wizard .nav-pills > li.active > a:hover {
-  background: #0094e7 !important;
-}
-.navbar-wizard .nav-pills > li.available > a {
-  background: #4ebfff;
-}
-.navbar-wizard .nav-pills > li.available > a:hover {
-  background: #0094e7 !important;
+  top: -18px;
+  right: -22px;
 }
 .container-brands-carousel-wizard {
   position: fixed;
