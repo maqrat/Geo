@@ -15,13 +15,14 @@
 }
 .table-wizard-container {
   position: absolute;
-  //top: 195px;
-  //top: 139px; //on second tab
   left: 0;
   right: 0;
   bottom:75px;
   z-index: 1;
-  //.transition();
+  &.table-wizard-container-step2 {
+    position: relative;
+    top: 77px;
+  }
   .container {
     padding-bottom: 75px;
     height: 100%;
