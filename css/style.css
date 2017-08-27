@@ -1551,6 +1551,9 @@ a.link-to-software {
   height: 55px;
   max-width: 149px;
 }
+.container-brands-carousel .slick-slide {
+  outline: none !important;
+}
 .container-brands-carousel .slick-list {
   opacity: 0.95;
 }
