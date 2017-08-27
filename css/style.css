@@ -1889,17 +1889,6 @@ td.image-td {
 .container-brands-carousel-wizard.container-brands-carousel .slick-next {
   top: 49%;
 }
-.table-wizard .table > tbody > tr > td {
-  vertical-align: middle;
-  padding: 6px 8px;
-}
-.table-wizard .version {
-  padding-left: 10px;
-  color: #676a6c;
-}
-.table-wizard .description {
-  color: #676a6c;
-}
 .table-wizard-container {
   position: absolute;
   left: 0;
@@ -1909,7 +1898,17 @@ td.image-td {
 }
 .table-wizard-container.table-wizard-container-step2 {
   position: relative;
-  top: 77px;
+  top: 97px;
+}
+.table-wizard-container.table-wizard-container-step2 .container .row.wizard-row > div {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.table-wizard-container.table-wizard-container-step2 .container .row.wizard-row > div .table-wizard .table {
+  margin-bottom: 0;
+}
+.table-wizard-container.table-wizard-container-step2 .container .row.wizard-row > div .table-wizard .table tbody tr:first-child td {
+  border-top: none;
 }
 .table-wizard-container .container {
   padding-bottom: 75px;
@@ -1918,4 +1917,15 @@ td.image-td {
 }
 .table-wizard-container .container .row.wizard-row > div {
   margin-bottom: 75px;
+}
+.table-wizard-container .container .row.wizard-row > div .table-wizard .table > tbody > tr > td {
+  vertical-align: middle;
+  padding: 6px 8px;
+}
+.table-wizard-container .container .row.wizard-row > div .table-wizard .version {
+  padding-left: 10px;
+  color: #676a6c;
+}
+.table-wizard-container .container .row.wizard-row > div .table-wizard .description {
+  color: #676a6c;
 }
