@@ -1771,6 +1771,11 @@ td.image-td {
 }
 .navbar-wizard .navbar-default .nav.navbar-nav > li.active > a {
   border-top: 6px solid transparent;
+  /* border-top: 4px solid black;
+    padding: 3px;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    margin-top: 21px;*/
 }
 .navbar-wizard ul.nav > li {
   display: inline-block;
@@ -1849,6 +1854,11 @@ td.image-td {
   top: 3px;
   right: -14px;
   font-size: 58px;
+  /*
+        position: absolute;
+        top: -18px;
+        right: -22px;
+        font-size: 58px;*/
 }
 .navbar-wizard ul.nav-pills {
   display: inline-block;

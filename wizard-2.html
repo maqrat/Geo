@@ -107,7 +107,7 @@
                                             <b>${(size * 1024 * 1024 * 1024)|fileSize} of storage network disk</b>
                                         </td>
                                         <td class="price-td">
-                                            <h2>Price ${(size * pricePerMonthPerGB)|price}$ Per Week</h2>
+                                            <h2>Price ${(size * pricePerMonthPerGB)|price}$ per Week</h2>
                                             <button
                                                     @click="toggleStorage(size)"
                                                     :disabled="processing"
@@ -174,7 +174,7 @@
                 }
             }
         });
-    })({"selected": null, "sizes": [100, 500, 1024, 2048], "pricePerMonthPerGB": 0.2, "steps": {"1": "available", "2": "active", "3": "disabled", "4": "disabled"}, "urls": {"toggleStorage": "/api/wizard/toggle-storage"}});
+    })({"selected": null, "sizes": [50, 100, 250, 500, 1024, 2048], "pricePerMonthPerGB": 0.2, "steps": {"1": "available", "2": "active", "3": "disabled", "4": "disabled"}, "urls": {"toggleStorage": "/api/wizard/toggle-storage"}});
 </script>
 
 </body>
