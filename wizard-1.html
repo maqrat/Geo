@@ -118,7 +118,7 @@
                                     <button
                                             @click="toggleApp(app)"
                                             :disabled="app.processing"
-                                            :class="{'btn-warning': app.selected}"
+                                            :class="{'btn-warning': app.selected, 'btn-disabled': app.processing}"
                                             class="btn btn-price btn-block">
                                         ${app.processing ? 'Selecting' : app.selected ? 'Selected' : 'Select'}
                                     </button>

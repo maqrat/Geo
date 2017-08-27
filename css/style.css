@@ -1724,6 +1724,12 @@ td.price-td .btn.btn-warning:hover {
   background-color: #ec971f;
   border-color: #d58512;
 }
+td.price-td .btn[disabled] {
+  opacity: 1;
+}
+td.price-td .btn.btn-disabled {
+  opacity: .65;
+}
 .packages .added {
   background-color: #eee;
 }
