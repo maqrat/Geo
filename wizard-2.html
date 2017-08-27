@@ -107,7 +107,7 @@
                                             <b>${(size * 1024 * 1024 * 1024)|fileSize} of storage network disk</b>
                                         </td>
                                         <td class="price-td">
-                                            <h2>Price ${(size * pricePerMonthPerGB)|price}$ per Week</h2>
+                                            <h2>Price $${(size * pricePerMonthPerGB)|price} per Week</h2>
                                             <button
                                                     @click="toggleStorage(size)"
                                                     :disabled="processing"
