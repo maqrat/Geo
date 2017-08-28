@@ -22,75 +22,75 @@
 <body class="gray-bg">
 <div id="app" style="display:none" v-show="true">
 
-<div class="navbar-wrapper navbar-wizard">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
-        <div class="navbar-bg"></div>
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="page-scroll navbar-brand" href="/app/"><img src="img/logo.jpg" class="img-responsive" alt=""></a>
+    <div class="navbar-wrapper navbar-wizard">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
+            <div class="navbar-bg"></div>
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="page-scroll navbar-brand" href="index.html"><img src="img/logo.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                    <ul class="nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                Admin
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/admin/">Database</a></li>
+                                <li><a href="/admin-change-company">Change Company</a></li>
+                                <li><a href="/billing/aws-charges">Amazon Charges</a></li>
+                                <li><a href="/billing/realtime-usage">Realtime Usage</a></li>
+                                <li><a href="/wizard/1">Start Wizard</a></li>
+                                <li><a href="/wizard/reset">Reset Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                imbolc
+
+                                (Imbolc)
+
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/accounts/logout/">Logout</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <ul class="nav  navbar-nav nav-steps navbar-left">
+                        <li class="active">
+                            <a href="wizard-1.html"><!--1. -->Select applications<!--<i class="fa fa-angle-right" aria-hidden="true"></i>--></a>
+                        </li>
+                        <li class="available">
+                            <a href="wizard-2.html"><!--2. -->Select storage<!--<i class="fa fa-angle-right" aria-hidden="true"></i>--></a>
+                        </li>
+                        <li class="available"><a href="wizard-3.html"><!--3. --><span class="nav-point">Review and</span> Activate<!--<i class="fa fa-angle-right" aria-hidden="true">--></i></a></li>
+                        <li class="disabled"><a href="wizard-4.html"><!--4. -->Start working</a></li>
+                    </ul>
+
+                </div>
             </div>
-            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
-                <ul class="nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#"
-                           class="dropdown-toggle"
-                           data-toggle="dropdown"
-                           role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            Admin
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/admin/">Database</a></li>
-                            <li><a href="/admin-change-company">Change Company</a></li>
-                            <li><a href="/billing/aws-charges">Amazon Charges</a></li>
-                            <li><a href="/billing/realtime-usage">Realtime Usage</a></li>
-                            <li><a href="/wizard/1">Start Wizard</a></li>
-                            <li><a href="/wizard/reset">Reset Wizard</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#"
-                           class="dropdown-toggle"
-                           data-toggle="dropdown"
-                           role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            imbolc
-
-                            (Imbolc)
-
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/accounts/logout/">Logout</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <ul class="nav  navbar-nav nav-steps navbar-left">
-                    <li class="active">
-                        <a href="#" @click.prevent="goToStep(1)">1. Select applications<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="available">
-                        <a href="#" @click.prevent="goToStep(2)">2. Select storage<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="disabled"><a href="#" @click.prevent="goToStep(3)">3. Review and activate<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                    <li class="disabled"><a href="#" @click.prevent="goToStep(4)">4. Finish</a></li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 
 <div class="gray-bg">
     <div class="container white-bg white-bg-back"></div>
