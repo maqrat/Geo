@@ -1877,6 +1877,7 @@ td.image-td {
   /*color: @navy!important;*/
   /*border: 1px solid transparent;
           border-radius: 21px;*/
+  color: #595959;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.available a:hover {
   /*color: black!important;*/
