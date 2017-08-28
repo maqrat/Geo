@@ -1596,6 +1596,9 @@ a.link-to-software {
     left: 0;
   }
 }
+body {
+  overflow-y: scroll;
+}
 .container.white-bg.white-bg-back {
   position: fixed;
   top: 78px;
@@ -1914,7 +1917,7 @@ td.image-td {
 }
 .table-wizard-container.table-wizard-container-step2 {
   position: relative;
-  top: 97px;
+  top: 78px;
 }
 .table-wizard-container.table-wizard-container-step2 .container .row.wizard-row > div {
   margin-bottom: 40px;
