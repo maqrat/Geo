@@ -1805,12 +1805,16 @@ td.image-td {
   max-width: 2000px;
 }
 .navbar-wizard .navbar-default .nav.navbar-nav > li.active > a {
-  border-top: 6px solid transparent;
-  border-top: 4px solid black;
-  padding: 3px;
-  border-bottom: 4px solid black;
-  border-left: 4px solid black;
-  margin-top: 21px;
+  /* padding: 3px;
+    margin-top: 21px;*/
+  /*border-top: 6px solid transparent;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;*/
+  /*padding: 0px 9px;
+    margin-top: 29px;
+    border: 1px solid black;
+    border-radius: 21px;*/
 }
 .navbar-wizard ul.nav > li {
   display: inline-block;
@@ -1849,11 +1853,13 @@ td.image-td {
 }
 .navbar-wizard ul.nav-steps.navbar-nav {
   width: 790px;
+  padding-left: 20px;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li {
-  position: relative;
+  /*position: relative;
+      margin: 0 6px;
+      padding: 0 4px;*/
   margin: 0 10px;
-  padding: 0 4px;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.active a {
   color: black;
@@ -1868,10 +1874,14 @@ td.image-td {
   color: black;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.available a {
-  color: #0094e7 !important;
+  /*color: @navy!important;*/
+  /*border: 1px solid transparent;
+          border-radius: 21px;*/
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.available a:hover {
-  color: black!important;
+  /*color: black!important;*/
+  /*border: 1px solid black;
+            border-radius: 21px;*/
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.available a:hover .fa-angle-right {
   color: black;
@@ -1886,17 +1896,23 @@ td.image-td {
   color: #a7aaab;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li a {
-  padding: 3px;
-  margin-top: 21px;
-  border: 4px solid transparent;
+  /*padding: 3px;
+        margin-top: 21px;
+        border: 4px solid transparent;*/
+  /* padding: 0px 9px;
+        margin-top: 29px;
+        border-top: 0;*/
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li .fa-angle-right {
   position: absolute;
   /*top: 3px;
         right: -14px;*/
+  /*top: -18px;
+        right: -22px;*/
   font-size: 58px;
-  top: -18px;
-  right: -22px;
+  top: -22px;
+  right: -8px;
+  display: none;
 }
 .container-brands-carousel-wizard {
   position: fixed;
