@@ -1862,7 +1862,7 @@ td.image-td {
   margin: 0 10px;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.active a {
-  color: black;
+  color: #0094e7 !important;
 }
 .navbar-wizard ul.nav-steps.navbar-nav > li.active a:hover {
   color: black!important;
