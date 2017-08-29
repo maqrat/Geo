@@ -1630,8 +1630,14 @@ body {
   padding: 0 60px 30px;
   background-color: #fff;
 }
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table {
+  margin-bottom: 0;
+}
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table input {
   width: 100%;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .text-mark {
+  font-weight: 600;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .glyphicon-trash {
   color: #b9b9b9;
@@ -1642,8 +1648,11 @@ body {
   color: #ed5565;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 h2 {
-  margin: 60px 0 20px;
+  margin: 30px 0 20px;
   font-weight: 200;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 h2:last-child {
+  margin-top: 50px;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .overflow-h {
   overflow: hidden;
@@ -1661,7 +1670,7 @@ body {
   right: 0;
   top: 29px;
   width: 1px;
-  height: 498px;
+  height: 509px;
   display: block;
   background-color: #ddd;
 }
@@ -1679,15 +1688,18 @@ body {
   background-color: #f4f4f4;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .pay-col h3 {
-  margin: 6px 0 26px;
+  margin: 0 0 26px;
   font-weight: 200;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .pay-col .text-total {
   padding-top: 12px;
 }
+.wrapper-wizard-content.wrapper-wizard-content-step3 .pay-col .m-t {
+  margin-top: 94px;
+}
 .wrapper-wizard-content.wrapper-wizard-content-step3 .pay-col .radio {
   text-align: center;
-  margin: 0;
+  margin: 48px 0 20px;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .pay-col .radio label {
   padding-left: 0;

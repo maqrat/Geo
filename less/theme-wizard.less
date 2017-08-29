@@ -28,8 +28,12 @@ body {
       padding: 0 60px 30px;
       background-color: #fff;
       table {
+        margin-bottom: 0;
         input {
           width: 100%;
+        }
+        .text-mark {
+          font-weight: 600;
         }
         .glyphicon-trash {
           color: lighten(@text-gray-color, 10%);
@@ -42,8 +46,11 @@ body {
       }
     }
     h2 {
-      margin: 60px 0 20px;
+      margin: 30px 0 20px;
       font-weight: 200;
+      &:last-child {
+        margin-top: 50px;
+      }
     }
     .overflow-h {
       overflow: hidden;
@@ -61,7 +68,7 @@ body {
           right: 0;
           top: 29px;
           width: 1px;
-          height: 498px;
+          height: 509px;
           display: block;
           background-color: #ddd;
         }
@@ -80,15 +87,18 @@ body {
         }
       }
       h3 {
-        margin: 6px 0 26px;
+        margin: 0 0 26px;
         font-weight: 200;
       }
       .text-total {
         padding-top: 12px;
       }
+      .m-t {
+        margin-top: 94px;
+      }
       .radio {
         text-align: center;
-        margin: 0;
+        margin: 48px 0 20px;
         label {
           padding-left: 0;
 
