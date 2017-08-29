@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+
+    <title>GeoCloud</title>
+
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/animate.css/animate.css" rel="stylesheet" type="text/css"/>
+
+    <link href="./node_modules/icheck/skins/square/_all.css" rel="stylesheet" type="text/css"/>
+
+    <link href="./node_modules/slick-carousel/slick/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/slick-carousel/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div  id="wrapper" v-show="true">
+
+    <div class="navbar-wrapper navbar-wizard">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
+            <div class="navbar-bg"></div>
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="page-scroll navbar-brand" href="index.html"><img src="img/logo.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                    <ul class="nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                Admin
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/admin/">Database</a></li>
+                                <li><a href="/admin-change-company">Change Company</a></li>
+                                <li><a href="/billing/aws-charges">Amazon Charges</a></li>
+                                <li><a href="/billing/realtime-usage">Realtime Usage</a></li>
+                                <li><a href="/wizard/1">Start Wizard</a></li>
+                                <li><a href="/wizard/reset">Reset Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                imbolc
+
+                                (Imbolc)
+
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/accounts/logout/">Logout</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <ul class="nav  navbar-nav nav-steps navbar-left">
+                        <li class="available">
+                            <a href="wizard-1.html"><!--1. -->Select applications<!--<i class="fa fa-angle-right" aria-hidden="true"></i>--></a>
+                        </li>
+                        <li class="available">
+                            <a href="wizard-2.html"><!--2. -->Select storage<!--<i class="fa fa-angle-right" aria-hidden="true"></i>--></a>
+                        </li>
+                        <li class="active"><a href="wizard-3.html"><!--3. --><span class="nav-point">Review and</span> Activate<!--<i class="fa fa-angle-right" aria-hidden="true">--></i></a></li>
+                        <li class="disabled"><a href="wizard-4.html"><!--4. -->Start working</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="gray-bg">
+
+        <div class="wizard wrapper-wizard-content wrapper-wizard-content-step3">
+            <div class="container">
+                <div class="row wizard-row">
+                    <h2 class="text-center">Your pending 5 orders<!-- <span><small class="text-muted">(5 items)</small></span>--></h2>
+
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th class="text-center">Application</th>
+                                <th class="text-center">Instance</th>
+                                <th class="text-center">Enter <br>needed hours</th>
+                                <th class="text-center">Hourly rate</th>
+                                <th class="text-center">Period</th>
+                                <th class="text-center">Price</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody class="">
+                                <template v-for="app in filteredApps">
+                                    <tr class="">
+                                        <td class="col-xs-1">
+                                            <img :src="app.image" class="img-responsive product-logo" alt="">
+                                        </td>
+                                        <td class="col-xs-2 text-center">${app.title}<br><span class="text-muted">v. 2.6.1</span></td>
+                                        <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
+                                        <td class="col-xs-2 text-center"><input type="number"  class="form-control" placeholder="0"></td>
+                                        <td class="col-xs-1 text-center">4.75</td>
+                                        <td class="col-xs-3 text-center">1 month (720h) and more</td>
+                                        <td class="col-xs-3 text-center">$1,752.00</td>
+                                        <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+                                        <!--<td class="col-xs-3">${app.software}</td>
+                                        <td class="col-xs-3"><a :href="app.website" target="_blank">${app.company}</a></td>
+                                        <td class="col-xs-1">${app.price|price}</td>
+                                        <td class="col-xs-3 description">
+                                            ${app.description} &nbsp;
+                                            <a :href="app.info_link" target="_blank">more info &nbsp;<i class="fa fa-external-link" aria-hidden="true" ></i></a>
+                                        </td>-->
+                                    </tr>
+                                </template>
+                                <tr class="">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right active"><b>Total:</b></td>
+                                    <td class="text-center active" colspan="2"><b>$2,267.94</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center text-warning">Please, attention!!! <br>
+                        Select your Storage period at least 24 hours larger than the maximal Application period
+                    </div>
+                    <h2 class="text-center">To get your instance up and running</h2>
+                    <div class="gray-bg overflow-h pay-block">
+
+                        <div class="col-xs-6 pay-col">
+                            <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <label>
+                                                <img src="img/payment_method_icons/paypal.png" alt="">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <label>
+                                                <img src="img/payment_method_icons/mastercard.png" alt="">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <label>
+                                                <img src="img/payment_method_icons/visa02.png" alt="">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <label>
+                                                <img src="img/payment_method_icons/americanexpress.png" alt="">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="">Card Number</label>
+                                            <div class="input-group">
+                                                <input
+                                                        type="tel"
+                                                        class="form-control"
+                                                        name="cardNumber"
+                                                        placeholder="Card Number"
+                                                        autocomplete="cc-number"
+                                                        required autofocus
+                                                />
+                                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label for=""><span class="hidden-xs">Expiration</span><span
+                                                    class="visible-xs-inline">EXP</span> Date</label>
+                                            <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardExpiry"
+                                                    placeholder="MM / YY"
+                                                    autocomplete="cc-exp"
+                                                    required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="">CV Code</label>
+                                            <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardCVC"
+                                                    placeholder="CVC"
+                                                    autocomplete="cc-csc"
+                                                    required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="">Card Owner Name</label>
+                                            <input type="text" class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-8 text-right text-total">Total:	$2,267.94</div>
+                                    <div class="col-xs-4">
+                                        <button class="btn btn-primary pull-right" type="button">
+                                            Pay now
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xs-6 pay-col">
+                            <h3>Contact us for a trial period or special requests:</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="" placeholder="Inna">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control" id="" placeholder="maqrat@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="id_phone" class="control-label">Phone</label>
+                                    <input type="text" name="phone" maxlength="254" title="" id="id_phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="id_message" class="control-label">Message</label>
+                                    <textarea name="message" rows="6" title="" id="id_message" class="form-control"></textarea>
+                                </div>
+                                <div class="form-actions"><button type="submit" class="btn btn-primary pull-right">Contact Me</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./node_modules/metismenu/dist/metisMenu.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/icheck/icheck.min.js"></script>
+<script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('input').iCheck({
+//            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+    (function (cfg) {
+        window.vm = new Vue({
+            el: '#app',
+            delimiters: ['${', '}'],
+            data: {
+                selected: cfg.selected,
+                sizes: cfg.sizes,
+                steps: cfg.steps,
+                pricePerMonthPerGB: cfg.pricePerMonthPerGB,
+                processing: null
+            },
+            filters: {
+                price: function (x) { return Number(x).toFixed(3); },
+                pluralize: function (str, count) { return count === 1 ? str : str + 's' },
+                fileSize: function (bytes) {
+                    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+                    if (bytes === 0) return 'Bytes';
+                    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+                    if (i === 0) return bytes + ' ' + sizes[i];
+                    return (bytes / Math.pow(1024, i)).toFixed(0) + ' ' + sizes[i];
+                }
+            },
+            methods: {
+                toggleStorage: function (size) {
+                    var vm = this;
+                    vm.processing = size;
+                    setTimeout(function () {
+                        vm.selected = vm.selected === size ? null : size;
+                        vm.processing = null;
+                    }, 300);
+                },
+                goToStep: function (step) {
+                    if (this.steps[step] === 'available') {
+                        window.location.replace('/wizard/' + step);
+                    }
+                }
+            }
+        });
+    })({"selected": null, "sizes": [50, 100, 250, 500, 1024, 2048], "pricePerMonthPerGB": [0.017, 0.033, 0.083, 0.165, 0.331, 0.661], "steps": {"1": "available", "2": "active", "3": "disabled", "4": "disabled"}, "urls": {"toggleStorage": "/api/wizard/toggle-storage"}});
+</script>
+
+<script>
+    (function (cfg) {
+        window.vm = new Vue({
+            el: '#wrapper',
+            delimiters: ['${', '}'],
+            data: {
+                apps: cfg.apps,
+                categories: cfg.categories,
+                companies: cfg.companies,
+                filters: {
+                    categories: [],
+                    companies: []
+                }
+            },
+            computed: {
+                filteredApps: function () {
+                    var vm = this,
+                            apps = vm.apps;
+                    apps = vm.filters.categories.length ? apps.filter(function (x) {
+                        return vm.filters.categories.indexOf(x.software) !== -1;
+                    }) : apps;
+                    apps = vm.filters.companies.length ? apps.filter(function (x) {
+                        return vm.filters.companies.indexOf(x.company) !== -1;
+                    }) : apps;
+                    return apps;
+                }
+            },
+            methods: {
+                clearFilters: function () {
+                    $('#filters input').iCheck('uncheck');
+                }
+            },
+            mounted: function () {
+                var vm = this;
+                $('input').on('ifChecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories.push(val.substr(9));
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies.push(val.substr(8));
+                    }
+                });
+                $('input').on('ifUnchecked', function(e){
+                    var val = $(this).val();
+                    if (val.indexOf('category-') === 0) {
+                        vm.filters.categories = vm.filters.categories.filter(function (x) {
+                            return x !== val.substr(9);
+                        });
+                    }
+                    else if (val.indexOf('company-') === 0) {
+                        vm.filters.companies = vm.filters.companies.filter(function (x) {
+                            return x !== val.substr(8);
+                        });
+                    }
+                });
+            },
+            filters: {
+                price: function (x) { return Number(x).toFixed(2); }
+            }
+        });
+
+    })({"apps": [{"id": 41, "featured": true, "itar": true, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Technodigit/Hexagon", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/3DReshaper_Viewer.png", "title": "3DReshaper Viewer", "description": "Visualize 3D data and share the results of your project", "info_link": "http://www.3dreshaper.com/en/software-en/download-software/free-viewer", "website": "http://www.3dreshaper.com/en/", "website_anchor": "www.3dreshaper.com", "price": "0.480000", "ext": {"rdp": [{"name": "3DReshaper"}]}},  {"id": 69, "featured": true, "itar": false, "software": "AT & Camera calibration", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "GIP, Dr. Kruck & Co.", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/bingo_logo.png", "title": "Bingo", "description": "Bundle adjustment program. It includes full camera calibration, oblique and combined adjustment, close range and many more", "info_link": "http://bingo-atm.de/solutions/", "website": "http://bingo-atm.de/", "website_anchor": "bingo-atm.de", "price": "0.480000", "ext": {}}, {"id": 47, "featured": true, "itar": false, "software": "Viewer Point Cloud", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Displaz", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/Displaz.png", "title": "Displaz", "description": "A las viewer for geospatial point clouds", "info_link": "http://c42f.github.io/displaz/", "website": "http://c42f.github.io/displaz/", "website_anchor": "c42f.github.io", "price": "0.480000", "ext": {"rdp": [{"name": "displaz"}]}}, {"id": 31, "featured": true, "itar": false, "software": "Viewer Remote Sensing", "software_option": "8 CPU, 15GB RAM, NVIDIA GPU (4GB)", "company": "Hexagon Geospatial", "image": "https://geocloud-clientuploads.s3.amazonaws.com/beta/app_images/ERDAS_ER_Viewer.png", "title": "ERDAS ER Viewer", "description": "Popular geospatial file types viewer", "info_link": "http://www.hexagongeospatial.com/brochure-pages/erdas-ermapper-professional-benefit-brochure", "website": "http://www.hexagongeospatial.com", "website_anchor": "www.hexagongeospatial.com", "price": "0.480000", "ext": {"rdp": [{"name": "ERViewer MFC Application"}]}}]});
+</script>
+
+</body>
+</html>

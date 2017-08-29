@@ -22,6 +22,86 @@ body {
   h4 small {
     font-size: 70%;
   }
+  &.wrapper-wizard-content-step3 {
+    position: relative;
+    .row.wizard-row {
+      padding: 0 60px 30px;
+      background-color: #fff;
+      table {
+        input {
+          width: 100%;
+        }
+        .glyphicon-trash {
+          color: lighten(@text-gray-color, 10%);
+          font-size: 13px;
+          cursor: pointer;
+          &:hover {
+            color: @text-warning;
+          }
+        }
+      }
+    }
+    h2 {
+      margin: 60px 0 20px;
+      font-weight: 200;
+    }
+    .overflow-h {
+      overflow: hidden;
+    }
+    .pay-block {
+      padding: 20px 40px;
+    }
+    .pay-col {
+      padding: 20px 50px;
+      position: relative;
+      &:first-child {
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 29px;
+          width: 1px;
+          height: 498px;
+          display: block;
+          background-color: #ddd;
+        }
+        &:after {
+          content: 'or';
+          position: absolute;
+          font-size: 20px;
+          font-weight: 200;
+          top: 254px;
+          right: -10px;
+          width: 21px;
+          padding-top: 4px;
+          height: 39px;
+          display: block;
+          background-color: @bg-light-gray;
+        }
+      }
+      h3 {
+        margin: 6px 0 26px;
+        font-weight: 200;
+      }
+      .text-total {
+        padding-top: 12px;
+      }
+      .radio {
+        text-align: center;
+        margin: 0;
+        label {
+          padding-left: 0;
+
+        }
+        .iradio_square-blue {
+          margin-top: -24px;
+         }
+        img {
+          width: 64px;
+        }
+      }
+    }
+  }
 }
 .row.wizard-row {
   padding: 0 30px;
