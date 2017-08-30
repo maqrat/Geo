@@ -2038,3 +2038,13 @@ td.image-td {
 .table-wizard-container .container .row.wizard-row > div .table-wizard .description {
   color: #9f9f9f;
 }
+.irs-from,
+.irs-to,
+.irs-single {
+  background: #0094e7;
+}
+.irs-from:after,
+.irs-to:after,
+.irs-single:after {
+  border-top-color: #0094e7;
+}
