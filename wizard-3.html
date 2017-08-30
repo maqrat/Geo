@@ -139,9 +139,9 @@
                                     <td class="col-xs-2 text-center"><span class="text-mark">${filteredApps[0].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
                                     <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center"><input id="time-slider" type="text"  class="form-control"></td>
-                                    <td class="col-xs-1 text-center">4.75</td>
-                                    <td class="col-xs-3 text-center">1 month (720h) and more</td>
-                                    <td class="col-xs-2 text-center">$1,752.00</td>
+                                    <td class="col-xs-1 text-center">${period1.rate}</td>
+                                    <td class="col-xs-3 text-center">${period1.title}</td>
+                                    <td class="col-xs-2 text-center">$${price1|price}</td>
                                     <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
@@ -151,19 +151,15 @@
                                     <td class="col-xs-2 text-center"><span class="text-mark">${filteredApps[1].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
                                     <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center">
-                                        <select class="form-control">
-                                            <option>1 to 167 hours</option>
-                                            <option>1 week (168h) and more</option>
-                                            <option>1 month (720h) and more</option>
-                                            <option>3 month (2160h) and more</option>
-                                            <option>6 month (4320h) and more</option>
-                                            <option>9 month (6480h) and more</option>
-                                            <option>12 month (8640h) and more</option>
+                                        <select class="form-control" v-model="period2">
+                                            <option v-for="period in periods" :value="period">
+                                                ${period.title}
+                                            </option>
                                         </select>
                                     </td>
-                                    <td class="col-xs-1 text-center">4.75</td>
-                                    <td class="col-xs-3 text-center">1 month (720h) and more</td>
-                                    <td class="col-xs-2 text-center">$1,752.00</td>
+                                    <td class="col-xs-1 text-center">${period2.rate}</td>
+                                    <td class="col-xs-3 text-center">${period2.title}</td>
+                                    <td class="col-xs-2 text-center">$${price2|price}</td>
                                     <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
@@ -173,11 +169,11 @@
                                     <td class="col-xs-2 text-center"><span class="text-mark">${filteredApps[2].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
                                     <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center">
-                                        <input id="" type="number"  class="form-control" placeholder="0">
+                                        <input v-model="hours3" type="number"  class="form-control" placeholder="0">
                                     </td>
-                                    <td class="col-xs-1 text-center">4.75</td>
-                                    <td class="col-xs-3 text-center">1 month (720h) and more</td>
-                                    <td class="col-xs-2 text-center">$1,752.00</td>
+                                    <td class="col-xs-1 text-center">${period3.rate}</td>
+                                    <td class="col-xs-3 text-center">${period3.title}</td>
+                                    <td class="col-xs-2 text-center">$${price3|price}</td>
                                     <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
@@ -187,11 +183,11 @@
                                     <td class="col-xs-2 text-center"><span class="text-mark">${filteredApps[3].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
                                     <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center">
-                                        <input id="" type="text"  class="form-control">
+                                        <input v-model="hours4" id="" type="text"  class="form-control">
                                     </td>
-                                    <td class="col-xs-1 text-center">4.75</td>
-                                    <td class="col-xs-3 text-center">1 month (720h) and more</td>
-                                    <td class="col-xs-2 text-center">$1,752.00</td>
+                                    <td class="col-xs-1 text-center">${period4.rate}</td>
+                                    <td class="col-xs-3 text-center">${period4.title}</td>
+                                    <td class="col-xs-2 text-center">$${price4|price}</td>
                                     <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
@@ -203,11 +199,11 @@
                                         <input type="text" id="storage-slider3" name="example_name" value="" />
                                     </td>
                                     <td class="text-center">
-                                        <input id="" type="text"  class="form-control">
+                                        <input v-model="hours5" id="" type="text"  class="form-control">
                                     </td>
-                                    <td class="text-center">$0.33</td>
-                                    <td class="text-center">1 month (720h) and more</td>
-                                    <td class="text-center">$264.44</td>
+                                    <td class="col-xs-1 text-center">${period5.rate}</td>
+                                    <td class="col-xs-3 text-center">${period5.title}</td>
+                                    <td class="col-xs-2 text-center">$${price5|price}</td>
                                     <td></td>
                                 </tr>
                                 <tr class="">
@@ -217,7 +213,7 @@
                                     <td></td>
                                     <td></td>
                                     <td class="text-right active"><b>Total:</b></td>
-                                    <td class="text-center active" colspan="2"><b>$2,267.94</b></td>
+                                    <td class="text-center active" colspan="2"><b>$${priceTotal|price}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -321,7 +317,7 @@
                                     </div>
                                 </div>
                                 <div class="row m-t">
-                                    <div class="col-xs-8 text-right text-total">Total:	$2,267.94</div>
+                                    <div class="col-xs-8 text-right text-total">Total:	$${priceTotal}</div>
                                     <div class="col-xs-4">
                                         <button class="btn btn-primary pull-right" type="button">
                                             Pay now
@@ -415,64 +411,20 @@
 
                 }
         );
-
-        $("#time-slider").ionRangeSlider(
-                {
-                    min: 0,
-                    from_min: 1,
-                    max: 8640,
-                    postfix: " h",
-                    grid: true,
-                    from: 5000,
-                    step: 1
-
-                }
-        );
     });
-
-    (function (cfg) {
-        window.vm = new Vue({
-            el: '#app',
-            delimiters: ['${', '}'],
-            data: {
-                selected: cfg.selected,
-                sizes: cfg.sizes,
-                steps: cfg.steps,
-                pricePerMonthPerGB: cfg.pricePerMonthPerGB,
-                processing: null
-            },
-            filters: {
-                price: function (x) { return Number(x).toFixed(3); },
-                pluralize: function (str, count) { return count === 1 ? str : str + 's' },
-                fileSize: function (bytes) {
-                    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-                    if (bytes === 0) return 'Bytes';
-                    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-                    if (i === 0) return bytes + ' ' + sizes[i];
-                    return (bytes / Math.pow(1024, i)).toFixed(0) + ' ' + sizes[i];
-                }
-            },
-            methods: {
-                toggleStorage: function (size) {
-                    var vm = this;
-                    vm.processing = size;
-                    setTimeout(function () {
-                        vm.selected = vm.selected === size ? null : size;
-                        vm.processing = null;
-                    }, 300);
-                },
-                goToStep: function (step) {
-                    if (this.steps[step] === 'available') {
-                        window.location.replace('/wizard/' + step);
-                    }
-                }
-            }
-        });
-    })({"selected": null, "sizes": [50, 100, 250, 500, 1024, 2048], "pricePerMonthPerGB": [0.017, 0.033, 0.083, 0.165, 0.331, 0.661], "steps": {"1": "available", "2": "active", "3": "disabled", "4": "disabled"}, "urls": {"toggleStorage": "/api/wizard/toggle-storage"}});
 </script>
 
 <script>
     (function (cfg) {
+        var periods = [
+            {minHours: 1, rate: 4.75, title: 'less than a week'},
+            {minHours: 168, rate: 2.93, title: '1 week (168h) and more'},
+            {minHours: 720, rate: 2.45, title: '1 month (720h) and more'},
+            {minHours: 2160, rate: 2.37, title: '3 month (2160h) and more'},
+            {minHours: 4320, rate: 2.31, title: '6 month (4320h) and more'},
+            {minHours: 6480, rate: 2.28, title: '9 month (6480h) and more'},
+            {minHours: 8640, rate: 2.26, title: '12 month (8640h) and more'}
+        ];
         window.vm = new Vue({
             el: '#wrapper',
             delimiters: ['${', '}'],
@@ -483,9 +435,27 @@
                 filters: {
                     categories: [],
                     companies: []
-                }
+                },
+				hours1: 2160,
+                hours3: 720,
+                hours4: 24,
+                hours5: 720,
+                periods: periods,
+                period2: periods[1]
             },
             computed: {
+                period1: function () { return this.getPeriod(this.hours1) },
+                period3: function () { return this.getPeriod(this.hours3) },
+                period4: function () { return this.getPeriod(this.hours4) },
+                period5: function () { return this.getPeriod(this.hours5) },
+                price1: function () { return this.hours1 * this.period2.rate},
+                price2: function () { return this.period2.minHours * this.period2.rate},
+                price3: function () { return this.hours3 * this.period3.rate},
+                price4: function () { return this.hours4 * this.period4.rate},
+                price5: function () { return this.hours5 * this.period5.rate},
+                priceTotal: function () {
+                    return this.price1 + this.price2 + this.price3 + this.price4 + this.price5;
+                },
                 filteredApps: function () {
                     var vm = this,
                             apps = vm.apps;
@@ -499,6 +469,15 @@
                 }
             },
             methods: {
+                getPeriod: function (hours) {
+                    var period = this.periods[0];
+                    this.periods.forEach(function (p) {
+                        if (p.minHours <= hours) {
+                            period = p;
+                        }
+                    });
+                    return period;
+                },
                 clearFilters: function () {
                     $('#filters input').iCheck('uncheck');
                 }
@@ -527,6 +506,21 @@
                         });
                     }
                 });
+				$("#time-slider").ionRangeSlider(
+					{
+						min: 0,
+						from_min: 1,
+						max: 8640,
+						postfix: " h",
+						grid: true,
+						from: vm.hours1,
+						step: 1,
+						onChange: function (x) {
+							vm.hours1 = x.from;
+						}
+
+					}
+				);
             },
             filters: {
                 price: function (x) { return Number(x).toFixed(2); }
