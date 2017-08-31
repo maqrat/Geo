@@ -141,7 +141,7 @@
                                     <td class="col-xs-3 text-center instance-td-payment-page">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center time-slider-td-payment-page"><input id="time-slider" type="text"  class="form-control"></td>
                                     <td class="col-xs-1 text-center period1-td-payment-page">
-                                        <span v-tooltip="{html: 'ratesTooltip'}">${period1.rate}</span>
+                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period1.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center period-td-payment-page">${period1.title}</td>
                                     <td class="col-xs-2 text-center price-td-payment-page">$${price1|price}</td>
@@ -161,7 +161,7 @@
                                         </select>
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip="{html: 'ratesTooltip'}">${period2.rate}</span>
+                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period2.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period2.title}</td>
                                     <td class="col-xs-2 text-center">$${price2|price}</td>
@@ -177,7 +177,7 @@
                                         <input v-model="hours3" type="number"  class="form-control" placeholder="0">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip="{html: 'ratesTooltip'}">${period3.rate}</span>
+                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period3.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period3.title}</td>
                                     <td class="col-xs-2 text-center">$${price3|price}</td>
@@ -193,7 +193,7 @@
                                         <input v-model="hours4" id="" type="text"  class="form-control">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip="{html: 'ratesTooltip'}">${period4.rate}</span>
+                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period4.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period4.title}</td>
                                     <td class="col-xs-2 text-center">$${price4|price}</td>
@@ -211,7 +211,7 @@
                                         <input v-model="hours5" id="" type="text"  class="form-control">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip="{html: 'ratesTooltip'}">${period5.rate}</span>
+                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period5.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period5.title}</td>
                                     <td class="col-xs-2 text-center">$${price5|price}</td>
