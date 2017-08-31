@@ -19,7 +19,7 @@
     <link href="./node_modules/ion-rangeslider/css/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="./node_modules/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
     <link href="./node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css" rel="stylesheet" type="text/css"/>
-    <link href="./node_modules/vue-directive-tooltip/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/qtip2/dist/jquery.qtip.min.css" rel="stylesheet" type="text/css"/>
 
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -141,7 +141,7 @@
                                     <td class="col-xs-3 text-center instance-td-payment-page">8CPU,15GB RAM, NVIDIA(4GB)</td>
                                     <td class="col-xs-3 text-center time-slider-td-payment-page"><input id="time-slider" type="text"  class="form-control"></td>
                                     <td class="col-xs-1 text-center period1-td-payment-page">
-                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period1.rate}</span>
+                                        <span class="js-rate">${period1.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center period-td-payment-page">${period1.title}</td>
                                     <td class="col-xs-2 text-center price-td-payment-page">$${price1|price}</td>
@@ -162,7 +162,7 @@
                                         </select>
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period2.rate}</span>
+                                        <span class="js-rate">${period2.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period2.title}</td>
                                     <td class="col-xs-2 text-center">$${price2|price}</td>
@@ -179,7 +179,7 @@
                                         <input v-model="hours3" type="number"  class="form-control" placeholder="0">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period3.rate}</span>
+                                        <span class="js-rate">${period3.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period3.title}</td>
                                     <td class="col-xs-2 text-center">$${price3|price}</td>
@@ -196,7 +196,7 @@
                                         <input v-model="hours4" id="" type="text"  class="form-control">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period4.rate}</span>
+                                        <span class="js-rate">${period4.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period4.title}</td>
                                     <td class="col-xs-2 text-center">$${price4|price}</td>
@@ -215,7 +215,7 @@
                                         <input v-model="hours5" id="" type="text"  class="form-control">
                                     </td>
                                     <td class="col-xs-1 text-center">
-                                        <span v-tooltip.bottom="{html: 'ratesTooltip'}">${period5.rate}</span>
+                                        <span class="js-rate">${period5.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center">${period5.title}</td>
                                     <td class="col-xs-2 text-center">$${price5|price}</td>
@@ -370,7 +370,7 @@
         </div>
 
     </div>
-    <div id="ratesTooltip">
+    <div id="ratesTooltip" style="display: none">
         <table class="table">
             <tr>
                 <th class="text-center">Hourly rate per period</th>
@@ -396,7 +396,7 @@
 <script src="./node_modules/icheck/icheck.min.js"></script>
 <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="./node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-<script src="./node_modules/vue-directive-tooltip/dist/vueDirectiveTooltip.min.js"></script>
+<script src="./node_modules/qtip2/dist/jquery.qtip.min.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -458,7 +458,6 @@
             {from: 6480, to: 8640, rate: 2.28, title: '9 month (6480h) and more'},
             {from: 8640, to: 'more', rate: 2.26, title: '12 month (8640h) and more'}
         ];
-        Vue.use(vueDirectiveTooltip);
         window.vm = new Vue({
             el: '#wrapper',
             delimiters: ['${', '}'],
@@ -555,6 +554,13 @@
 
 					}
 				);
+				$('.js-rate').each(function() {
+                    $(this).qtip({
+                        content: {
+                            text: $('#ratesTooltip').html()
+                        }
+                    });
+                });
             },
             filters: {
                 price: function (x) { return Number(x).toFixed(2); }
