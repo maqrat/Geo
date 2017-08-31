@@ -134,18 +134,18 @@
                                     </tr>
                                 </template>-->
                                 <tr class="">
-                                    <td class="col-xs-1">
+                                    <td class="col-xs-1 text-center product-logo-td-payment-page">
                                         <img :src="filteredApps[0].image" class="img-responsive product-logo" alt="">
                                     </td>
-                                    <td class="col-xs-2 text-center"><span class="text-mark">${filteredApps[0].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
-                                    <td class="col-xs-3 text-center">8CPU,15GB RAM, NVIDIA(4GB)</td>
-                                    <td class="col-xs-3 text-center"><input id="time-slider" type="text"  class="form-control"></td>
-                                    <td class="col-xs-1 text-center">
+                                    <td class="col-xs-2 text-center title-td-payment-page"><span class="text-mark">${filteredApps[0].title}</span><br><span class="text-muted">v. 2.6.1</span></td>
+                                    <td class="col-xs-3 text-center instance-td-payment-page">8CPU,15GB RAM, NVIDIA(4GB)</td>
+                                    <td class="col-xs-3 text-center time-slider-td-payment-page"><input id="time-slider" type="text"  class="form-control"></td>
+                                    <td class="col-xs-1 text-center period1-td-payment-page">
                                         <span v-tooltip="{html: 'ratesTooltip'}">${period1.rate}</span>
                                     </td>
                                     <td class="col-xs-3 text-center period-td-payment-page">${period1.title}</td>
                                     <td class="col-xs-2 text-center price-td-payment-page">$${price1|price}</td>
-                                    <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+                                    <td class="col-xs-1 text-center del-ic-td-payment-page"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
                                     <td class="col-xs-1">

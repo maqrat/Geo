@@ -1639,6 +1639,26 @@ body {
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .text-mark {
   font-weight: 600;
 }
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .product-logo-td-payment-page {
+  min-width: 68px;
+  max-width: 68px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .title-td-payment-page {
+  min-width: 154px;
+  max-width: 154px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .instance-td-payment-page {
+  min-width: 219px;
+  max-width: 219px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .time-slider-td-payment-page {
+  min-width: 212px;
+  max-width: 212px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .period1-td-payment-page {
+  min-width: 81px;
+  max-width: 81px;
+}
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .period-td-payment-page {
   min-width: 150px;
   max-width: 150px;
@@ -1646,6 +1666,10 @@ body {
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .price-td-payment-page {
   min-width: 90px;
   max-width: 90px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .del-ic-td-payment-page {
+  min-width: 29px;
+  max-width: 29px;
 }
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .glyphicon-trash {
   color: #b9b9b9;
