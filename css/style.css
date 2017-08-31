@@ -1639,6 +1639,14 @@ body {
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .text-mark {
   font-weight: 600;
 }
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .period-td-payment-page {
+  min-width: 150px;
+  max-width: 150px;
+}
+.wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .price-td-payment-page {
+  min-width: 90px;
+  max-width: 90px;
+}
 .wrapper-wizard-content.wrapper-wizard-content-step3 .row.wizard-row table .glyphicon-trash {
   color: #b9b9b9;
   font-size: 13px;

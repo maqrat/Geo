@@ -143,8 +143,8 @@
                                     <td class="col-xs-1 text-center">
                                         <span v-tooltip="{html: 'ratesTooltip'}">${period1.rate}</span>
                                     </td>
-                                    <td class="col-xs-3 text-center">${period1.title}</td>
-                                    <td class="col-xs-2 text-center">$${price1|price}</td>
+                                    <td class="col-xs-3 text-center period-td-payment-page">${period1.title}</td>
+                                    <td class="col-xs-2 text-center price-td-payment-page">$${price1|price}</td>
                                     <td class="col-xs-1 text-center"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
                                 </tr>
                                 <tr class="">
@@ -543,7 +543,7 @@
 						postfix: " h",
 						grid: true,
 						from: vm.hours1,
-						step: 1,
+						//step: 1,
 						onChange: function (x) {
 							vm.hours1 = x.from;
 						}
