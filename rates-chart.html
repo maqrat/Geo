@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<style>
+    body {padding: 0; margin: 0}
+</style>
+<div id="app">
+    <chart :options="ratesChartOptions"></chart>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/vue-echarts/dist/vue-echarts.js"></script>
+<script>
+    (function () {
+        var periods = [
+            {from: 1, to: 167, rate: 4.75, title: 'less than a week'},
+            {from: 168, to: 719, rate: 2.93, title: '1 week (168h) and more'},
+            {from: 720, to: 2160, rate: 2.45, title: '1 month (720h) and more'},
+            {from: 2160, to: 4320, rate: 2.37, title: '3 month (2160h) and more'},
+            {from: 4320, to: 6480, rate: 2.31, title: '6 month (4320h) and more'},
+            {from: 6480, to: 8640, rate: 2.28, title: '9 month (6480h) and more'},
+            {from: 8640, to: 'more', rate: 2.26, title: '12 month (8640h) and more'}
+        ];
+
+        Vue.component('chart', VueECharts)
+        window.vm = new Vue({
+            el: '#app',
+            delimiters: ['${', '}'],
+            data: {
+                ratesChartOptions: {
+                    color: ['#3398DB'],
+                    title : {
+                        text: 'Time Period',
+                        top: 'bottom',
+                        left: 'center',
+                        textStyle: {
+                            color: 'gray'
+                        }
+                    },
+                    xAxis : [
+                        {
+                            type: 'category',
+                            data: periods.map(function (p) { return p.from })
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value'
+                        }
+                    ],
+                    series : [
+                        {
+                            type: 'bar',
+                            data: periods.map(function (p) { return p.rate }),
+							label: {
+								normal: {
+									show: true,
+									position: 'top'
+								}
+							},
+                        }
+                    ]
+                }
+
+            }
+        });
+    })();
+</script>
