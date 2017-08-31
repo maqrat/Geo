@@ -366,14 +366,14 @@
 
     </div>
     <div id="ratesTooltip">
-        <table>
+        <table class="table">
             <tr>
-                <th>Hourly rate per period</th>
-                <th>Rental period</th>
-                <th>From</th>
-                <th>To</th>
+                <th class="text-center">Hourly rate per period</th>
+                <th class="text-center">Rental period</th>
+                <th class="text-center">From</th>
+                <th class="text-center">To</th>
             </tr>
-            <tr v-for="period in periods">
+            <tr v-for="period in periods" class="text-center">
                 <td>${period.rate}</td>
                 <td>${period.title}</td>
                 <td>${period.from}</td>

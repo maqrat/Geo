@@ -2080,3 +2080,22 @@ td.image-td {
 .irs-single:after {
   border-top-color: #0094e7;
 }
+.vue-tooltip {
+  background-color: #f8f8f8;
+  color: #424242;
+  border: 1px solid #ddd;
+  padding: 0;
+}
+.vue-tooltip .table {
+  margin: 0;
+}
+.vue-tooltip .table td {
+  padding: 7px 2px;
+  line-height: 15px;
+}
+.vue-tooltip[x-placement^="bottom"] .tooltip-arrow {
+  border-bottom-color: #ddd;
+}
+.vue-tooltip[x-placement^="top"] .tooltip-arrow {
+  border-top-color: transparent;
+}
