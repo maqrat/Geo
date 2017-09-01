@@ -20,6 +20,7 @@
     <link href="./node_modules/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
     <link href="./node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css" rel="stylesheet" type="text/css"/>
     <link href="./node_modules/qtip2/dist/jquery.qtip.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./node_modules/qtip2/src/basic.css" rel="stylesheet" type="text/css"/>
 
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -370,13 +371,13 @@
         </div>
 
     </div>
-    <div id="ratesTooltip" style="display: none">
-        <table class="table">
+    <div id="ratesTooltip" style="display: none" class="table-tooltip">
+        <table class="table row">
             <tr>
-                <th class="text-center">Hourly rate per period</th>
-                <th class="text-center">Rental period</th>
-                <th class="text-center">From</th>
-                <th class="text-center">To</th>
+                <th class="col-xs-1 text-center">Hourly rate per period</th>
+                <th class="col-xs-4 text-center">Rental period</th>
+                <th class="col-xs-1 text-center">From</th>
+                <th class="col-xs-1 text-center">To</th>
             </tr>
             <tr v-for="period in periods" class="text-center">
                 <td>${period.rate}</td>
@@ -558,6 +559,13 @@
                     $(this).qtip({
                         content: {
                             text: $('#ratesTooltip').html()
+                        },
+                        hide: {
+                            fixed: true,
+                            delay: 300
+                        },
+                        style: {
+                            classes: 'qtip-blue'
                         }
                     });
                 });
