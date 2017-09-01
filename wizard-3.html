@@ -208,9 +208,9 @@
                                     <td class="text-center"><img src="img/amazon-cloud-drive.png" class="img-responsive product-logo" alt=""></td>
                                     <td class="text-center"><span class="text-mark">Storage (GB)</span><br><span class="text-muted">SSD</span></td>
                                     <td class="text-center">
-                                        <input type="text" id="storage-slider" name="example_name" value="" />
+                                        <!--<input type="text" id="storage-slider" name="example_name" value="" />-->
                                         <input type="text" id="storage-slider2" name="example_name" value="" />
-                                        <input type="text" id="storage-slider3" name="example_name" value="" />
+                                        <!--<input type="text" id="storage-slider3" name="example_name" value="" />-->
                                     </td>
                                     <td class="text-center">
                                         <input v-model="hours5" id="" type="text"  class="form-control">
@@ -406,7 +406,7 @@
             increaseArea: '20%' // optional
         });
 
-        $("#storage-slider").ionRangeSlider(
+       /* $("#storage-slider").ionRangeSlider(
                 {
                     type: "single",
                     min: 0,
@@ -416,7 +416,7 @@
                     from: 5,
                     values: [50, 100, 250, 500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
                 }
-        );
+        );*/
         $("#storage-slider2").ionRangeSlider(
                 {
                     type: "single",
@@ -431,7 +431,7 @@
 
                 }
         );
-        $("#storage-slider3").ionRangeSlider(
+       /* $("#storage-slider3").ionRangeSlider(
                 {
                     type: "single",
                     min: 0,
@@ -444,7 +444,7 @@
                     grid_num: 5
 
                 }
-        );
+        );*/
     });
 </script>
 
@@ -565,7 +565,7 @@
                             delay: 300
                         },
                         style: {
-                            classes: 'qtip-blue'
+                            classes: 'qtip-light'
                         }
                     });
                 });

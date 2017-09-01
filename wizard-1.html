@@ -319,7 +319,6 @@
 <script src="./node_modules/vue-echarts/dist/vue-echarts.js"></script>
 
 <script >
-
     $(document).ready(function () {
 
         var elTableWizard = $(".table-wizard-container");
@@ -647,7 +646,14 @@
 							my: 'top right',
 							at: 'center left'
 							//target: $('.selector') // my target
-						}
+						},
+                        hide: {
+                            fixed: true,
+                            delay: 300
+                        },
+                        style: {
+                            classes: 'qtip-blue'
+                        }
                     });
                 });
             },
