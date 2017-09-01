@@ -133,23 +133,6 @@
                         <div v-else style="text-align: center; color: gray; padding-top: 15px">
                             Please, select your apps
                         </div>
-                        <div id="ratesTooltip" style="display:none" v-show="true">
-                            <chart :options="ratesChartOptions"></chart>
-                            <table class="table">
-                                <tr>
-                                    <th class="text-center">Hourly rate per period</th>
-                                    <th class="text-center">Rental period</th>
-                                    <th class="text-center">From</th>
-                                    <th class="text-center">To</th>
-                                </tr>
-                                <tr v-for="period in periods" class="text-center">
-                                    <td>${period.rate}</td>
-                                    <td>${period.title}</td>
-                                    <td>${period.from}</td>
-                                    <td>${period.to}</td>
-                                </tr>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -640,10 +623,10 @@
                     $(this).qtip({
                         content: {
                             // text: $('#ratesTooltip').html()
-							text: '<iframe src="rates-chart.html" width="600" height="400" frameborder="0">'
+							text: '<iframe src="rates-chart.html" width="300" height="250" frameborder="0">'
                         },
 						position: {
-							my: 'top right',
+							my: 'center right',
 							at: 'center left'
 							//target: $('.selector') // my target
 						},
