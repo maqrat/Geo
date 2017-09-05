@@ -2070,6 +2070,14 @@ td.image-td {
 .table-wizard-container .container .row.wizard-row > div .table-wizard .description {
   color: #9f9f9f;
 }
+.irs-line-mid,
+.irs-line-left,
+.irs-line-right,
+.irs-bar,
+.irs-bar-edge,
+.irs-slider {
+  background-image: url(../img/sprite-skin-modern-blue.png);
+}
 .irs-from,
 .irs-to,
 .irs-single {
